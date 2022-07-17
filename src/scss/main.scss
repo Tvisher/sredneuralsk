@@ -118,6 +118,8 @@ h1 {
 }
 h2 {
   font-size: 22px;
+  color: $brand_blue;
+  font-weight: 700;
 }
 h3 {
   font-size: 18px;
@@ -210,14 +212,16 @@ h4 {
 }
 
 .main-screen__slider {
+  filter: drop-shadow(0px 0px 2px rgba(0, 0, 0, 0.16))
+    drop-shadow(0px 4px 12px rgba(0, 0, 0, 0.1));
   flex: 1 0 calc(75% - 30px);
   padding-bottom: 20px;
-  .swiper-pagination {
-    bottom: 0px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
+}
+.swiper-pagination.lines {
+  bottom: 0px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   .swiper-pagination-bullet {
     border-radius: 0 !important;
     transition: opacity 0.25s ease-in-out;
@@ -297,6 +301,7 @@ h4 {
 
 .slide-baner__title {
   @include pruning(5);
+  color: #fbfbfb;
   text-transform: uppercase;
   font-weight: 700;
   line-height: 130%;
@@ -369,6 +374,7 @@ h4 {
 
 .categories {
   padding-top: 30px;
+  padding-bottom: 22px;
 }
 .c-ico {
   width: 40px;
@@ -412,5 +418,121 @@ h4 {
         fill: #fff;
       }
     }
+  }
+}
+
+.main-info {
+  padding-top: 40px;
+  padding-bottom: 56px;
+  background: linear-gradient(270deg, #f1faec 0%, #e3f1e4 100%);
+
+  .main-info__title {
+    margin-bottom: 28px;
+  }
+}
+
+.main-info__list {
+  display: flex;
+  align-items: stretch;
+  flex-wrap: wrap;
+  gap: 0 30px;
+}
+
+.main-info__item {
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.08);
+  position: relative;
+  &::before {
+    position: absolute;
+    content: "";
+    top: 0;
+    left: 0;
+    width: 4px;
+    height: 100%;
+    background: #90c171;
+    z-index: 1;
+    transition: width 0.3s ease-in-out;
+  }
+  padding: 14px 28px;
+  background: #ffffff;
+  margin-bottom: 2px;
+  flex: 1 0 calc(33.33% - 30px);
+  a {
+    transition: color 0.25s ease-in-out;
+    z-index: 2;
+    position: relative;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-weight: 700;
+    color: $brand_blue;
+    min-height: 88px;
+    justify-content: space-between;
+    svg {
+      flex-shrink: 0;
+      path {
+        transition: stroke 0.25s ease-in-out;
+      }
+    }
+  }
+  &:hover {
+    &::before {
+      width: 100%;
+    }
+    a {
+      color: #fff;
+    }
+    svg path {
+      stroke: #fff;
+    }
+  }
+}
+
+.honoraries {
+  padding-top: 40px;
+  padding-bottom: 28px;
+  background: #f2f3f7;
+  box-shadow: inset 0px 0px 15px rgba(0, 0, 0, 0.09);
+
+  .honorable {
+    width: 340px;
+    display: flex;
+    align-items: flex-start;
+    gap: 16px;
+    padding: 28px;
+    display: flex;
+    background: #fbfbfb;
+    box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.16), 0px 4px 12px rgba(0, 0, 0, 0.1);
+    .honorable__image {
+      flex-shrink: 0;
+      width: 80px;
+      height: 80px;
+      overflow: hidden;
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center;
+      }
+    }
+    .honorable__name {
+      margin-bottom: 8px;
+      line-height: 120%;
+      @include pruning(2);
+      color: $brand_black;
+    }
+    .honorable__descr {
+      line-height: 120%;
+      color: #393c41;
+      font-size: 14px;
+      @include pruning(2);
+    }
+  }
+
+  .honoraries__slider {
+    padding: 28px 5px 30px;
+    margin-right: -5px;
+    margin-left: -5px;
   }
 }

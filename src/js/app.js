@@ -20,12 +20,31 @@ window.addEventListener('load', (e) => {
 
 
 const mainScreenSlider = new Swiper('.main-screen__slider', {
-    modules: [EffectFade, Pagination],
+    modules: [EffectFade, Pagination, Autoplay],
     slidesPerView: 1,
     effect: 'fade',
+    loop: 1,
     fadeEffect: {
         crossFade: 1
     },
+    autoplay: {
+        delay: 5000,
+    },
+    pagination: {
+        el: '.swiper-pagination',
+        type: 'bullets',
+        clickable: 1,
+    },
+});
+
+const honorariesSlider = new Swiper('.honoraries__slider', {
+    modules: [Pagination, Autoplay],
+    slidesPerView: 3,
+    loop: 1,
+    autoplay: {
+        delay: 5000,
+    },
+    spaceBetween: 45,
     pagination: {
         el: '.swiper-pagination',
         type: 'bullets',
