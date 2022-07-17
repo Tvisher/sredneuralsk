@@ -1520,6 +1520,22 @@ h4 {
   margin-left: -5px;
 }
 
+.footer {
+  background: #f3f8f1;
+  padding: 32px 0;
+}
+
+.footer__wrapper {
+  justify-content: space-between;
+  display: flex;
+  align-items: center;
+}
+
+.footer__wrapper * {
+  color: #114f74;
+  font-size: 14px;
+}
+
 @media screen and (max-width: 768px) {
   .container {
     max-width: 98%;
