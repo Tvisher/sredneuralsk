@@ -1,0 +1,32 @@
+// Size
+$mainFontSize: 16px;
+$mainFontWeight: 400;
+$mainLineHeight: 125%;
+
+$desktopWidth: 1150px;
+$smDesktopWidth: 980px;
+$tableWidth: 768px;
+$phoneWidth: 480px;
+$smPhoneWidth: 380px;
+
+// Main color
+$brand_black: #000000;
+$brand_blue: #114f74;
+$brand_dark_g: #393c41;
+$green_hover: #90c171;
+
+// Font
+$mainFont: "Roboto";
+$mainFontColor: $brand_black;
+
+@mixin pruning($c) {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -moz-box;
+  -moz-box-orient: vertical;
+  display: -webkit-box;
+  -webkit-line-clamp: $c;
+  -webkit-box-orient: vertical;
+  line-clamp: $c;
+  box-orient: vertical;
+}
