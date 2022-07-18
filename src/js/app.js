@@ -53,13 +53,13 @@ const honorariesSlider = new Swiper('.honoraries__slider', {
     },
 });
 
-
+const afficheSliderSpeed = 500;
 const afficheSlider = new Swiper('.affiche__slider', {
     modules: [EffectCreative, Navigation],
     centeredSlides: true,
     slidesPerView: 'auto',
     loop: true,
-    speed: 600,
+    speed: afficheSliderSpeed,
     navigation: {
         nextEl: '.swiper-button-next',
         prevEl: '.swiper-button-prev',
@@ -79,6 +79,15 @@ const afficheSlider = new Swiper('.affiche__slider', {
             scale: 0.9,
         },
     },
+    on: {
+        slideChangeTransitionStart(swiper) {
+            swiper.disable()
+            setTimeout(() => {
+                swiper.enable();
+            }, afficheSliderSpeed);
+        },
+
+    }
 });
 
 
