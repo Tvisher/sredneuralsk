@@ -1573,11 +1573,12 @@ h4 {
   padding-bottom: 22px;
   padding-top: 12px;
   margin-left: 0;
-  max-width: 860px;
+  max-width: 825px;
   width: 100%;
 }
 
 .affiche__slider .poster {
+  will-change: transform;
   color: #fff;
   display: flex;
   flex-direction: column;

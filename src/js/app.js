@@ -67,16 +67,16 @@ const afficheSlider = new Swiper('.affiche__slider', {
     effect: 'creative',
     creativeEffect: {
         shadowPerProgress: 2,
-        limitProgress: 1.55,
+        limitProgress: 1.40,
         prev: {
-            translate: ['-90%', '0%', 0],
+            translate: ['-95%', '0%', 0],
             origin: 'center center',
-            scale: 0.88,
+            scale: 0.9,
         },
         next: {
-            translate: ['90%', '0%', 0],
+            translate: ['95%', '0%', 0],
             origin: 'center center',
-            scale: 0.88,
+            scale: 0.9,
         },
     },
 });
