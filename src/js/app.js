@@ -6,6 +6,7 @@ import Swiper, {
     Pagination,
     Autoplay,
     EffectFade,
+    EffectCreative
 } from 'swiper';
 
 import IMask from 'imask';
@@ -49,6 +50,34 @@ const honorariesSlider = new Swiper('.honoraries__slider', {
         el: '.swiper-pagination',
         type: 'bullets',
         clickable: 1,
+    },
+});
+
+
+const afficheSlider = new Swiper('.affiche__slider', {
+    modules: [EffectCreative, Navigation],
+    centeredSlides: true,
+    slidesPerView: 'auto',
+    loop: true,
+    speed: 600,
+    navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+    },
+    effect: 'creative',
+    creativeEffect: {
+        shadowPerProgress: 2,
+        limitProgress: 1.55,
+        prev: {
+            translate: ['-90%', '0%', 0],
+            origin: 'center center',
+            scale: 0.88,
+        },
+        next: {
+            translate: ['90%', '0%', 0],
+            origin: 'center center',
+            scale: 0.88,
+        },
     },
 });
 
