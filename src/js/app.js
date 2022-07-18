@@ -45,12 +45,17 @@ const honorariesSlider = new Swiper('.honoraries__slider', {
     autoplay: {
         delay: 5000,
     },
-    spaceBetween: 45,
+    spaceBetween: 20,
     pagination: {
         el: '.swiper-pagination',
         type: 'bullets',
         clickable: 1,
     },
+    breakpoints: {
+        992: {
+            spaceBetween: 45,
+        }
+    }
 });
 
 const afficheSliderSpeed = 500;
@@ -86,7 +91,6 @@ const afficheSlider = new Swiper('.affiche__slider', {
                 swiper.enable();
             }, afficheSliderSpeed);
         },
-
     }
 });
 
