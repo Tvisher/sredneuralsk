@@ -66,20 +66,20 @@ const afficheSlider = new Swiper('.affiche__slider', {
     loop: true,
     speed: afficheSliderSpeed,
     navigation: {
-        nextEl: '.swiper-button-next',
-        prevEl: '.swiper-button-prev',
+        nextEl: '.swiper-button-next.aff',
+        prevEl: '.swiper-button-prev.aff',
     },
     effect: 'creative',
     creativeEffect: {
         shadowPerProgress: 2,
         limitProgress: 1.40,
         prev: {
-            translate: ['-95%', '0%', 0],
+            translate: ['-92.5%', '0%', 0],
             origin: 'center center',
             scale: 0.9,
         },
         next: {
-            translate: ['95%', '0%', 0],
+            translate: ['92.5%', '0%', 0],
             origin: 'center center',
             scale: 0.9,
         },
