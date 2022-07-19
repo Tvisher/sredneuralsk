@@ -40,7 +40,7 @@ const mainScreenSlider = new Swiper('.main-screen__slider', {
 
 const honorariesSlider = new Swiper('.honoraries__slider', {
     modules: [Pagination, Autoplay],
-    slidesPerView: 3,
+    slidesPerView: 1,
     loop: 1,
     autoplay: {
         delay: 5000,
@@ -52,7 +52,15 @@ const honorariesSlider = new Swiper('.honoraries__slider', {
         clickable: 1,
     },
     breakpoints: {
+        576: {
+            slidesPerView: 2,
+        },
+        768: {
+            slidesPerView: 3,
+            spaceBetween: 20,
+        },
         992: {
+            slidesPerView: 3,
             spaceBetween: 45,
         }
     }
