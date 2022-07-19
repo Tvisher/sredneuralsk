@@ -947,9 +947,6 @@ html {
 }
 
 body {
-  display: flex;
-  flex-direction: column;
-  min-height: 100%;
   font-family: "Roboto";
   font-size: 16px;
   font-weight: 400;
@@ -958,11 +955,11 @@ body {
   margin: 0;
   padding: 0;
   background-color: #fff;
-  opacity: 0;
-  transition: opacity 0.3s ease;
 }
 
 body.hidden {
+  height: 100%;
+  width: 100%;
   overflow: hidden;
   touch-action: none;
   -ms-touch-action: none;
@@ -1085,6 +1082,20 @@ h4 {
   height: 2px;
   width: 100%;
   background-color: #fff;
+  border-radius: 1px;
+  transition: transform 0.25s ease-in-out;
+}
+
+.menu-btn.active span:nth-of-type(1) {
+  transform: rotate(45deg) translate(7px, 6px);
+}
+
+.menu-btn.active span:nth-of-type(2) {
+  transform: scale(0);
+}
+
+.menu-btn.active span:nth-of-type(3) {
+  transform: rotate(-45deg) translate(7px, -6px);
 }
 
 header {
@@ -1785,6 +1796,9 @@ header {
   width: 100%;
   height: 318px;
   background-color: rgb(202, 195, 195);
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .main-body__wrapper {
@@ -1867,6 +1881,72 @@ header {
 .affiche__slider-container .swiper-button-prev:after,
 .affiche__slider-container .swiper-button-next:after {
   display: none;
+}
+
+.gosuslugi-mob-banner {
+  display: none;
+}
+
+.mobile-menu {
+  transition: opacity 0.25s ease-in-out, visibility 0.25s ease-in-out;
+  opacity: 0;
+  visibility: hidden;
+  position: fixed;
+  left: 0;
+  top: 53px;
+  width: 100%;
+  height: 100%;
+  z-index: 999;
+  background: rgba(0, 0, 0, 0.8);
+}
+
+.mobile-menu.active {
+  opacity: 1;
+  visibility: visible;
+}
+
+.mobile-menu .mobile-menu__content {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  max-width: 320px;
+  width: 100%;
+  display: flex;
+  background-color: #fff;
+}
+
+.mobile-menu .mobile-menu__content a {
+  color: #f6f7f9;
+}
+
+.mobile-menu .mobile-menu__top {
+  background: #0f4a35;
+}
+
+.mobile-menu .mobile-menu__top li {
+  padding: 0px 20px;
+}
+
+.mobile-menu .mobile-menu__top li:not(:last-child) a {
+  border-bottom: 1px solid #055a3c;
+}
+
+.mobile-menu .mobile-menu__top li a {
+  padding: 26px 0;
+}
+
+.mobile-menu .mobile-menu__bottom {
+  height: 100%;
+  background: linear-gradient(169.89deg, #0f6c50 8.51%, #3d9805 226.55%);
+}
+
+.mobile-menu .mobile-menu__bottom li {
+  padding: 0px 20px;
+}
+
+.mobile-menu .mobile-menu__bottom li a {
+  padding: 26px 0;
+  border-bottom: 1px solid #055a3c;
 }
 
 @media (max-width: 1190px) {
@@ -2228,6 +2308,20 @@ header {
   .affiche__slider {
     padding-bottom: 20px;
   }
+
+  .main-body__gosuslugi {
+    display: none;
+  }
+
+  .gosuslugi-mob-banner {
+    width: 100%;
+    display: block;
+    height: 240px;
+    background-color: rgb(202, 195, 195);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
 }
 
 @media screen and (max-width: 480px) {
@@ -2271,6 +2365,12 @@ header {
   .affiche__slider_wrapper {
     margin-right: -10px;
     margin-left: -10px;
+  }
+
+  .mobile-menu .mobile-menu__bottom li,
+  .mobile-menu .mobile-menu__top li {
+    padding-left: 10px;
+    padding-right: 10px;
   }
 
   .btn {
