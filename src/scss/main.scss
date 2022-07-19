@@ -283,29 +283,29 @@ header {
 .slide-baner__grad {
   padding: 32px 44px;
   height: 100%;
-  width: 70%;
+  width: 100%;
 }
 
 .slide-baner {
   &.blue-grad .slide-baner__grad {
     background: linear-gradient(
       90deg,
-      #0156dd 52.03%,
-      rgba(1, 86, 221, 0) 100%
+      #0156dd 39.69%,
+      rgba(1, 86, 221, 0) 98.33%
     );
   }
   &.pink-grad .slide-baner__grad {
     background: linear-gradient(
       90deg,
-      #7107c9 52.03%,
-      rgba(113, 8, 201, 0) 100%
+      #7107c9 39.69%,
+      rgba(113, 8, 201, 0) 98.33%
     );
   }
   &.green-grad .slide-baner__grad {
     background: linear-gradient(
       90deg,
-      #89a600 52.03%,
-      rgba(137, 166, 0, 0) 100%
+      #89a600 39.69%,
+      rgba(137, 166, 0, 0) 98.33%
     );
   }
   &.turquoise-grad .slide-baner__grad {
@@ -318,8 +318,8 @@ header {
   &.brown-grad .slide-baner__grad {
     background: linear-gradient(
       90deg,
-      #be6330 52.03%,
-      rgba(190, 99, 48, 0) 100%
+      #be6330 39.69%,
+      rgba(190, 99, 48, 0) 98.33%
     );
   }
 }
