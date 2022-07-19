@@ -72,6 +72,9 @@ h6 {
 
 main {
   padding-top: 30px;
+  &.index {
+    background: #fbfbfb;
+  }
 }
 
 ul,
@@ -348,10 +351,10 @@ header {
   @include pruning(2);
   font-size: 20px;
   font-weight: 400;
-  margin-top: auto;
+  // margin-top: auto;
 }
 .slide-baner__btn {
-  margin-top: auto;
+  // margin-top: auto;
 }
 
 .main-screen__chapter {
@@ -1056,7 +1059,7 @@ header {
   }
   .slide-baner__grad {
     width: 100%;
-    height: auto;
+    height: 100%;
     margin-top: auto;
     padding-right: 15px;
     padding-left: 15px;
@@ -1071,22 +1074,22 @@ header {
     &.blue-grad .slide-baner__grad {
       background: linear-gradient(
         0deg,
-        #0156dd 52.03%,
-        rgba(1, 86, 221, 0) 100%
+        #0156dd 39.69%,
+        rgba(1, 86, 221, 0) 98.33%
       );
     }
     &.pink-grad .slide-baner__grad {
       background: linear-gradient(
         0deg,
-        #7107c9 52.03%,
-        rgba(113, 8, 201, 0) 100%
+        #7107c9 39.69%,
+        rgba(113, 8, 201, 0) 98.33%
       );
     }
     &.green-grad .slide-baner__grad {
       background: linear-gradient(
         0deg,
-        #89a600 52.03%,
-        rgba(137, 166, 0, 0) 100%
+        #89a600 39.69%,
+        rgba(137, 166, 0, 0) 98.33%
       );
     }
     &.turquoise-grad .slide-baner__grad {
@@ -1099,8 +1102,8 @@ header {
     &.brown-grad .slide-baner__grad {
       background: linear-gradient(
         0deg,
-        #be6330 52.03%,
-        rgba(190, 99, 48, 0) 100%
+        #be6330 39.69%,
+        rgba(190, 99, 48, 0) 98.33%
       );
     }
   }
@@ -1116,6 +1119,7 @@ header {
   }
   .slide-baner__content {
     gap: 10px;
+    justify-content: flex-end;
   }
   .main-screen__chapter {
     margin-top: 18px;
