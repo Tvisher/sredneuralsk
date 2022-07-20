@@ -946,6 +946,9 @@ html {
 }
 
 body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
   font-family: "Roboto";
   font-size: 16px;
   font-weight: 400;
@@ -964,6 +967,10 @@ body.hidden {
   -ms-touch-action: none;
 }
 
+footer {
+  margin-top: auto;
+}
+
 *,
 *:before,
 *:after {
@@ -979,11 +986,8 @@ h6 {
   margin: 0;
 }
 
-main {
-  padding-top: 30px;
-}
-
 main.index {
+  padding-top: 30px;
   background: #fbfbfb;
 }
 
@@ -1050,6 +1054,7 @@ button {
 
 h1 {
   font-size: 36px;
+  font-weight: 700;
 }
 
 h2 {
@@ -1064,6 +1069,53 @@ h3 {
 
 h4 {
   font-size: 14px;
+}
+
+.text-2 {
+  color: #393c41;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 125%;
+}
+
+.caps {
+  font-size: 12px;
+  font-weight: 700;
+  color: #114f74;
+}
+
+.breadcrumbs {
+  padding: 44px 0;
+}
+
+.breadcrumbs ul {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.breadcrumbs ul li {
+  margin-right: 10px;
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.breadcrumbs ul li:not(:last-child)::after {
+  margin-left: 10px;
+  display: block;
+  width: 6px;
+  height: 10px;
+  content: "";
+  background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='6' height='10' viewBox='0 0 6 10' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M1 1L5 5L1 9' stroke='%23A1A1A1'/%3e%3c/svg%3e ");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.breadcrumbs ul a {
+  color: #a1a1a1;
+  font-size: 12px;
 }
 
 .menu-btn {
@@ -1169,7 +1221,6 @@ header {
 }
 
 .header__bottom {
-  padding: 16px 0;
   background: #f2f3f7;
   box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.16), 0px 4px 12px rgba(0, 0, 0, 0.1);
 }
@@ -1178,12 +1229,32 @@ header {
   display: flex;
   align-items: center;
   justify-content: flex-start;
-  gap: 28px;
   flex-wrap: wrap;
 }
 
 .header__cats a {
+  padding: 16px 0;
   color: #114f74;
+}
+
+.header__cats a:nth-of-type(1) {
+  margin-right: 28px;
+}
+
+.header__cats a.active {
+  color: #007cc3;
+  font-weight: 700;
+  position: relative;
+}
+
+.header__cats a.active::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  background-color: #007cc3;
 }
 
 .main-screen__wrapper {
@@ -1947,6 +2018,15 @@ header {
 .mobile-menu .mobile-menu__bottom li a {
   padding: 26px 0;
   border-bottom: 1px solid #055a3c;
+}
+
+.org-info {
+  padding-bottom: 40px;
+}
+
+.org-info .caps,
+.org-info h1 {
+  margin-bottom: 12px;
 }
 
 @media (max-width: 1190px) {

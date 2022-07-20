@@ -40,6 +40,7 @@ const mainScreenSlider = new Swiper('.main-screen__slider', {
 
 const honorariesSlider = new Swiper('.honoraries__slider', {
     modules: [Pagination, Autoplay],
+    grabCursor: 1,
     slidesPerView: 1,
     loop: 1,
     autoplay: {
