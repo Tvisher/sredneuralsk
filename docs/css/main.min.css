@@ -2280,6 +2280,66 @@ header {
   box-orient: vertical;
 }
 
+.tab-content__item {
+  display: none;
+}
+
+.tab-content__item.active {
+  display: flex;
+}
+
+.services-tab {
+  margin-right: -15px;
+  margin-left: -15px;
+  margin-bottom: -30px;
+  flex-wrap: wrap;
+  align-items: stretch;
+}
+
+.services-tab__item {
+  width: 50%;
+  padding: 0 15px;
+  margin-bottom: 30px;
+}
+
+.services-tab__item .list-item__wrapper {
+  height: 100%;
+  border: 1px solid #dfe1e6;
+  box-shadow: 0px 2px 0px #dfe1e6;
+  padding: 24px;
+  padding-right: 16px;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  font-size: 18px;
+  line-height: 125%;
+  color: #000000;
+  font-weight: 500;
+  transition: color 0.25s ease-in-out, background-color 0.25s ease-in-out, box-shadow 0.25s ease-in-out, border-color 0.25s ease-in-out;
+}
+
+.services-tab__item .list-item__wrapper:hover {
+  background-color: #90c171;
+  box-shadow: 0px 2px 0px #90c171;
+  border-color: #90c171;
+  color: #fff;
+}
+
+.services-tab__item .list-item__wrapper:hover .ico path {
+  stroke: #fff;
+}
+
+.services-tab__item .ico {
+  width: 32px;
+  height: 32px;
+  flex-shrink: 0;
+  margin-left: 16px;
+}
+
+.services-tab__item .ico path {
+  transition: stroke 0.25s ease-in-out;
+}
+
 @media (max-width: 1190px) {
   .slide-baner__grad {
     padding: 32px;
