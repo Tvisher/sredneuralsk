@@ -2334,10 +2334,14 @@ header {
 }
 
 .services-tab__item .ico {
+  margin-top: -4px;
   width: 32px;
   height: 32px;
   flex-shrink: 0;
   margin-left: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .services-tab__item .ico path {
