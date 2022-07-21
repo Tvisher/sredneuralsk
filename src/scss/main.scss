@@ -1656,6 +1656,9 @@ header {
     }
   }
 }
+.documents-tab {
+  flex-direction: column;
+}
 
 .documents-tab__list {
   width: 100%;
@@ -1701,5 +1704,31 @@ header {
     flex-shrink: 0;
     font-size: 18px;
     color: #000;
+  }
+}
+
+.pagination {
+  padding-top: 30px;
+  display: flex;
+  .pages {
+    display: flex;
+    align-items: center;
+  }
+  .page {
+    color: #000000;
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    &.selected {
+      background: #f2f3f7;
+    }
+  }
+  .next-btn {
+    margin-left: 12px;
+    color: #000000;
   }
 }

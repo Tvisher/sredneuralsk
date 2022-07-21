@@ -2344,6 +2344,10 @@ header {
   transition: stroke 0.25s ease-in-out;
 }
 
+.documents-tab {
+  flex-direction: column;
+}
+
 .documents-tab__list {
   width: 100%;
 }
@@ -2395,6 +2399,36 @@ header {
   flex-shrink: 0;
   font-size: 18px;
   color: #000;
+}
+
+.pagination {
+  padding-top: 30px;
+  display: flex;
+}
+
+.pagination .pages {
+  display: flex;
+  align-items: center;
+}
+
+.pagination .page {
+  color: #000000;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.pagination .page.selected {
+  background: #f2f3f7;
+}
+
+.pagination .next-btn {
+  margin-left: 12px;
+  color: #000000;
 }
 
 @media (max-width: 1190px) {

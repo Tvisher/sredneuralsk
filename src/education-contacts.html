@@ -1,7 +1,9 @@
 @@include("./html/head.html")
 
 <body>
-    @@include("./html/header.html")
+    @@include("./html/header.html",{
+    "class":"active"
+    })
     <main>
         <section class="breadcrumbs">
             <div class="container">
@@ -376,6 +378,16 @@
                                 <div class="date">01.01.0001</div>
                             </li>
                         </ul>
+                        <div class="pagination">
+                            <div class="pages">
+                                <a href="#" class="page selected">1</a>
+                                <a href="#" class="page">2</a>
+                                <a href="#" class="page active">3</a>
+                                <span class="page">...</span>
+                                <a href="#" class="page">100</a>
+                            </div>
+                            <button class="next-btn">Следующая</button>
+                        </div>
                     </div>
                 </div>
             </div>
