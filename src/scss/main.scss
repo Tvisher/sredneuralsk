@@ -1656,3 +1656,50 @@ header {
     }
   }
 }
+
+.documents-tab__list {
+  width: 100%;
+  .list-item {
+    gap: 24px;
+    width: 100%;
+    padding: 24px 24px 24px 12px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    border-bottom: 1px solid #dfe1e6;
+  }
+  .list-item__link {
+    margin-right: auto;
+    display: flex;
+    align-items: center;
+    color: #007cc3;
+    font-size: 18px;
+    font-weight: 700;
+    .ico {
+      flex-shrink: 0;
+      width: 30px;
+      height: 30px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-right: 24px;
+      img,
+      svg {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center;
+      }
+    }
+  }
+  .size {
+    color: #a1a1a1;
+    font-size: 18px;
+    flex-shrink: 0;
+  }
+  .date {
+    flex-shrink: 0;
+    font-size: 18px;
+    color: #000;
+  }
+}
