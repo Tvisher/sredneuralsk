@@ -1604,6 +1604,9 @@ header {
   &.active {
     display: flex;
   }
+  &.contacts-tab.active {
+    display: block;
+  }
 }
 
 .services-tab {

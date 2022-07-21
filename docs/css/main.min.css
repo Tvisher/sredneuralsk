@@ -2288,6 +2288,10 @@ header {
   display: flex;
 }
 
+.tab-content__item.contacts-tab.active {
+  display: block;
+}
+
 .services-tab {
   margin-right: -15px;
   margin-left: -15px;

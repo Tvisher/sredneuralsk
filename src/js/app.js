@@ -115,6 +115,19 @@ document.body.addEventListener('click', (e) => {
     if (target.closest('.fullscreen-slider__desc')) {
         target.closest('.fullscreen-slider__desc').classList.add('open');
     }
+
+
+    if (target.hasAttribute('data-tab-control')) {
+        const activeTab = document.querySelector('[data-tab-content].active');
+        if (activeTab) { activeTab.classList.remove('active') }
+        const activeTabBtn = document.querySelector('[data-tab-control].active');
+        if (activeTabBtn) { activeTabBtn.classList.remove('active') }
+        const tabId = target.getAttribute('data-tab-control');
+        target.classList.add('active');
+        const tabContentWhatINeed = document.querySelector(`[data-tab-content="${tabId}"]`);
+        if (tabContentWhatINeed) { tabContentWhatINeed.classList.add('active') }
+
+    }
 });
 
 // Маска на номера телефона
