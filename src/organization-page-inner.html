@@ -1,106 +1,22 @@
-<!DOCTYPE html>
-<html lang="ru">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Среднеуральск</title>
-    <!-- preload fonts -->
-    <link rel="preload" href="./fonts/Roboto-Bold.woff2" as="font" type="font/woff2" crossorigin="anonymous">
-    <link rel="preload" href="./fonts/Roboto-Light.woff2" as="font" type="font/woff2" crossorigin="anonymous">
-    <link rel="preload" href="./fonts/Roboto-Medium.woff2" as="font" type="font/woff2" crossorigin="anonymous">
-    <link rel="preload" href="./fonts/Roboto-Regular.woff2" as="font" type="font/woff2" crossorigin="anonymous">
-    <!-- main css -->
-    <link rel="stylesheet" href="./css/main.min.css">
-    <!-- transition bagfix zeroscript -->
-    <script> </script>
-</head>
+@@include("./html/head.html")
 
 <body>
-    <header class="header">
-    <div class="header__top">
-        <div class="container">
-            <div class="header__wrapper">
-                <div class="menu-btn" data-burger-menu>
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </div>
-                <a href="#" class="header__logo">
-                    <div class="logo-container">
-                        <img src="img/logo.svg" alt="">
-                    </div>
-                    <span class="logo__name">Среднеуральск</span>
-                </a>
-                <nav class="header__nav">
-                    <ul>
-                        <li><a href="#">Администрация</a></li>
-                        <li><a href="#">Городская дума</a></li>
-                        <li><a href="#">Счетная палата</a></li>
-                    </ul>
-                </nav>
-                <div class="header__actions">
-                    <button class="search-btn">
-                        <svg width="21" height="22" viewBox="0 0 21 22" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M9.40982 17.8135C14.0544 17.8135 17.8196 14.0497 17.8196 9.40676C17.8196 4.76383 14.0544 1 9.40982 1C4.76521 1 1 4.76383 1 9.40676C1 14.0497 4.76521 17.8135 9.40982 17.8135Z" stroke="white" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" />
-                            <path d="M15.3145 15.9883L20.3259 20.9998" stroke="white" stroke-width="1.5" stroke-miterlimit="10" />
-                        </svg>
-                    </button>
-                    <button class="eye-btn">
-                        <svg width="20" height="11" viewBox="0 0 20 11" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path fill-rule="evenodd" clip-rule="evenodd" d="M9.86275 0C5.73256 0 2.09941 2.1281 0 5.3476C2.0993 8.5677 5.7328 10.6963 9.86345 10.6963C13.9936 10.6963 17.6268 8.56817 19.7262 5.34867C17.6269 2.12857 13.9934 0 9.86275 0ZM9.86227 9.0385C11.9005 9.0385 13.5527 7.38621 13.5527 5.34802C13.5527 3.30983 11.9005 1.65755 9.86227 1.65755C7.82407 1.65755 6.17179 3.30983 6.17179 5.34802C6.17179 7.38621 7.82407 9.0385 9.86227 9.0385Z" fill="white" />
-                        </svg>
-                    </button>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="header__bottom">
-        <div class="container">
-            <div class="header__cats">
-                <a href="#" class="cats__item  active">Муниципальные услуги</a>
-                <a href="#" class="cats__item">Нормативно-правовые акты</a>
-            </div>
-        </div>
-    </div>
-</header>
-<div class="mobile-menu" data-header-menu>
-    <div class="mobile-menu__content">
-        <ul class="mobile-menu__top">
-            <li>
-                <a href="#">Администрация</a>
-            </li>
-            <li>
-                <a href="#">Городская дума</a>
-            </li>
-            <li>
-                <a href="#">Счетная палата</a>
-            </li>
-        </ul>
-        <ul class="mobile-menu__bottom">
-            <li>
-                <a href="#">Муниципальные услуги</a>
-            </li>
-            <li>
-                <a href="#">Нормативно-правовые акты</a>
-            </li>
-        </ul>
-    </div>
-</div>
+    @@include("./html/header.html",{
+    "class":"active"
+    })
     <main>
         <section class="breadcrumbs">
             <div class="container">
                 <ul>
                     <li><a href="#">Главная</a></li>
-                    <li><a href="#">Управление образования городского округа Среднеуральск</a></li>
+                    <li><a href="#">Администрация городского округа Среднеуральск</a></li>
                 </ul>
             </div>
         </section>
         <section class="org-info">
             <div class="container">
-                <span class="caps">МУНИЦИПАЛЬНОЕ КАЗЁННОЕ УЧРЕЖДЕНИЕ</span>
-                <h1>Управление образования городского округа Среднеуральск</h1>
+                <span class="caps">орган местного самоуправления</span>
+                <h1>Администрация городского округа Среднеуральск</h1>
                 <p class="text-2">
                     Вопросы: итоговая аттестация обучающихся, учёт и расследование несчастных случаев, организация перевозки специального назначения («Школьный автобус», противодействие коррупции)
                 </p>
@@ -118,178 +34,173 @@
                                 <span class="item__text">г.Среднеуральск, ул.Уральская, 26</span>
                             </div>
                             <div class="contancts__item">
-                                <span class="item__nameplate">Электронная почта</span>
-                                <a href="#" class="item__link">obr.sredneuralsk@mail.ru</a>
-                            </div>
-                            <div class="contancts__item">
-                                <span class="item__nameplate">Сайт</span>
-                                <a href="#" class="item__link">www.yo-sredneuralsk.ru</a>
+                                <span class="item__nameplate">Время работы</span>
+                                <span class="item__text">Пн–Чт 8:30–17:30 / Пт 8:30–16:30 </span>
                             </div>
                         </div>
                         <div class="contacts-tab__personal personal">
-                            <div class="personal__item">
-                                <div class="personal__item-content">
-                                    <span class="caps">Начальник</span>
-                                    <div class="text-1-b">Киселёв Владимир Николаевич</div>
-                                    <div class="personal__item-data__wrap">
-                                        <div class="personal__item-data">
-                                            <span>Кабинет</span>
-                                            <span>№ 17</span>
-                                        </div>
-                                        <div class="personal__item-data">
-                                            <span>Телефон</span>
-                                            <span>7-39-04</span>
+                            <div class="personal__item inner">
+                                <a href="#" class="personal__item-content">
+                                    <div class="personal__item-wrapper">
+                                        <div class="text-1-b">Приемная</div>
+                                        <span>Подать жалобу, оставить сообщение, записаться на личный прием к главе городского округа Среднеуральс</span>
+                                        <div class="personal__item-data__wrap">
+                                            <div class="personal__item-data ">
+                                                <span>Телефон</span>
+                                                <span>7-39-04</span>
+                                            </div>
                                         </div>
                                     </div>
-                                </div>
+                                    <div class="ico">
+                                        <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M1 7C5.68629 7 8.31371 7 13 7M13 7L7.24 13M13 7L7.24 1" stroke="#007CC3" stroke-linecap="round" />
+                                        </svg>
+                                    </div>
+                                </a>
                             </div>
-                            <div class="personal__item">
-                                <div class="personal__item-content">
-                                    <span class="caps">Секретарь руководителя</span>
-                                    <div class="text-1-b">Бахарева Наталья Анатольевна</div>
-                                    <div class="personal__item-data__wrap">
-                                        <div class="personal__item-data">
-                                            <span>Кабинет</span>
-                                            <span>№ 17</span>
-                                        </div>
-                                        <div class="personal__item-data">
-                                            <span>Телефон</span>
-                                            <span>7-39-04</span>
+                            <div class="personal__item inner">
+                                <a href="#" class="personal__item-content">
+                                    <div class="personal__item-wrapper">
+                                        <div class="text-1-b">Правовой отдел</div>
+                                        <span>Правовое обеспечение деятельности и защита интересов администрации в судах, а также обеспечения юридической помощи гражданам и юридическим лицам городского округа Среднеуральск</span>
+                                        <div class="personal__item-data__wrap">
+                                            <div class="personal__item-data fdc">
+                                                <span>Приемные дни</span>
+                                                <span>понедельник, вторник, среда, четверг, пятница, суббота, воскресенье</span>
+                                            </div>
+                                            <div class="personal__item-data ">
+                                                <span>Телефон</span>
+                                                <span>7-39-04</span>
+                                            </div>
                                         </div>
                                     </div>
-                                </div>
+                                    <div class="ico">
+                                        <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M1 7C5.68629 7 8.31371 7 13 7M13 7L7.24 13M13 7L7.24 1" stroke="#007CC3" stroke-linecap="round" />
+                                        </svg>
+                                    </div>
+                                </a>
                             </div>
-                            <div class="personal__item">
-                                <div class="personal__item-content">
-                                    <span class="caps">Заместитель начальника</span>
-                                    <div class="text-1-b">Янин Геннадий Николаевич</div>
-                                    <p class="personal__item-text">Вопросы: итоговая аттестация обучающихся, учёт и расследование несчастных случаев, организация перевозки специального назначения («Школьный автобус», противодействие коррупции)</p>
-                                    <div class="personal__item-data__wrap">
-                                        <div class="personal__item-data">
-                                            <span>Кабинет</span>
-                                            <span>№ 20</span>
-                                        </div>
-                                        <div class="personal__item-data">
-                                            <span>Телефон</span>
-                                            <span>7-39-04</span>
+                            <div class="personal__item inner">
+                                <a href="#" class="personal__item-content">
+                                    <div class="personal__item-wrapper">
+                                        <div class="text-1-b">Общий отдел</div>
+                                        <span>Обеспечение взаимодействия структурных подразделений администрации, органов местного самоуправления, предприятий, учреждений, организаций по организационным вопросам</span>
+                                        <div class="personal__item-data__wrap">
+                                            <div class="personal__item-data fdc">
+                                                <span>Приемные дни</span>
+                                                <span>понедельник, вторник, среда, четверг, пятница, суббота, воскресенье</span>
+                                            </div>
+                                            <div class="personal__item-data ">
+                                                <span>Телефон</span>
+                                                <span7-39-04></span>
+                                            </div>
                                         </div>
                                     </div>
-                                </div>
+                                    <div class="ico">
+                                        <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M1 7C5.68629 7 8.31371 7 13 7M13 7L7.24 13M13 7L7.24 1" stroke="#007CC3" stroke-linecap="round" />
+                                        </svg>
+                                    </div>
+                                </a>
                             </div>
-                            <div class="personal__item">
-                                <div class="personal__item-content">
-                                    <span class="caps">Ведущий специалист</span>
-                                    <div class="text-1-b">Свищёва Галина Владимировна</div>
-                                    <p class="personal__item-text">Награждение, независимая оценка качества, образование для детей с ОВЗ, персонифицированное финансирование дополнительного образования</p>
-                                    <div class="personal__item-data__wrap">
-                                        <div class="personal__item-data">
-                                            <span>Кабинет</span>
-                                            <span>№ 20</span>
-                                        </div>
-                                        <div class="personal__item-data">
-                                            <span>Телефон</span>
-                                            <span>7-39-04</span>
+                            <div class="personal__item inner">
+                                <a href="#" class="personal__item-content">
+                                    <div class="personal__item-wrapper">
+                                        <div class="text-1-b">Финансовое управление</div>
+                                        <span>Разработка и реализация единой государственной финансовой, бюджетной и налоговой политики городского округа Среднеуральск</span>
+                                        <div class="personal__item-data__wrap">
+                                            <div class="personal__item-data fdc">
+                                                <span>Приемные дни</span>
+                                                <span>понедельник, вторник, среда, четверг, пятница, суббота, воскресенье</span>
+                                            </div>
+                                            <div class="personal__item-data ">
+                                                <span>Телефон</span>
+                                                <span7-39-04></span>
+                                            </div>
                                         </div>
                                     </div>
-                                </div>
+                                    <div class="ico">
+                                        <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M1 7C5.68629 7 8.31371 7 13 7M13 7L7.24 13M13 7L7.24 1" stroke="#007CC3" stroke-linecap="round" />
+                                        </svg>
+                                    </div>
+                                </a>
                             </div>
-
-                            <div class="personal__item">
-                                <div class="personal__item-content">
-                                    <span class="caps">Ведущий специалист</span>
-                                    <div class="text-1-b">Будакова Елена Владимировна</div>
-                                    <p class="personal__item-text">Аттестация педагогических и руководящих работников, повышение квалификации, Всероссийские проверочные работы, Всероссийская олимпиада школьников, организация питания</p>
-                                    <div class="personal__item-data__wrap">
-                                        <div class="personal__item-data">
-                                            <span>Кабинет</span>
-                                            <span>№ 20</span>
-                                        </div>
-                                        <div class="personal__item-data">
-                                            <span>Телефон</span>
-                                            <span>7-39-04</span>
+                            <div class="personal__item inner">
+                                <a href="#" class="personal__item-content">
+                                    <div class="personal__item-wrapper">
+                                        <div class="text-1-b">Отдел архитектуры</div>
+                                        <span>Контроль за соблюдением градостроительной дисциплины на территории района, за обеспеченностью района и населенных пунктов необходимой градостроительной и инженерно-изыскательной документацией, своевременным ее обновлением и корректировкой</span>
+                                        <div class="personal__item-data__wrap">
+                                            <div class="personal__item-data fdc">
+                                                <span>Приемные дни</span>
+                                                <span>понедельник, вторник, среда, четверг, пятница, суббота, воскресенье</span>
+                                            </div>
+                                            <div class="personal__item-data ">
+                                                <span>Телефон</span>
+                                                <span7-39-04></span>
+                                            </div>
                                         </div>
                                     </div>
-                                </div>
+                                    <div class="ico">
+                                        <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M1 7C5.68629 7 8.31371 7 13 7M13 7L7.24 13M13 7L7.24 1" stroke="#007CC3" stroke-linecap="round" />
+                                        </svg>
+                                    </div>
+                                </a>
                             </div>
-
-                            <div class="personal__item">
-                                <div class="personal__item-content">
-                                    <span class="caps">Ведущий специалист</span>
-                                    <div class="text-1-b">Шмакова Марина Викторовна</div>
-                                    <p class="personal__item-text">Комплектование дошкольных учреждений, статистические отчёты</p>
-                                    <div class="personal__item-data__wrap">
-                                        <div class="personal__item-data">
-                                            <span>Кабинет</span>
-                                            <span>№ 20</span>
-                                        </div>
-                                        <div class="personal__item-data">
-                                            <span>Телефон</span>
-                                            <span>7-39-04</span>
+                            <div class="personal__item inner">
+                                <a href="#" class="personal__item-content">
+                                    <div class="personal__item-wrapper">
+                                        <div class="text-1-b">Территориальная избирательная комиссия</div>
+                                        <span>Организация выборов в городском округе Среднеуральск в муниципальные и федеральные органы власти</span>
+                                        <div class="personal__item-data__wrap">
+                                            <div class="personal__item-data ">
+                                                <span>Адрес</span>
+                                                <span>г. Среднеуральск, ул. Уральская, д. 26</span>
+                                            </div>
+                                            <div class="personal__item-data ">
+                                                <span>Телефон</span>
+                                                <span>7-39-04</span>
+                                            </div>
                                         </div>
                                     </div>
-                                </div>
+                                    <div class="ico">
+                                        <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M1 7C5.68629 7 8.31371 7 13 7M13 7L7.24 13M13 7L7.24 1" stroke="#007CC3" stroke-linecap="round" />
+                                        </svg>
+                                    </div>
+                                </a>
                             </div>
-
-                            <div class="personal__item">
-                                <div class="personal__item-content">
-                                    <span class="caps">Ведущий специалист</span>
-                                    <div class="text-1-b">Лебедь Ольга Борисовна</div>
-                                    <p class="personal__item-text">Профилактическая и воспитательная работа</p>
-                                    <div class="personal__item-data__wrap">
-                                        <div class="personal__item-data">
-                                            <span>Кабинет</span>
-                                            <span>№ 20</span>
-                                        </div>
-                                        <div class="personal__item-data">
-                                            <span>Телефон</span>
-                                            <span>7-39-04</span>
+                            <div class="personal__item inner">
+                                <a href="#" class="personal__item-content">
+                                    <div class="personal__item-wrapper">
+                                        <div class="text-1-b">Организационный отдел</div>
+                                        <span>Документооборот, кадры </span>
+                                        <div class="personal__item-data__wrap">
+                                            <div class="personal__item-data ">
+                                                <span>Телефон</span>
+                                                <span>7-39-04</span>
+                                            </div>
                                         </div>
                                     </div>
-                                </div>
-                            </div>
-
-                            <div class="personal__item">
-                                <div class="personal__item-content">
-                                    <span class="caps">Методист</span>
-                                    <p class="personal__item-text">Методическая работа в ДОУ, профилактическая работа</p>
-                                    <div class="personal__item-data__wrap">
-                                        <div class="personal__item-data">
-                                            <span>Кабинет</span>
-                                            <span>№ 20</span>
-                                        </div>
-                                        <div class="personal__item-data">
-                                            <span>Телефон</span>
-                                            <span>7-39-04</span>
-                                        </div>
+                                    <div class="ico">
+                                        <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M1 7C5.68629 7 8.31371 7 13 7M13 7L7.24 13M13 7L7.24 1" stroke="#007CC3" stroke-linecap="round" />
+                                        </svg>
                                     </div>
-                                </div>
+                                </a>
                             </div>
-
-                            <div class="personal__item">
-                                <div class="personal__item-content">
-                                    <span class="caps">Главный бухгалтер</span>
-                                    <div class="text-1-b">Русинова Елена Станиславовна</div>
-                                    <div class="personal__item-data__wrap">
-                                        <div class="personal__item-data">
-                                            <span>Кабинет</span>
-                                            <span>№ 20</span>
-                                        </div>
-                                        <div class="personal__item-data">
-                                            <span>Телефон</span>
-                                            <span>7-39-04</span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
                         </div>
                     </div>
                     <ul class="tab-content__item services-tab" data-tab-content="2">
                         <li class="services-tab__item list-item">
                             <a href="#" class="list-item__wrapper">
-                                <span>
-                                    Прием заявлений, постановка на учет и зачисление детей в образовательные учреждения, реализующие основную образовательную программу дошкольного образования (детские сады)
-                                </span>
+                                <div>
+                                    <span class="text-1-b">Услуги образования</span>
+                                    <p>В том числе дополнительного — музыкального, художественного и т.д.</p>
+                                </div>
                                 <div class="ico">
                                     <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
                                         <path d="M1 7C5.68629 7 8.31371 7 13 7M13 7L7.24 13M13 7L7.24 1" stroke="#007CC3" stroke-linecap="round" />
@@ -299,9 +210,9 @@
                         </li>
                         <li class="services-tab__item list-item">
                             <a href="#" class="list-item__wrapper">
-                                <span>
-                                    Предоставление путевок в организации отдыха детей и их оздоровления в учебное время (за исключением детей-сирот и детей, оставшихся без попечения родителей, детей, находящихся в трудной жизненной ситуации)
-                                </span>
+                                <div>
+                                    <span class="text-1-b">Услуги здравоохранения</span>
+                                </div>
                                 <div class="ico">
                                     <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
                                         <path d="M1 7C5.68629 7 8.31371 7 13 7M13 7L7.24 13M13 7L7.24 1" stroke="#007CC3" stroke-linecap="round" />
@@ -311,9 +222,9 @@
                         </li>
                         <li class="services-tab__item list-item">
                             <a href="#" class="list-item__wrapper">
-                                <span>
-                                    Предоставление информации об образовательных программах и учебных планах, рабочих программах учебных курсов, предметов, дисциплин (модулей), годовых календарных учебных графиках
-                                </span>
+                                <div>
+                                    <span class="text-1-b">Услуги по обеспечению досуга</span>
+                                </div>
                                 <div class="ico">
                                     <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
                                         <path d="M1 7C5.68629 7 8.31371 7 13 7M13 7L7.24 13M13 7L7.24 1" stroke="#007CC3" stroke-linecap="round" />
@@ -323,9 +234,10 @@
                         </li>
                         <li class="services-tab__item list-item">
                             <a href="#" class="list-item__wrapper">
-                                <span>
-                                    Предоставление информации о результатах сданных экзаменов, тестирования и иных вступительных испытаний, а также о зачислении в образовательное учреждение
-                                </span>
+                                <div>
+                                    <span class="text-1-b">Услуги по обеспечению среды обитания</span>
+                                    <p>Благоустройство, озеленение, градостроение, содержание дорог</p>
+                                </div>
                                 <div class="ico">
                                     <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
                                         <path d="M1 7C5.68629 7 8.31371 7 13 7M13 7L7.24 13M13 7L7.24 1" stroke="#007CC3" stroke-linecap="round" />
@@ -335,9 +247,9 @@
                         </li>
                         <li class="services-tab__item list-item">
                             <a href="#" class="list-item__wrapper">
-                                <span>
-                                    Предоставление информации о текущей успеваемости учащегося, ведение электронного дневника и электронного журнала успеваемости
-                                </span>
+                                <div>
+                                    <span class="text-1-b">Жилищные и коммунальные услуги</span>
+                                </div>
                                 <div class="ico">
                                     <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
                                         <path d="M1 7C5.68629 7 8.31371 7 13 7M13 7L7.24 13M13 7L7.24 1" stroke="#007CC3" stroke-linecap="round" />
@@ -347,9 +259,9 @@
                         </li>
                         <li class="services-tab__item list-item">
                             <a href="#" class="list-item__wrapper">
-                                <span>
-                                    Зачисление в общеобразовательное учреждение
-                                </span>
+                                <div>
+                                    <span class="text-1-b">Услуги транспорта и связи</span>
+                                </div>
                                 <div class="ico">
                                     <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
                                         <path d="M1 7C5.68629 7 8.31371 7 13 7M13 7L7.24 13M13 7L7.24 1" stroke="#007CC3" stroke-linecap="round" />
@@ -359,9 +271,9 @@
                         </li>
                         <li class="services-tab__item list-item">
                             <a href="#" class="list-item__wrapper">
-                                <span>
-                                    Предоставление информации об организации общедоступного и бесплатного дошкольного, начального общего, основного общего, среднего общего образования, а также дополнительного образования в общеобразовательных учреждениях, расположенных на территории городского округа Среднеуральск
-                                </span>
+                                <div>
+                                    <span class="text-1-b">Услуги торговли, общественного питания, бытового обслуживания</span>
+                                </div>
                                 <div class="ico">
                                     <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
                                         <path d="M1 7C5.68629 7 8.31371 7 13 7M13 7L7.24 13M13 7L7.24 1" stroke="#007CC3" stroke-linecap="round" />
@@ -371,21 +283,9 @@
                         </li>
                         <li class="services-tab__item list-item">
                             <a href="#" class="list-item__wrapper">
-                                <span>
-                                    Предоставление путевок детям в организации отдыха в дневных и загородных лагерях
-                                </span>
-                                <div class="ico">
-                                    <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <path d="M1 7C5.68629 7 8.31371 7 13 7M13 7L7.24 13M13 7L7.24 1" stroke="#007CC3" stroke-linecap="round" />
-                                    </svg>
+                                <div>
+                                    <span class="text-1-b">Услуги поддержки деловой активности</span>
                                 </div>
-                            </a>
-                        </li>
-                        <li class="services-tab__item list-item">
-                            <a href="#" class="list-item__wrapper">
-                                <span>
-                                    Предоставление информации об организации дополнительного образования
-                                </span>
                                 <div class="ico">
                                     <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
                                         <path d="M1 7C5.68629 7 8.31371 7 13 7M13 7L7.24 13M13 7L7.24 1" stroke="#007CC3" stroke-linecap="round" />
@@ -475,104 +375,116 @@
                     </div>
                     <div class="tab-content__item sub-org" data-tab-content="4">
                         <ul class="sub-org__list">
-                            <li class="sub-org__item list-item">
+
+                            <li class="sub-org__item list-item inner">
                                 <a href="#" class="list-item__wrapper">
-                                    <div class="list-item__image">
-                                        <img src="img/photo.jpg" alt="">
-                                    </div>
                                     <div class="list-item__content">
-                                        <div class="list-item__name text-1-b">Школа № 31 с углубленным изучением отдельных предметов</div>
-                                        <div class="list-item__site">
-                                            <span>Сайт</span>
-                                            <span class="text-blue">srschool31.ru</span>
-                                        </div>
+                                        <div class="text-1-b">ЕДДС</div>
+                                        <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M1 7C5.68629 7 8.31371 7 13 7M13 7L7.24 13M13 7L7.24 1" stroke="#007CC3" stroke-linecap="round" />
+                                        </svg>
                                     </div>
                                 </a>
                             </li>
 
-                            <li class="sub-org__item list-item">
+                            <li class="sub-org__item list-item inner">
                                 <a href="#" class="list-item__wrapper">
-                                    <div class="list-item__image">
-                                        <img src="img/photo-1.jpg" alt="">
-                                    </div>
                                     <div class="list-item__content">
-                                        <div class="list-item__name text-1-b">Школа № 5 с углубленным изучением отдельных предметов</div>
-                                        <div class="list-item__site">
-                                            <span>Сайт</span>
-                                            <span class="text-blue">парта5.рф</span>
-                                        </div>
+                                        <div class="text-1-b">МКУ «УЖКХ»</div>
+                                        <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M1 7C5.68629 7 8.31371 7 13 7M13 7L7.24 13M13 7L7.24 1" stroke="#007CC3" stroke-linecap="round" />
+                                        </svg>
                                     </div>
                                 </a>
                             </li>
 
-                            <li class="sub-org__item list-item">
+
+                            <li class="sub-org__item list-item inner">
                                 <a href="#" class="list-item__wrapper">
-                                    <div class="list-item__image">
-                                        <img src="img/photo-2.jpg" alt="">
-                                    </div>
                                     <div class="list-item__content">
-                                        <div class="list-item__name text-1-b">Школа № 6 с углубленным изучением отдельных предметов</div>
-                                        <div class="list-item__site">
-                                            <span>Сайт</span>
-                                            <span class="text-blue">avesol6.moy.su</span>
-                                        </div>
+                                        <div class="text-1-b">МБУ «Архитектура»</div>
+                                        <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M1 7C5.68629 7 8.31371 7 13 7M13 7L7.24 13M13 7L7.24 1" stroke="#007CC3" stroke-linecap="round" />
+                                        </svg>
                                     </div>
                                 </a>
                             </li>
 
-                            <li class="sub-org__item list-item">
+                            <li class="sub-org__item list-item inner">
                                 <a href="#" class="list-item__wrapper">
-                                    <div class="list-item__image">
-                                        <img src="img/photo-3.jpg" alt="">
-                                    </div>
                                     <div class="list-item__content">
-                                        <div class="list-item__name text-1-b">Школа № 215 с углубленным изучением отдельных предметов</div>
-                                        <div class="list-item__site">
-                                            <span>Сайт</span>
-                                            <span class="text-blue">site-2253.siteedu.ru</span>
-                                        </div>
+                                        <div class="text-1-b">Управление культуры и молодежной политики </div>
+                                        <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M1 7C5.68629 7 8.31371 7 13 7M13 7L7.24 13M13 7L7.24 1" stroke="#007CC3" stroke-linecap="round" />
+                                        </svg>
                                     </div>
                                 </a>
                             </li>
-                            <li class="sub-org__item list-item">
+
+
+                            <li class="sub-org__item list-item inner">
                                 <a href="#" class="list-item__wrapper">
-                                    <div class="list-item__image">
-                                        <img src="img/photo-4.jpg" alt="">
-                                    </div>
                                     <div class="list-item__content">
-                                        <div class="list-item__name text-1-b">Детский сад № 15 с углубленным изучением отдельных предметов</div>
-                                        <div class="list-item__site">
-                                            <span>Сайт</span>
-                                            <span class="text-blue">teremok-ds15.ru</span>
-                                        </div>
+                                        <div class="text-1-b">Отдел физической культуры, спорта и туризма</div>
+                                        <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M1 7C5.68629 7 8.31371 7 13 7M13 7L7.24 13M13 7L7.24 1" stroke="#007CC3" stroke-linecap="round" />
+                                        </svg>
                                     </div>
                                 </a>
                             </li>
-                            <li class="sub-org__item list-item">
+
+                            <li class="sub-org__item list-item inner">
                                 <a href="#" class="list-item__wrapper">
-                                    <div class="list-item__image">
-                                        <img src="img/photo-5.jpg" alt="">
-                                    </div>
                                     <div class="list-item__content">
-                                        <div class="list-item__name text-1-b">Детский сад № 18 с углубленным изучением отдельных предметов</div>
-                                        <div class="list-item__site">
-                                            <span>Сайт</span>
-                                            <span class="text-blue">list-org.com</span>
-                                        </div>
+                                        <div class="text-1-b">Архив городского округа Среднеуральск</div>
+                                        <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M1 7C5.68629 7 8.31371 7 13 7M13 7L7.24 13M13 7L7.24 1" stroke="#007CC3" stroke-linecap="round" />
+                                        </svg>
                                     </div>
                                 </a>
                             </li>
-                            <li class="sub-org__item list-item">
+
+
+                            <li class="sub-org__item list-item inner">
                                 <a href="#" class="list-item__wrapper">
-                                    <div class="list-item__image">
-                                        <img src="img/photo-6.jpg" alt="">
-                                    </div>
                                     <div class="list-item__content">
-                                        <div class="list-item__name text-1-b">Дом детского творчества с углубленным изучением отдельных предметов</div>
-                                        <div class="list-item__site">
-                                            <span>Сайт</span>
-                                            <span class="text-blue">ddt96.ru</span>
-                                        </div>
+                                        <div class="text-1-b">МКУ «УКС»</div>
+                                        <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M1 7C5.68629 7 8.31371 7 13 7M13 7L7.24 13M13 7L7.24 1" stroke="#007CC3" stroke-linecap="round" />
+                                        </svg>
+                                    </div>
+                                </a>
+                            </li>
+
+                            <li class="sub-org__item list-item inner">
+                                <a href="#" class="list-item__wrapper">
+                                    <div class="list-item__content">
+                                        <div class="text-1-b">МКУ «УПСО»</div>
+                                        <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M1 7C5.68629 7 8.31371 7 13 7M13 7L7.24 13M13 7L7.24 1" stroke="#007CC3" stroke-linecap="round" />
+                                        </svg>
+                                    </div>
+                                </a>
+                            </li>
+
+                            <li class="sub-org__item list-item inner">
+                                <a href="#" class="list-item__wrapper">
+                                    <div class="list-item__content">
+                                        <div class="text-1-b">МКУ «АХиУ»</div>
+                                        <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M1 7C5.68629 7 8.31371 7 13 7M13 7L7.24 13M13 7L7.24 1" stroke="#007CC3" stroke-linecap="round" />
+                                        </svg>
+                                    </div>
+                                </a>
+                            </li>
+
+                            <li class="sub-org__item list-item inner">
+                                <a href="#" class="list-item__wrapper">
+                                    <div class="list-item__content">
+                                        <div class="text-1-b">МКУ «Управление образования»</div>
+                                        <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M1 7C5.68629 7 8.31371 7 13 7M13 7L7.24 13M13 7L7.24 1" stroke="#007CC3" stroke-linecap="round" />
+                                        </svg>
                                     </div>
                                 </a>
                             </li>
@@ -628,7 +540,7 @@
                     <li class="list-item">
                         <a href="#" class="list-item__wrapper">
                             <div class="list-item__image">
-                                <img src="img/news-pic01.jpg" alt="">
+                                <img src="@img/news-pic01.jpg" alt="">
                             </div>
                             <span class="list-item__date">20.03.2022</span>
                             <h3>В рамках работы антикризисного штаба посетил технопарк</h3>
@@ -637,7 +549,7 @@
                     <li class="list-item">
                         <a href="#" class="list-item__wrapper">
                             <div class="list-item__image">
-                                <img src="img/news-pic02.jpg" alt="">
+                                <img src="@img/news-pic02.jpg" alt="">
                             </div>
                             <span class="list-item__date">20.03.2022</span>
                             <h3>В рамках работы антикризисного штаба посетил технопарк</h3>
@@ -646,7 +558,7 @@
                     <li class="list-item">
                         <a href="#" class="list-item__wrapper">
                             <div class="list-item__image">
-                                <img src="img/news-pic03.jpg" alt="">
+                                <img src="@img/news-pic03.jpg" alt="">
                             </div>
                             <span class="list-item__date">20.03.2022</span>
                             <h3>В рамках работы антикризисного штаба посетил технопарк</h3>
@@ -655,7 +567,7 @@
                     <li class="list-item">
                         <a href="#" class="list-item__wrapper">
                             <div class="list-item__image">
-                                <img src="img/news-pic04.jpg" alt="">
+                                <img src="@img/news-pic04.jpg" alt="">
                             </div>
                             <span class="list-item__date">20.03.2022</span>
                             <h3>В рамках работы антикризисного штаба посетил технопарк В рамках работы антикризисного штаба посетил технопарк</h3>
@@ -665,15 +577,4 @@
             </div>
         </section>
     </main>
-    <footer class="footer">
-    <div class="container">
-        <div class="footer__wrapper">
-            <span>© 2022 Официальный сайт Городского округа Среднеуральск</span>
-            <a href="#">Карта сайта</a>
-        </div>
-    </div>
-</footer>
-</body>
-<script src="./js/app.min.js"></script>
-
-</html>
+    @@include("./html/footer.html")
