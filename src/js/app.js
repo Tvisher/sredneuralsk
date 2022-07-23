@@ -10,6 +10,8 @@ import Swiper, {
 } from 'swiper';
 
 import IMask from 'imask';
+import AirDatepicker from 'air-datepicker';
+window.AirDatepicker = AirDatepicker;
 
 // Проверка поддержки webP
 baseFunction.testWebP();
@@ -17,7 +19,6 @@ baseFunction.testWebP();
 window.addEventListener('load', (e) => {
     document.body.style.opacity = 1;
 });
-
 
 
 const mainScreenSlider = new Swiper('.main-screen__slider', {
@@ -136,6 +137,5 @@ document.querySelectorAll('input[type="tel"]').forEach(input => {
         mask: '+{7}(000) 000-00-00'
     });
 });
-
 
 

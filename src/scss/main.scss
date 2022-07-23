@@ -1610,19 +1610,21 @@ header {
 .tab-content__item {
   display: none;
   &.active {
-    display: flex;
-  }
-  &.contacts-tab.active {
     display: block;
   }
+  // &.contacts-tab.active {
+  //   display: block;
+  // }
 }
 
 .services-tab {
+  display: flex;
   margin-right: -15px;
   margin-left: -15px;
   margin-bottom: -30px;
   flex-wrap: wrap;
   align-items: stretch;
+  width: 100%;
 }
 .services-tab__item {
   width: 50%;
@@ -2004,4 +2006,114 @@ header {
       stroke: #fff;
     }
   }
+}
+
+.npa-docs-tab__list {
+  .list-item {
+    padding: 24px 0px 24px 12px;
+    border-bottom: 1px solid #dfe1e6;
+  }
+  .list-item__head {
+    font-size: 18px;
+    display: flex;
+    align-items: flex-start;
+    width: 100%;
+    margin-bottom: 12px;
+  }
+  .ico {
+    flex-shrink: 0;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    margin-right: 20px;
+    svg,
+    img {
+      object-fit: contain;
+      object-position: center;
+    }
+  }
+  .list-item__link {
+    color: #007cc3;
+    margin-right: 30px;
+    font-weight: 700;
+    font-size: 18px;
+    max-width: 700px;
+  }
+  .list-item__edition {
+    color: #a1a1a1;
+    // margin-right: 30px;
+  }
+  .list-item__size {
+    color: #a1a1a1;
+    // margin-right: 30px;
+  }
+  .list-item__info {
+    display: flex;
+    align-items: center;
+    flex-shrink: 0;
+    margin-left: auto;
+    width: 341px;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 10px;
+  }
+  .list-item__body {
+    padding-left: 50px;
+    max-width: 95%;
+  }
+}
+
+.org-info__block {
+  margin-top: 26px;
+  padding: 30px;
+  background: #f2f3f7;
+  .info-card__key {
+    width: 187px;
+    margin-right: 10px;
+    color: #a1a1a1;
+    flex-shrink: 0;
+  }
+  .info-card__row {
+    a {
+      color: #007cc3;
+    }
+    font-size: 14px;
+    line-height: 200%;
+    margin-bottom: 5px;
+    display: flex;
+    justify-content: flex-start;
+  }
+}
+
+.npa-docs-tab__settings {
+  margin-bottom: 36px;
+  display: flex;
+  justify-content: flex-start;
+  .date-field {
+    width: 268px;
+    padding: 12px 0;
+    font-size: 18px;
+    line-height: 125%;
+    border-bottom: 1px solid #a1a1a1;
+    position: relative;
+    &::after {
+      position: absolute;
+      right: 0;
+      top: 50%;
+      transform: translateY(-50%);
+      content: "";
+      width: 23px;
+      height: 23px;
+      background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='23' height='23' viewBox='0 0 23 23' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3crect x='5' y='9' width='13' height='9' stroke='%23393C41' stroke-width='2' stroke-miterlimit='10'/%3e%3cpath d='M4 7L19 7' stroke='%23393C41' stroke-width='2' stroke-miterlimit='10'/%3e%3cpath d='M7 3L7 7' stroke='%23393C41' stroke-width='2' stroke-miterlimit='10'/%3e%3cpath d='M16 3L16 7' stroke='%23393C41' stroke-width='2' stroke-miterlimit='10'/%3e%3c/svg%3e ");
+      background-repeat: no-repeat;
+      background-size: contain;
+      background-position: center;
+    }
+  }
+}
+.air-datepicker-body--day-name {
+  color: $brand_blue;
+  font-weight: 500;
 }
