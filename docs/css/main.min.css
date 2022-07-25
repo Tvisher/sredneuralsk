@@ -5107,8 +5107,9 @@ header {
     font-size: 14px;
   }
 
-  .npa-docs-tab__settings {
-    margin-bottom: 0;
+  .npa-docs-tab__settings,
+  .archive-tab__btns {
+    margin-bottom: 10px;
   }
 
   .contacts-tab__personal .personal__item {
