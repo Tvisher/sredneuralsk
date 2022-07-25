@@ -8,18 +8,13 @@ import Swiper, {
     EffectFade,
     EffectCreative
 } from 'swiper';
-
 import IMask from 'imask';
 import AirDatepicker from 'air-datepicker';
-window.AirDatepicker = AirDatepicker;
 
+
+window.AirDatepicker = AirDatepicker;
 // Проверка поддержки webP
 baseFunction.testWebP();
-
-window.addEventListener('load', (e) => {
-    document.body.style.opacity = 1;
-});
-
 
 const mainScreenSlider = new Swiper('.main-screen__slider', {
     modules: [EffectFade, Pagination, Autoplay],
@@ -104,10 +99,9 @@ const afficheSlider = new Swiper('.affiche__slider', {
     }
 });
 
-
-//логика работы меню бургер
 document.body.addEventListener('click', (e) => {
     const target = e.target;
+    //логика работы меню бургер
     if (target.closest('[data-burger-menu]')) {
         target.closest('[data-burger-menu]').classList.toggle('active');
         document.querySelector('[data-header-menu]').classList.toggle('active');
@@ -117,7 +111,7 @@ document.body.addEventListener('click', (e) => {
         target.closest('.fullscreen-slider__desc').classList.add('open');
     }
 
-
+    //логика работы табов
     if (target.hasAttribute('data-tab-control')) {
         const activeTab = document.querySelector('[data-tab-content].active');
         if (activeTab) { activeTab.classList.remove('active') }

@@ -1,4 +1,3 @@
-// import "./air-datepicker.js";
-// import "./jquery.maskedinput.min.js";
-// import "./jquery.overlayScrollbars.min.js";
+import "./jquery.min.js";
+import "./select2.min.js";
 

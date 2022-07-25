@@ -31,6 +31,18 @@
                                 <label class="date-field">
                                     <input type="text" id="date-input" placeholder="Выбрать период">
                                 </label>
+                                <div class="decrees__wrapper">
+                                    <select name="decrees" id="decrees">
+                                        <option value="Все постановления">Все постановления</option>
+                                        <option value="Постановления главы ">Постановления главы</option>
+                                        <option value="Постановления администрации">Постановления администрации</option>
+                                        <option value="Распоряжения главы">Распоряжения главы</option>
+                                        <option value="Распоряжения администрации">Распоряжения администрации</option>
+                                        <option value="Решения думы">Решения думы</option>
+                                    </select>
+                                </div>
+
+
                             </div>
                             <ul class="npa-docs-tab__list">
                                 <li class="list-item">
@@ -194,4 +206,9 @@
                     console.log(dateArr);
                 }
             });
+
+        $('#decrees').select2({
+            minimumResultsForSearch: Infinity,
+            width: 'style'
+        });
     </script>
