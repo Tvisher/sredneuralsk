@@ -101,14 +101,12 @@ const afficheSlider = new Swiper('.affiche__slider', {
 
 document.body.addEventListener('click', (e) => {
     const target = e.target;
+
     //логика работы меню бургер
     if (target.closest('[data-burger-menu]')) {
         target.closest('[data-burger-menu]').classList.toggle('active');
         document.querySelector('[data-header-menu]').classList.toggle('active');
         document.body.classList.toggle('hidden');
-    }
-    if (target.closest('.fullscreen-slider__desc')) {
-        target.closest('.fullscreen-slider__desc').classList.add('open');
     }
 
     //логика работы табов
@@ -121,7 +119,12 @@ document.body.addEventListener('click', (e) => {
         target.classList.add('active');
         const tabContentWhatINeed = document.querySelector(`[data-tab-content="${tabId}"]`);
         if (tabContentWhatINeed) { tabContentWhatINeed.classList.add('active') }
+    }
 
+    if (target.closest('[data-open-hide-text]')) {
+        let btn = target.closest('[data-open-hide-text]');
+        btn.classList.toggle('open');
+        btn.closest('.list-item').classList.toggle('toggle');
     }
 });
 
@@ -133,3 +136,21 @@ document.querySelectorAll('input[type="tel"]').forEach(input => {
 });
 
 
+
+document.addEventListener('DOMContentLoaded', () => {
+    function showOrHidedescription() {
+        const listOfLongText = document.querySelectorAll('.list-item__body');
+        if (listOfLongText) {
+            listOfLongText.forEach(item => {
+                if (item.clientHeight > 60) {
+                    item.parentElement.classList.add('hide');
+                }
+            });
+        }
+    };
+    showOrHidedescription();
+    window.addEventListener('resize', () => {
+        showOrHidedescription();
+    });
+
+})
