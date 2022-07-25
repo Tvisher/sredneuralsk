@@ -278,11 +278,10 @@
             </div>
         </section>
     </main>
-
     @@include("./html/footer.html")
     <script>
         const AirDatepicker = window.AirDatepicker;
-        new AirDatepicker('#date-input',
+        const dateField = new AirDatepicker('#date-input',
             {
                 range: true,
                 multipleDatesSeparator: ' — ',
@@ -299,6 +298,6 @@
 
         $('#decrees').select2({
             minimumResultsForSearch: Infinity,
-            width: 'style'
         });
+
     </script>
