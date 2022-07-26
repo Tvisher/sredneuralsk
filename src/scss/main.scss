@@ -52,6 +52,11 @@ body {
     -ms-touch-action: none;
   }
 }
+
+b,
+strong {
+  display: inline;
+}
 footer {
   margin-top: auto;
 }
@@ -2039,6 +2044,10 @@ header {
     font-weight: 700;
     font-size: 18px;
     max-width: 700px;
+    b {
+      color: #90c171;
+      display: inline;
+    }
   }
   .list-item__edition {
     color: #a1a1a1;
@@ -2208,7 +2217,11 @@ header {
   }
 }
 
-.archive-tab {
+.search-res {
+  color: #a1a1a1;
+  font-size: 18px;
+  margin-bottom: 36px;
+  margin-top: -17px;
 }
 
 .archive-tab__btns {

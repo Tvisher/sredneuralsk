@@ -1,0 +1,204 @@
+@@include("./html/head.html")
+
+<body>
+    @@include("./html/header.html",{
+    "class":"active"
+    })
+    <main>
+        <section class="breadcrumbs">
+            <div class="container">
+                <ul>
+                    <li><a href="#">Главная</a></li>
+                    <li><a href="#">Нормативно-правовые акты</a></li>
+                </ul>
+            </div>
+        </section>
+        <section class="org-info">
+            <div class="container">
+                <span class="caps">МУНИЦИПАЛЬНОЕ КАЗЁННОЕ УЧРЕЖДЕНИЕ</span>
+                <h1>Среднеуральский вестник</h1>
+                <p class="text-2">
+                    Нормативно-правовые акты городского округа Среднеуральск
+                </p>
+                <ul class="org-info__tab-controls">
+                    <li class="tab-control active" data-tab-control="1">НПА</li>
+                    <li class="tab-control" data-tab-control="2">Архив выпусков</li>
+                </ul>
+                <div class="org-info__tab-content tab-content">
+                    <div class="tab-content__item active" data-tab-content="1">
+                        <div class="npa-docs-tab">
+                            <div class="npa-docs-tab__settings">
+                                <label class="date-field">
+                                    <input type="text" id="date-input" placeholder="Выбрать период">
+                                </label>
+                                <div class="decrees__wrapper">
+                                    <select name="decrees" id="decrees">
+                                        <option value="Все постановления">Все постановления</option>
+                                        <option value="Постановления главы ">Постановления главы</option>
+                                        <option value="Постановления администрации">Постановления администрации</option>
+                                        <option value="Распоряжения главы">Распоряжения главы</option>
+                                        <option value="Распоряжения администрации">Распоряжения администрации</option>
+                                        <option value="Решения думы">Решения думы</option>
+                                    </select>
+                                </div>
+                                <label class="search-container">
+                                    <button type="button">
+                                        <svg width="19" height="19" viewBox="0 0 19 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M8.14836 15.2915C12.0963 15.2915 15.2967 12.0922 15.2967 8.14576C15.2967 4.19926 12.0963 1 8.14836 1C4.20043 1 1 4.19926 1 8.14576C1 12.0922 4.20043 15.2915 8.14836 15.2915Z" stroke="#393C41" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round" />
+                                            <path d="M13.167 13.7422L17.4268 18.002" stroke="#393C41" stroke-width="2" stroke-miterlimit="10" />
+                                        </svg>
+                                    </button>
+                                    <input type="text" placeholder="Поиск документов" value="297">
+                                </label>
+                            </div>
+                            <div class="search-res">Результаты поиска: 1</div>
+                            <ul class="npa-docs-tab__list">
+                                <li class="list-item">
+                                    <div class="list-item__head">
+                                        <a href="#" class="list-item__link">
+                                            <div class="ico">
+                                                <img src="@img/jpg-ico.svg" alt="">
+                                            </div>
+                                            <p><b>297-ПА.</b> Постановление Администрации городского округа Среднеуральск</p>
+                                        </a>
+                                        <div class="list-item__info">
+                                            <div class="list-item__edition">Выпуск № 30</div>
+                                            <div class="list-item__size">74 Кб</div>
+                                            <div class="list-item__date">13.05.2022</div>
+                                        </div>
+                                    </div>
+                                    <div class="list-item__body">
+                                        О создании комиссии по обследованию и категорированию объектов спорта, находящихся на территории городского округа Среднеуральск
+                                    </div>
+                                    <div class="list-item__more" data-open-hide-text>
+                                        <span class="more">Подробнее</span>
+                                        <span class="collapse">Свернуть</span>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="tab-content__item" data-tab-content="2">
+                        <div class="archive-tab">
+                            <div class="archive-tab__btns">
+                                <a href="#" class="archive-tab__btn active">Все</a>
+                                <a href="#" class="archive-tab__btn">2022</a>
+                                <a href="#" class="archive-tab__btn">2021</a>
+                            </div>
+                            <ul class="archive-tab__render-content render-content">
+                                <li class="render-content__item list-item">
+                                    <a href="#" class="list-item__link">
+                                        <div class="ico">
+                                            <img src="@img/pdf-ico.svg" alt="">
+                                        </div>
+                                        <span class="list-item__name"> №30/ 9 — 15 мая 2022</span>
+                                        <span class="list-item__size">148 Кб</span>
+                                    </a>
+                                </li>
+                                <li class="render-content__item list-item">
+                                    <a href="#" class="list-item__link">
+                                        <div class="ico">
+                                            <img src="@img/pdf-ico.svg" alt="">
+                                        </div>
+                                        <span class="list-item__name">№29/2 — 8 мая 2022</span>
+                                        <span class="list-item__size">2,7 Мб</span>
+                                    </a>
+                                </li>
+                                <li class="render-content__item list-item">
+                                    <a href="#" class="list-item__link">
+                                        <div class="ico">
+                                            <img src="@img/pdf-ico.svg" alt="">
+                                        </div>
+                                        <span class="list-item__name"> №28/25 апреля — 1 мая 2022</span>
+                                        <span class="list-item__size">746 Кб</span>
+                                    </a>
+                                </li>
+                                <li class="render-content__item list-item">
+                                    <a href="#" class="list-item__link">
+                                        <div class="ico">
+                                            <img src="@img/pdf-ico.svg" alt="">
+                                        </div>
+                                        <span class="list-item__name">№30/9 — 15 мая 202</span>
+                                        <span class="list-item__size">76 Кб</span>
+                                    </a>
+                                </li>
+                                <li class="render-content__item list-item">
+                                    <a href="#" class="list-item__link">
+                                        <div class="ico">
+                                            <img src="@img/pdf-ico.svg" alt="">
+                                        </div>
+                                        <span class="list-item__name"> №26/4 — 10 апреля 2022</span>
+                                        <span class="list-item__size">872 Кб</span>
+                                    </a>
+                                </li>
+                                <li class="render-content__item list-item">
+                                    <a href="#" class="list-item__link">
+                                        <div class="ico">
+                                            <img src="@img/pdf-ico.svg" alt="">
+                                        </div>
+                                        <span class="list-item__name"> №25/28 марта — 3 апреля 2022</span>
+                                        <span class="list-item__size">158 Кб</span>
+                                    </a>
+                                </li>
+                                <li class="render-content__item list-item">
+                                    <a href="#" class="list-item__link">
+                                        <div class="ico">
+                                            <img src="@img/pdf-ico.svg" alt="">
+                                        </div>
+                                        <span class="list-item__name">№24/21 — 27 марта 2022</span>
+                                        <span class="list-item__size">386 Кб</span>
+                                    </a>
+                                </li>
+                            </ul>
+                            <div class="pagination">
+                                <div class="pages">
+                                    <a href="#" class="page selected">1</a>
+                                    <a href="#" class="page">2</a>
+                                    <a href="#" class="page active">3</a>
+                                    <span class="page">...</span>
+                                    <a href="#" class="page">100</a>
+                                </div>
+                                <button class="next-btn">Следующая</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+    </main>
+    @@include("./html/footer.html")
+    <script>
+        const AirDatepicker = window.AirDatepicker;
+        const dateField = new AirDatepicker('#date-input',
+            {
+                range: true,
+                multipleDatesSeparator: ' — ',
+                autoClose: 1,
+                // inline: 1,
+                buttons: ['clear'],
+                onSelect(date) {
+                    let dateArr = date.formattedDate;
+                    if (dateArr.length < 2) { return }
+                    //Сработает если выбрано две даты
+                    console.log(dateArr);
+                }
+            });
+
+        // Включение и выключение режима модального окна в календаре
+        function checkWindowSize(e) {
+            const windowInnerWidth = window.innerWidth;
+            if (windowInnerWidth <= 992) {
+                dateField && dateField.update({ isMobile: true });
+            } else {
+                dateField && dateField.update({ isMobile: false });
+            }
+        }
+        checkWindowSize();
+        window.addEventListener('resize', checkWindowSize);
+
+        $('#decrees').select2({
+            minimumResultsForSearch: Infinity,
+        });
+
+    </script>

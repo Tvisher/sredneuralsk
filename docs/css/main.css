@@ -2425,6 +2425,11 @@ body.hidden {
   -ms-touch-action: none;
 }
 
+b,
+strong {
+  display: inline;
+}
+
 footer {
   margin-top: auto;
 }
@@ -4079,6 +4084,11 @@ header {
   max-width: 700px;
 }
 
+.npa-docs-tab__list .list-item__link b {
+  color: #90c171;
+  display: inline;
+}
+
 .npa-docs-tab__list .list-item__edition {
   color: #a1a1a1;
 }
@@ -4251,6 +4261,13 @@ header {
   background-color: transparent;
   padding: 12px 0;
   height: 100%;
+}
+
+.search-res {
+  color: #a1a1a1;
+  font-size: 18px;
+  margin-bottom: 36px;
+  margin-top: -17px;
 }
 
 .archive-tab__btns {
