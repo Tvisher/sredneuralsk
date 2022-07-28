@@ -1,0 +1,83 @@
+@@include("./html/head.html")
+
+<body>
+    @@include("./html/header.html",{
+    "class":"active"
+    })
+    <main>
+        <section class="breadcrumbs">
+            <div class="container">
+                <ul>
+                    <li><a href="#">Главная</a></li>
+                    <li><a href="#">Поиск</a></li>
+                </ul>
+            </div>
+        </section>
+        <section class="search-area">
+            <div class="container">
+                <h1>Поиск</h1>
+                <div class="search-area__wrapper">
+                    <form action="#" autocomplete="off" class="search-area__block">
+                        <input type="text" class="search__field" value="Дополнительно">
+                        <button class="btn fillBtn" type="submit">Поиск</button>
+                    </form>
+                    <div class="search__res">Найдено:<span class="res-count">1213 совпадений</span></div>
+                </div>
+                <ul class="search-area__res npa-docs-tab__list">
+                    <li class="res-item npa">
+                        <span class="res-item__type">Нормативно-правовые акты</span>
+                        <a href="#" class="res-item__name">300-ПА. Постановление Администрации городского округа Среднеуральск. Постановление Администрации городского округа Среднеуральск</a>
+                        <span class="res-item__excerpt">...по обследованию и категорированию объектов спорта, <b>дополнительно</b> находящихся на территории городского округа Среднеуральск...</span>
+                        <span class="res-item__info">13.05.2022</span>
+                    </li>
+                    <li class="res-item others">
+                        <span class="res-item__type">Новость</span>
+                        <a href="#" class="res-item__name">Выход на весенний лёд опасен</a>
+                        <span class="res-item__excerpt">...В весенний период лёд начинает таять и становится непрочным. Скреплённый <b>дополнительно</b> ночным холодом,....</span>
+                        <span class="res-item__info">6.05.2021</span>
+                    </li>
+                    <li class="res-item others">
+                        <span class="res-item__type">Новость</span>
+                        <a href="#" class="res-item__name">С праздником Великой Победы! Мира Вам, добра и счастья</a>
+                        <span class="res-item__excerpt">...ударственной районной электростанции (СуГРЭС). Официальная дата образования — 27 июня 1931 года, <b>дополнительно</b>....</span>
+                        <span class="res-item__info">6.05.2021</span>
+                    </li>
+                    <li class="res-item others">
+                        <span class="res-item__type">Услуги</span>
+                        <a href="#" class="res-item__name">Услуги образования </a>
+                        <span class="res-item__excerpt">...В том числе <b>дополнительного</b> — музыкального, художественного и т.д.....</span>
+                        <span class="res-item__info"></span>
+                    </li>
+                    <li class="res-item docs">
+                        <span class="res-item__type">Документы</span>
+                        <a href="#" class="res-item__name">Решения Думы городского округа Среднеуральск от 25.03.2021 № 83/3</a>
+                        <span class="res-item__excerpt">...В том числе <b>дополнительного</b> — музыкального, художественного и т.д.....</span>
+                        <span class="res-item__info">689 Кб</span>
+                    </li>
+                    <li class="res-item others">
+                        <span class="res-item__type">Контакты</span>
+                        <a href="#" class="res-item__name">Янин Геннадий Николаевич</a>
+                        <span class="res-item__excerpt">...<b>дополнительная</b> итоговая аттестация обучающихся, учёт и расследование несчастных случаев, органи.....</span>
+                        <span class="res-item__info">7-39-04</span>
+                    </li>
+                    <li class="res-item others">
+                        <span class="res-item__type">Услуги</span>
+                        <a href="#" class="res-item__name">Прием заявлений, постановка на учет и зачисление детей в образовательные учреждения, реализующие основную образовательную программу дошкольного образования (детские сады)</a>
+                        <span class="res-item__excerpt">...В том числе <b>дополнительного</b> — музыкального, художественного и т.д.....</span>
+                        <span class="res-item__info"></span>
+                    </li>
+                </ul>
+                <div class="pagination">
+                    <div class="pages">
+                        <a href="#" class="page selected">1</a>
+                        <a href="#" class="page">2</a>
+                        <a href="#" class="page active">3</a>
+                        <span class="page">...</span>
+                        <a href="#" class="page">100</a>
+                    </div>
+                    <button class="next-btn">Следующая</button>
+                </div>
+            </div>
+        </section>
+    </main>
+    @@include("./html/footer.html")
