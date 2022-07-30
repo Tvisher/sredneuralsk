@@ -1,0 +1,250 @@
+@@include("./html/head.html")
+
+<body>
+    @@include("./html/header.html",{
+    "class":"active"
+    })
+    <main>
+        <section class="breadcrumbs">
+            <div class="container">
+                <ul>
+                    <li><a href="#">Главная</a></li>
+                    <li><a href="#">Новости</a></li>
+                    <li><a href="#">Среднеуральск</a></li>
+                </ul>
+            </div>
+        </section>
+        <section class="article">
+            <div class="container">
+                <div class="article__wrapper">
+                    <div class="article__content">
+                        <h1>Среднеуральск</h1>
+                        <p class="text-1-b">Среднеура́льск — город (с 1966) в России, до 1996 городского подчинения городу Верхняя Пышма Свердловской области, ныне — самостоятельное муниципальное образование «Городской округ Среднеуральск»</p>
+                        <div class="article__image">
+                            <div class="article__image-wrapper">
+                                <div class="article__image-container">
+                                    <img src="@img/article-img.jpg" alt="">
+                                </div>
+                            </div>
+                            <span class="img-descr">Город Среднеуральск фото завода</span>
+                        </div>
+
+                        <h5 class="article-title">История</h5>
+                        <p>Населённый пункт Среднеуральск образован в связи с началом строительства Среднеуральской государственной районной электростанции (СуГРЭС). Официальная дата образования — 27 июня 1931 года, статус рабочего посёлка получил 10 июля 1932 года, преобразован в город районного подчинения 17 февраля 1966 года. Развивался и рос как город энергетиков в связи с постоянным расширением материальной базы Министерства энергетики России. Градообразующее предприятие — Среднеуральская ГРЭС начала выдавать промышленный ток 5 января 1936 года.</p>
+
+                        <div class="quote">
+                            <div class="quote__wrapper">
+                                <h5 class="quote__title">Среднеуральск, как и вся Свердловская область, находится в часовой зоне МСК+2. Смещение применяемого времени относительно UTC составляет +5:00[8].</h5>
+                                <div class="quote__block">
+                                    <div class="quote__img">
+                                        <img src="@img/article-user.jpg" alt="">
+                                    </div>
+                                    <div class="quote__auth">
+                                        <div class="name">Иванов Иван</div>
+                                        <div class="descr">Должность</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <h5 class="article-title">Географическое положение</h5>
+                        <p>Город расположен на возвышенности высотой 252—278 м от уровня моря, бассейн стока вод — озеро Исетское площадью 25 км² и глубиной до 6 м, остаточное от древней речной сети, берега озера преимущественно пологие и заболоченные, восточный берег частично обрывистый. Озеро питают 8 мелких рек, вытекает одна река Исеть, замерзает в октябре, освобождается ото льда в начале мая, толщина льда 70—100 см.</p>
+                        <h5 class="article-title">Экономика</h5>
+                        <ol>
+                            <li>ЗАО Среднеуральский завод ЖБИ</li>
+                            <li>Среднеуральский асфальтобетонный завод</li>
+                            <li>ОАО Опытный завод метрологического оборудования</li>
+                            <li>ЗАО Среднеуральский деревообрабатывающий завод</li>
+                            <li>ООО Среднеуральское управление «Уралспецэнергомонтаж»</li>
+                            <li>ООО Среднеуральский винзавод</li>
+                        </ol>
+
+                        <h5 class="article-title">Досуг</h5>
+                        <ul>
+                            <li> Газета «Среднеуральская волна»</li>
+                            <li> Дворец культуры</li>
+                            <li> Центр культуры и досуга «Волна» (ранее — кинотеатр «Волна»)</li>
+                            <li> Три библиотеки: Центральная городская и два её филиала</li>
+                            <li>Детская школа искусств</li>
+                            <li> Дом детского творчества</li>
+                            <li> Стадион «Энергетик»</li>
+                        </ul>
+
+                        <h5 class="article-title">Видео</h5>
+                        <div class="article__image">
+                            <div class="article__image-wrapper">
+                                <div class="article__image-container">
+                                    <video preload="" controls="true" poster="@img/video-poster.jpg">
+                                        <source src="files/video.mp4" type="video/mp4">
+                                        <source src="files/video.webm" type="video/webm">
+                                    </video>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="table-wrapper">
+                            <h5 class="article-title">Таблица</h5>
+                            <table>
+                                <thead>
+                                    <tr>
+                                        <th>Заголовок</th>
+                                        <th>Заголовок</th>
+                                        <th>Дата</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>Решения Думы городского округа Среднеуральск от 25.03.2021 № 83/3</td>
+                                        <td>233334</td>
+                                        <td>25.05.2021</td>
+                                    </tr>
+
+                                    <tr>
+                                        <td>Общее образование</td>
+                                        <td>234</td>
+                                        <td>25.05.2021</td>
+                                    </tr>
+
+                                    <tr>
+                                        <td>Дошкольное образование</td>
+                                        <td>13</td>
+                                        <td>25.05.2021</td>
+                                    </tr>
+
+                                    <tr>
+                                        <td>Дополнительное образование</td>
+                                        <td>123</td>
+                                        <td>25.05.2021</td>
+                                    </tr>
+
+
+                                </tbody>
+                            </table>
+                        </div>
+
+                        <div class="quote">
+                            <div class="quote__wrapper">
+                                <h5 class="quote__title">На 1 января 2021 года по численности населения город находился на 585-м месте из 1116 городов Российской Федерации</h5>
+                                <div class="quote__block">
+                                    <div class="quote__auth">
+                                        <div class="name">Иванов Иван</div>
+                                        <div class="descr">Должность</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="docs-container">
+                            <h5 class="article-title">Документы</h5>
+                            <div class="doc-item">
+                                <div class="ico">
+                                    <img src="@img/pdf-ico.svg" alt="">
+                                </div>
+                                <a href="#" class="link">Решения Думы городского округа Среднеуральск от <br>25.03.2021 № 83/3</a>
+                                <span class="size">689 Кб</span>
+                            </div>
+                            <div class="doc-item">
+                                <div class="ico">
+                                    <img src="@img/pdf-ico.svg" alt="">
+                                </div>
+                                <a href="#" class="link">Решения Думы городского округа Среднеуральск от <br>25.03.2021 № 83/3</a>
+                                <span class="size">689 Кб</span>
+                            </div>
+                            <div class="doc-item">
+                                <div class="ico">
+                                    <img src="@img/pdf-ico.svg" alt="">
+                                </div>
+                                <a href="#" class="link">Решения Думы городского округа Среднеуральск от <br>25.03.2021 № 83/3</a>
+                                <span class="size">689 Кб</span>
+                            </div>
+                            <div class="doc-item">
+                                <div class="ico">
+                                    <img src="@img/pdf-ico.svg" alt="">
+                                </div>
+                                <a href="#" class="link">Решения Думы городского округа Среднеуральск от <br>25.03.2021 № 83/3</a>
+                                <span class="size">689 Кб</span>
+                            </div>
+                        </div>
+                        <h5 class="article-title">Документы</h5>
+                        <a href="#" class="article-link">Решения Думы городского округа Среднеуральск от 25.03.2021 № 83/3</a>
+                    </div>
+                    <div class="article__flying">
+                        <div class="title-wrapper">
+                            <h2 class="news__title">Лента новостей</h2>
+                            <a href="#" class="show-more">Все новости</a>
+                        </div>
+                        <ul class="news__list">
+                            <li class="news__item">
+                                <span class="news__item-date">19 Апреля</span>
+                                <a href="#" class="news__item-link">С 22 по 29 апреля в Среднеуральске объявлена неделя субботников</a>
+                            </li>
+                            <li class="news__item">
+                                <span class="news__item-date">19 Апреля</span>
+                                <a href="#" class="news__item-link">С 22 по 29 апреля в Среднеуральске объявлена неделя субботников</a>
+                            </li>
+                            <li class="news__item">
+                                <span class="news__item-date">19 Апреля</span>
+                                <a href="#" class="news__item-link">С 22 по 29 апреля в Среднеуральске объявлена неделя субботников</a>
+                            </li>
+                            <li class="news__item">
+                                <span class="news__item-date">19 Апреля</span>
+                                <a href="#" class="news__item-link">С 22 по 29 апреля в Среднеуральске объявлена неделя субботников</a>
+                            </li>
+                            <li class="news__item">
+                                <span class="news__item-date">19 Апреля</span>
+                                <a href="#" class="news__item-link">С 22 по 29 апреля в Среднеуральске объявлена неделя субботников</a>
+                            </li>
+                            <li class="news__item">
+                                <span class="news__item-date">19 Апреля</span>
+                                <a href="#" class="news__item-link">С 22 по 29 апреля в Среднеуральске объявлена неделя субботников</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="news-section">
+            <div class="container">
+                <h2>Новости</h2>
+                <!-- Вывод 4 последних новостей -->
+                <ul class="news-section__list">
+                    <li class="list-item">
+                        <a href="#" class="list-item__wrapper">
+                            <div class="list-item__image">
+                                <img src="@img/news-pic01.jpg" alt="">
+                            </div>
+                            <span class="list-item__date">20.03.2022</span>
+                            <h3>В рамках работы антикризисного штаба посетил технопарк</h3>
+                        </a>
+                    </li>
+                    <li class="list-item">
+                        <a href="#" class="list-item__wrapper">
+                            <div class="list-item__image">
+                                <img src="@img/news-pic02.jpg" alt="">
+                            </div>
+                            <span class="list-item__date">20.03.2022</span>
+                            <h3>В рамках работы антикризисного штаба посетил технопарк</h3>
+                        </a>
+                    </li>
+                    <li class="list-item">
+                        <a href="#" class="list-item__wrapper">
+                            <div class="list-item__image">
+                                <img src="@img/news-pic03.jpg" alt="">
+                            </div>
+                            <span class="list-item__date">20.03.2022</span>
+                            <h3>В рамках работы антикризисного штаба посетил технопарк</h3>
+                        </a>
+                    </li>
+                    <li class="list-item">
+                        <a href="#" class="list-item__wrapper">
+                            <div class="list-item__image">
+                                <img src="@img/news-pic04.jpg" alt="">
+                            </div>
+                            <span class="list-item__date">20.03.2022</span>
+                            <h3>В рамках работы антикризисного штаба посетил технопарк В рамках работы антикризисного штаба посетил технопарк</h3>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </section>
+    </main>
+    @@include("./html/footer.html")
