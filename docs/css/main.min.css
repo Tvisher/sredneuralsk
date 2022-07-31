@@ -4953,6 +4953,65 @@ header {
   line-height: 125%;
 }
 
+.galery-slider__wrapper {
+  margin-bottom: 10px;
+  position: relative;
+  height: 0;
+  width: 100%;
+  padding-top: 54%;
+}
+
+.galery-slider__wrapper .galery-slider__container {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.galery-slider__wrapper .swiper-button-next,
+.galery-slider__wrapper .swiper-button-prev {
+  width: 42px;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  top: 0;
+  margin: 0;
+}
+
+.galery-slider__wrapper .swiper-button-next::after,
+.galery-slider__wrapper .swiper-button-prev::after {
+  display: none;
+}
+
+.galery-slider__wrapper .swiper-button-next {
+  right: 0;
+}
+
+.galery-slider__wrapper .swiper-button-prev {
+  left: 0;
+}
+
+.article-galery .galery-slider {
+  background-color: #393c41;
+  height: 100%;
+}
+
+.article-galery .galery-slider img {
+  height: 100%;
+  width: 100%;
+  object-position: center;
+  object-fit: contain;
+}
+
+.article-galery .galery-thumbs-slider .swiper-slide {
+  cursor: pointer;
+  width: 90px;
+  height: 90px;
+}
+
 @media (max-width: 1190px) {
   .slide-baner__grad {
     padding: 32px;

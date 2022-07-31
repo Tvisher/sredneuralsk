@@ -6,7 +6,8 @@ import Swiper, {
     Pagination,
     Autoplay,
     EffectFade,
-    EffectCreative
+    EffectCreative,
+    Thumbs
 } from 'swiper';
 import IMask from 'imask';
 import AirDatepicker from 'air-datepicker';
@@ -99,6 +100,28 @@ const afficheSlider = new Swiper('.affiche__slider', {
     }
 });
 
+
+
+
+const galeryThumbsSlider = new Swiper(".galery-thumbs-slider", {
+    spaceBetween: 10,
+    slidesPerView: 'auto',
+    freeMode: true,
+    watchSlidesProgress: true,
+});
+
+const galerySlider = new Swiper(".galery-slider", {
+    modules: [Thumbs, Navigation],
+    spaceBetween: 10,
+    navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+    },
+    thumbs: {
+        swiper: galeryThumbsSlider,
+    },
+});
+
 document.body.addEventListener('click', (e) => {
     const target = e.target;
 
@@ -136,7 +159,7 @@ document.querySelectorAll('input[type="tel"]').forEach(input => {
 });
 
 
-
+// Показать/Скрыть описание в документе 
 document.addEventListener('DOMContentLoaded', () => {
     function showOrHidedescription() {
         const listOfLongText = document.querySelectorAll('.list-item__body');
