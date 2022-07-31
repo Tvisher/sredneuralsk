@@ -699,7 +699,6 @@ header {
     align-items: center;
     justify-content: flex-start;
     gap: 16px;
-    // margin-bottom: 12px;
   }
 }
 .show-more {
@@ -2900,6 +2899,11 @@ header {
 }
 
 .article {
+  .article-title,
+  h2 {
+    padding: 22px 0 20px;
+    color: #000000;
+  }
   padding-bottom: 40px;
   h1 {
     margin-bottom: 20px;
@@ -2983,6 +2987,7 @@ header {
   }
   .docs-container {
     padding: 22px 0;
+    padding-top: 0;
   }
 
   .doc-item {
@@ -3015,12 +3020,6 @@ header {
     line-height: 125%;
     color: #007cc3;
   }
-}
-
-.article-title {
-  padding: 22px 0 20px;
-  font-weight: 700;
-  font-size: 22px;
 }
 
 .quote {
@@ -3087,6 +3086,7 @@ header {
     padding-top: 0;
   }
   padding: 22px 0;
+  padding-top: 0;
   overflow: auto;
   table {
     width: 100%;
@@ -3134,6 +3134,7 @@ header {
     display: flex;
     gap: 20px;
     justify-content: space-between;
+    flex-wrap: wrap;
   }
   .news__list {
     padding-left: 0;
@@ -3193,6 +3194,7 @@ header {
 }
 
 .article-galery {
+  padding: 22px 0;
   .galery-slider {
     background-color: #393c41;
     height: 100%;
@@ -3206,8 +3208,176 @@ header {
   .galery-thumbs-slider {
     .swiper-slide {
       cursor: pointer;
-      width: 90px;
-      height: 90px;
+      width: 60px;
+      height: 60px;
     }
+  }
+  .swiper-pagination {
+    display: none;
+  }
+}
+
+@media (max-width: 1110px) {
+  .article__flying {
+    display: none;
+  }
+  .article .article__content {
+    margin-right: 0;
+  }
+}
+
+@media (max-width: 680px) {
+  .table-wrapper table {
+    width: 600px;
+  }
+}
+
+@media (max-width: 576px) {
+  .article .text-1-b {
+    margin-bottom: 15px;
+  }
+  .article .article__image {
+    padding: 15px 0;
+  }
+  .article .article-title,
+  .article h2 {
+    font-size: 18px;
+    padding: 15px 0;
+  }
+  .article p {
+    font-size: 16px;
+    margin-bottom: 15px;
+  }
+  .quote {
+    padding: 15px 0px;
+    padding-top: 22px;
+  }
+  .quote .quote__wrapper {
+    padding: 20px 15px;
+  }
+  .quote .quote__wrapper::before {
+    left: 16px;
+  }
+  .quote .quote__title {
+    font-size: 18px;
+    margin-bottom: 15px;
+  }
+  .article ul li,
+  .article ol li {
+    font-size: 16px;
+  }
+  .article ul,
+  .article ol {
+    margin-bottom: 15px;
+    padding-left: 20px;
+  }
+  .article .docs-container {
+    padding-bottom: 15px;
+  }
+  .article .article-link {
+    margin-bottom: 15px;
+  }
+  .article {
+    padding-bottom: 20px;
+  }
+  .galery-thumbs-slider {
+    display: none;
+  }
+  .article-galery {
+    padding: 15px 0;
+  }
+  .article .article__image,
+  .article-galery {
+    margin-right: -20px;
+    margin-left: -20px;
+    width: initial;
+  }
+  .article .article__image .article__image-wrapper,
+  .galery-slider__wrapper {
+    padding-top: 72%;
+  }
+  .galery-slider__wrapper {
+    margin-bottom: 0;
+  }
+  .article h1 {
+    font-size: 22px;
+    margin-bottom: 15px;
+  }
+  .galery-slider__wrapper .galery-slider__container,
+  .article-galery .galery-slider {
+    overflow: visible;
+  }
+
+  .article-galery {
+    overflow: hidden;
+    padding-bottom: 40px;
+  }
+
+  .article-galery .swiper-pagination {
+    display: flex;
+    flex-wrap: wrap;
+    width: 200px;
+    margin: auto;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    bottom: -10px;
+    .swiper-pagination-bullet {
+      position: static;
+      background: #90c171;
+      opacity: 0.3;
+      width: 20px;
+      height: 2px;
+      margin: 4px;
+      border-radius: 0;
+      &.swiper-pagination-bullet-active {
+        opacity: 1;
+      }
+    }
+  }
+}
+
+@media (max-width: 380px) {
+  .article .article__image,
+  .article-galery {
+    margin-right: -10px;
+    margin-left: -10px;
+    width: initial;
+  }
+
+  .article .doc-item .ico {
+    margin-right: 10px;
+  }
+  .article .doc-item .link,
+  .article .doc-item .size {
+    font-size: 14px;
+  }
+  .article .doc-item {
+    padding: 15px 0;
+  }
+  .quote .quote__img {
+    width: 50px;
+    height: 50px;
+  }
+  .quote .quote__title {
+    font-size: 16px;
+  }
+  .article .article__image .img-descr {
+    font-size: 12px;
+    margin-top: 4px;
+  }
+  .news-section .news-section__list {
+    margin-right: 0;
+    margin-left: 0;
+  }
+  .news-section .news-section__list .list-item {
+    padding-right: 0;
+    padding-left: 0;
+  }
+  .table-wrapper td {
+    font-size: 16px;
+  }
+  .quote .quote__auth .name {
+    font-size: 16px;
   }
 }

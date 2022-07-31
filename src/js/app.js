@@ -102,20 +102,23 @@ const afficheSlider = new Swiper('.affiche__slider', {
 
 
 
-
+// Галерея статьи
 const galeryThumbsSlider = new Swiper(".galery-thumbs-slider", {
     spaceBetween: 10,
     slidesPerView: 'auto',
     freeMode: true,
     watchSlidesProgress: true,
 });
-
 const galerySlider = new Swiper(".galery-slider", {
-    modules: [Thumbs, Navigation],
+    modules: [Thumbs, Navigation, Pagination],
     spaceBetween: 10,
     navigation: {
         nextEl: ".swiper-button-next",
         prevEl: ".swiper-button-prev",
+    },
+    pagination: {
+        el: '.swiper-pagination',
+        type: 'bullets',
     },
     thumbs: {
         swiper: galeryThumbsSlider,
