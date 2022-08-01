@@ -5743,6 +5743,10 @@ header {
     padding: 15px 0;
   }
 
+  .article .article__image .img-descr {
+    padding-right: 20px;
+  }
+
   .article .article__image,
   .article-galery {
     margin-right: -20px;
@@ -6086,6 +6090,10 @@ header {
     margin-right: -10px;
     margin-left: -10px;
     width: initial;
+  }
+
+  .article .article__image .img-descr {
+    padding-right: 10px;
   }
 
   .article .doc-item .ico {
