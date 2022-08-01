@@ -2934,6 +2934,7 @@ header {
       width: 100%;
       padding-top: 55%;
       position: relative;
+      animation: imageLoad 1.5s ease-in-out infinite;
     }
     .article__image-container {
       position: absolute;
