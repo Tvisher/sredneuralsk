@@ -2898,7 +2898,7 @@ header {
   }
 }
 
-.article {
+.article-section {
   .article-title,
   h2 {
     padding: 22px 0 20px;
@@ -3221,7 +3221,7 @@ header {
   .article__flying {
     display: none;
   }
-  .article .article__content {
+  .article-section .article__content {
     margin-right: 0;
   }
 }
@@ -3233,18 +3233,18 @@ header {
 }
 
 @media (max-width: 576px) {
-  .article .text-1-b {
+  .article-section .text-1-b {
     margin-bottom: 15px;
   }
-  .article .article__image {
+  .article-section .article__image {
     padding: 15px 0;
   }
-  .article .article-title,
-  .article h2 {
+  .article-section .article-title,
+  .article-section h2 {
     font-size: 18px;
     padding: 15px 0;
   }
-  .article p {
+  .article-section p {
     font-size: 16px;
     margin-bottom: 15px;
   }
@@ -3262,22 +3262,22 @@ header {
     font-size: 18px;
     margin-bottom: 15px;
   }
-  .article ul li,
-  .article ol li {
+  .article-section ul li,
+  .article-section ol li {
     font-size: 16px;
   }
-  .article ul,
-  .article ol {
+  .article-section ul,
+  .article-section ol {
     margin-bottom: 15px;
     padding-left: 20px;
   }
-  .article .docs-container {
+  .article-section .docs-container {
     padding-bottom: 15px;
   }
-  .article .article-link {
+  .article-section .article-link {
     margin-bottom: 15px;
   }
-  .article {
+  .article-section {
     padding-bottom: 20px;
   }
   .galery-thumbs-slider {
@@ -3286,23 +3286,23 @@ header {
   .article-galery {
     padding: 15px 0;
   }
-  .article .article__image .img-descr {
+  .article-section .article__image .img-descr {
     padding-right: 20px;
   }
-  .article .article__image,
+  .article-section .article__image,
   .article-galery {
     margin-right: -20px;
     margin-left: -20px;
     width: initial;
   }
-  .article .article__image .article__image-wrapper,
+  .article-section .article__image .article__image-wrapper,
   .galery-slider__wrapper {
     padding-top: 72%;
   }
   .galery-slider__wrapper {
     margin-bottom: 0;
   }
-  .article h1 {
+  .article-section h1 {
     font-size: 22px;
     margin-bottom: 15px;
   }
@@ -3341,24 +3341,24 @@ header {
 }
 
 @media (max-width: 380px) {
-  .article .article__image,
+  .article-section .article__image,
   .article-galery {
     margin-right: -10px;
     margin-left: -10px;
     width: initial;
   }
-  .article .article__image .img-descr {
+  .article-section .article__image .img-descr {
     padding-right: 10px;
   }
 
-  .article .doc-item .ico {
+  .article-section .doc-item .ico {
     margin-right: 10px;
   }
-  .article .doc-item .link,
-  .article .doc-item .size {
+  .article-section .doc-item .link,
+  .article-section .doc-item .size {
     font-size: 14px;
   }
-  .article .doc-item {
+  .article-section .doc-item {
     padding: 15px 0;
   }
   .quote .quote__img {
@@ -3368,7 +3368,7 @@ header {
   .quote .quote__title {
     font-size: 16px;
   }
-  .article .article__image .img-descr {
+  .article-section .article__image .img-descr {
     font-size: 12px;
     margin-top: 4px;
   }
