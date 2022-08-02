@@ -5453,6 +5453,68 @@ header {
   top: 12px;
 }
 
+.event h1 {
+  margin-bottom: 20px;
+}
+
+.event .text-1-b {
+  margin-bottom: 35px;
+}
+
+.event .event__wrapper {
+  max-width: 730px;
+}
+
+.event .event__image {
+  width: 100%;
+  height: 0px;
+  padding-top: 55%;
+  position: relative;
+  margin-bottom: 35px;
+}
+
+.event .event__image.vertical {
+  float: right;
+  width: 48%;
+  margin-left: 30px;
+  margin-bottom: 30px;
+  padding-top: 68%;
+}
+
+.event .event__image.contain .img-wrap img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.event .img-wrap {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.event .img-wrap img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.event .title {
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 125%;
+  color: #393c41;
+  padding: 12px 0;
+  margin-bottom: 12px;
+}
+
+.event__texts p {
+  margin-bottom: 15px;
+}
+
 @media (max-width: 1190px) {
   .slide-baner__grad {
     padding: 32px;

@@ -1,0 +1,40 @@
+@@include("./html/head.html")
+
+<body>
+    @@include("./html/header.html",{
+    "class":"active"
+    })
+    <main>
+        <section class="breadcrumbs">
+            <div class="container">
+                <ul>
+                    <li><a href="#">Главная</a></li>
+                    <li><a href="#">Нормативно-правовые акты</a></li>
+                    <li><a href="#">Космос Тертеряна</a></li>
+                </ul>
+            </div>
+        </section>
+        <section class="event">
+            <div class="container">
+                <div class="event__wrapper">
+                    <h1>Космос Тертеряна</h1>
+                    <span class="text-1-b">16 и 17 июня в 19:00 в Креативном кластере «Л52» Центр авангарда проводит музыкальный фестиваль «Космос Тертеряна»</span>
+                    <div class="event__content">
+                        <!-- добавить к event__image класс contain, если изображение афиши не должно растягиваться и обрезаться -->
+                        <div class="event__image ">
+                            <div class="img-wrap">
+                                <img src="@img/event-1.jpg" alt="">
+                            </div>
+                        </div>
+                        <div class="event__texts">
+                            <p>Авет Тертерян - авангардный композитор мирового уровня. Его музыка самобытная, свободная, характерная для 20 века, каждый звук - яркий образ. Она вбирает в себя, с одной стороны, национальную традицию, а, с другой - рефлексию композитора на актуальные события, через которые прошла Армения в 20 веке.</p>
+                            <br>
+                            <p>На фестивале прозвучит музыка Авета Тертеряна, Ольги Викторовой, Сергея Патраманского, Дмитрия Ремезова.</p>
+                            <stan class="title">Программа:</stan>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    @@include("./html/footer.html")
