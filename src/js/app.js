@@ -152,6 +152,11 @@ document.body.addEventListener('click', (e) => {
         btn.classList.toggle('open');
         btn.closest('.list-item').classList.toggle('toggle');
     }
+
+
+    if (target.closest('.modal.show') && !target.closest('.modal__content')) {
+        target.closest('.modal.show').classList.remove('show');
+    }
 });
 
 // Маска на номера телефона
@@ -180,3 +185,8 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
 })
+
+
+$('#modal-select').select2({
+    minimumResultsForSearch: Infinity,
+});

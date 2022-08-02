@@ -504,6 +504,46 @@
     </div>
 </footer>
 </body>
+<div class="modal show" data-modal="reception">
+    <div class="modal__content">
+        <form action="#" method="post" class="modal__form">
+            <div class="close-btn" onclick="this.closest('.modal').classList.remove('show')">
+                <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M10 22L15.76 16L10 10" stroke="#007CC3" stroke-linecap="round" />
+                    <path d="M21.7266 22L15.9666 16L21.7266 10" stroke="#007CC3" stroke-linecap="round" />
+                </svg>
+            </div>
+            <h5 class="modal__title">Приемная главы</h5>
+            <select name="" id="modal-select">
+                <option value="Тема обращения">Тема обращения</option>
+                <option value="Тема обращения 1">Тема обращения 1</option>
+                <option value="Тема обращения 2">Тема обращения 2</option>
+            </select>
+            <label class="modal__label">
+                <input type="text" placeholder="Ваше ФИО" name="">
+            </label>
+            <label class="modal__label">
+                <textarea name="" placeholder="Текст обращения"></textarea>
+            </label>
+            <label class="modal__label file-label">
+                <input type="file" name="">
+                <span>Добавить файл</span>
+            </label>
+            <label class="modal__label">
+                <input type="tel" placeholder="Ваш телефон" name="">
+            </label>
+            <label class="modal__label">
+                <input type="email" placeholder="E-mail" name="">
+            </label>
+
+            <label class="modal__label agreement">
+                <input type="checkbox" name="agreement" checked>
+                <span class="agreement-text">Согласен(а) на обработку, хранение и направление моих персональных данных в целях рассмотрения обращения</span>
+            </label>
+            <button class="btn fillBtn" type="submit">Оставить</button>
+        </form>
+    </div>
+</div>
 <script src="./js/app.min.js"></script>
 
 </html>
