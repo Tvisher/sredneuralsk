@@ -23,7 +23,7 @@ window.addEventListener('load', (e) => {
 });
 
 const mainScreenSlider = new Swiper('.main-screen__slider', {
-    modules: [EffectFade, Pagination, Autoplay],
+    modules: [EffectFade, Pagination, Autoplay, Navigation],
     slidesPerView: 1,
     effect: 'fade',
     loop: 1,
@@ -33,6 +33,10 @@ const mainScreenSlider = new Swiper('.main-screen__slider', {
     autoplay: {
         delay: 5000,
     },
+    navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+    },
     pagination: {
         el: '.swiper-pagination',
         type: 'bullets',
@@ -41,7 +45,12 @@ const mainScreenSlider = new Swiper('.main-screen__slider', {
 });
 
 const honorariesSlider = new Swiper('.honoraries__slider', {
-    modules: [Pagination, Autoplay],
+    modules: [Pagination, Autoplay, Navigation],
+    navigation: {
+        nextEl: '.swiper-button-next.hono',
+        prevEl: '.swiper-button-prev.hono',
+    },
+    // centeredSlides: 1,
     grabCursor: 1,
     slidesPerView: 1,
     loop: 1,
