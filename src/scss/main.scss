@@ -59,12 +59,17 @@ body {
   margin: 0;
   padding: 0;
   background-color: #fff;
+  transition: opacity 0.2s ease-in-out;
   &.hidden {
     height: 100%;
     width: 100%;
     overflow: hidden;
     touch-action: none;
     -ms-touch-action: none;
+  }
+  opacity: 0;
+  &.loaded {
+    opacity: 1;
   }
 }
 

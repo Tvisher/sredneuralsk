@@ -2433,6 +2433,8 @@ body {
   margin: 0;
   padding: 0;
   background-color: #fff;
+  transition: opacity 0.2s ease-in-out;
+  opacity: 0;
 }
 
 body.hidden {
@@ -2441,6 +2443,10 @@ body.hidden {
   overflow: hidden;
   touch-action: none;
   -ms-touch-action: none;
+}
+
+body.loaded {
+  opacity: 1;
 }
 
 b,
