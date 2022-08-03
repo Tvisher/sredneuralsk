@@ -210,7 +210,17 @@ h4 {
     a {
       color: #a1a1a1;
       font-size: 12px;
+      transition: color $tt;
+      &:hover {
+        color: #0e4cd4;
+      }
     }
+  }
+}
+.org-info__tab-controls .tab-control {
+  transition: color $tt;
+  &:hover {
+    color: #0e4cd4;
   }
 }
 
@@ -1277,6 +1287,9 @@ header {
 }
 
 @media (max-width: 576px) {
+  .menu-btn {
+    width: 42px;
+  }
   .main-screen__chapter .chapter__img {
     height: 209px;
     width: 140px;
@@ -2356,8 +2369,8 @@ header {
   max-height: inherit;
 }
 .select2-container--default .select2-results__option[aria-selected="true"] {
-  background: #f6f7f9;
-  color: #000000;
+  background: #007cc3 !important;
+  color: #fff !important;
 }
 .select2-results__option {
   padding: 12px !important;
@@ -2397,6 +2410,11 @@ header {
     padding: 12px 0;
     height: 100%;
   }
+}
+.select2-container--default
+  .select2-results__option--highlighted[aria-selected] {
+  background: #f6f7f9;
+  color: #000000;
 }
 
 .search-res {

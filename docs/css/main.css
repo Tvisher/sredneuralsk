@@ -2611,6 +2611,19 @@ h4 {
 .breadcrumbs ul a {
   color: #a1a1a1;
   font-size: 12px;
+  transition: color 0.25s ease-in-out;
+}
+
+.breadcrumbs ul a:hover {
+  color: #0e4cd4;
+}
+
+.org-info__tab-controls .tab-control {
+  transition: color 0.25s ease-in-out;
+}
+
+.org-info__tab-controls .tab-control:hover {
+  color: #0e4cd4;
 }
 
 .menu-btn {
@@ -4420,8 +4433,8 @@ header {
 }
 
 .select2-container--default .select2-results__option[aria-selected=true] {
-  background: #f6f7f9;
-  color: #000000;
+  background: #007cc3 !important;
+  color: #fff !important;
 }
 
 .select2-results__option {
@@ -4464,6 +4477,11 @@ header {
   background-color: transparent;
   padding: 12px 0;
   height: 100%;
+}
+
+.select2-container--default .select2-results__option--highlighted[aria-selected] {
+  background: #f6f7f9;
+  color: #000000;
 }
 
 .search-res {
@@ -6291,6 +6309,10 @@ header {
 @media (max-width: 576px) {
   h2 {
     font-size: 18px;
+  }
+
+  .menu-btn {
+    width: 42px;
   }
 
   .main-screen__chapter .chapter__img {
