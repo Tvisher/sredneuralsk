@@ -5266,6 +5266,10 @@ header {
   margin-bottom: 36px;
 }
 
+.posters__list .poster-item .poster-item__time {
+  color: #393c41;
+}
+
 .posters__list .poster-item__image {
   overflow: hidden;
   margin-right: 30px;
@@ -5404,9 +5408,21 @@ header {
   font-size: 16px;
 }
 
-.posters__list .poster-item__price a {
+.posters__list .poster-item__price span {
   color: #114f74;
   font-size: 16px;
+}
+
+.poster-item__title,
+.poster-item__descr,
+.caps {
+  transition: color 0.25s ease-in-out;
+}
+
+.posters__list .poster-item:hover .poster-item__title,
+.posters__list .poster-item:hover .poster-item__descr,
+.posters__list .poster-item:hover .caps {
+  color: #0e4cd4;
 }
 
 .error-page {

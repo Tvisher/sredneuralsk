@@ -3601,6 +3601,9 @@ header {
     padding-bottom: 30px;
     border-bottom: 1px solid #dfe1e6;
     margin-bottom: 36px;
+    .poster-item__time {
+      color: #393c41;
+    }
   }
   .poster-item__image {
     overflow: hidden;
@@ -3728,10 +3731,23 @@ header {
     display: flex;
     flex-direction: column;
     font-size: 16px;
-    a {
+    span {
       color: #114f74;
       font-size: 16px;
     }
+  }
+}
+.poster-item__title,
+.poster-item__descr,
+.caps {
+  transition: color $tt;
+}
+
+.posters__list .poster-item:hover {
+  .poster-item__title,
+  .poster-item__descr,
+  .caps {
+    color: #0e4cd4;
   }
 }
 
