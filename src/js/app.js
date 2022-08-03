@@ -199,6 +199,7 @@ $('#modal-select').select2({
 
 document.querySelectorAll('[data-target-modal]').forEach(btn => {
     btn.addEventListener('click', (e) => {
+        e.preventDefault();
         let targetId = btn.dataset.targetModal;
         let targetMotal = document.querySelector(`[data-modal="${targetId}"]`)
         if (targetMotal) {

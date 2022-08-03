@@ -3984,6 +3984,10 @@ header {
 }
 
 @media (max-width: 576px) {
+  .affiche__slider-container .swiper-button-prev,
+  .affiche__slider-container .swiper-button-next {
+    transform: translate(0);
+  }
   .event {
     padding-bottom: 40px;
   }
