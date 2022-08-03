@@ -17,6 +17,11 @@ window.AirDatepicker = AirDatepicker;
 // Проверка поддержки webP
 baseFunction.testWebP();
 
+// Плавное отображение загрузки страницы 
+window.addEventListener('load', (e) => {
+    document.querySelector('body').classList.add('loaded');
+});
+
 const mainScreenSlider = new Swiper('.main-screen__slider', {
     modules: [EffectFade, Pagination, Autoplay],
     slidesPerView: 1,
@@ -186,7 +191,20 @@ document.addEventListener('DOMContentLoaded', () => {
 
 })
 
-
+// выпадашка в модалке
 $('#modal-select').select2({
     minimumResultsForSearch: Infinity,
 });
+
+
+document.querySelectorAll('[data-target-modal]').forEach(btn => {
+    btn.addEventListener('click', (e) => {
+        let targetId = btn.dataset.targetModal;
+        let targetMotal = document.querySelector(`[data-modal="${targetId}"]`)
+        if (targetMotal) {
+            targetMotal.classList.add('show');
+        }
+    });
+});
+
+
