@@ -5251,6 +5251,10 @@ header {
   margin-right: 16px;
 }
 
+.poster-section__hashtag-links .hashtag-link:hover {
+  color: #0e4cd4;
+}
+
 .poster-section {
   padding-bottom: 80px;
 }

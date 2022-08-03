@@ -3588,6 +3588,9 @@ header {
     font-size: 12px;
     color: #114f74;
     margin-right: 16px;
+    &:hover {
+      color: #0e4cd4;
+    }
   }
 }
 .poster-section {
