@@ -56,39 +56,15 @@ body {
   font-weight: $mainFontWeight;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  position: relative;
   margin: 0;
   padding: 0;
   background-color: #fff;
-  overflow: hidden;
   &.hidden {
     height: 100%;
     width: 100%;
     overflow: hidden;
     touch-action: none;
     -ms-touch-action: none;
-  }
-  &:before {
-    position: absolute;
-    content: "";
-    left: 0;
-    top: 0;
-    width: 100vw;
-    height: 100vh;
-    background-color: #fff;
-    z-index: 999;
-    transition: opacity 0.2s ease-in-out, visibility 0.2s ease-in-out;
-    background-image: url(../img/logo.svg);
-    background-size: 100px 100px;
-    background-repeat: no-repeat;
-    background-position: center;
-  }
-  &.loaded {
-    overflow: auto;
-    &:before {
-      opacity: 0;
-      visibility: hidden;
-    }
   }
 }
 
@@ -963,6 +939,7 @@ header {
   .news__item {
     padding: 15px 0;
     border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+    padding-left: 15px;
   }
   .news__item-date {
     line-height: 100%;
