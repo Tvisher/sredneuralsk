@@ -7132,6 +7132,10 @@ header {
 }
 
 @media (max-width: 380px) {
+  .search-res {
+    margin-bottom: 15px;
+  }
+
   .main-screen__slider,
   .affiche__slider_wrapper {
     margin-right: -10px;
