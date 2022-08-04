@@ -1296,12 +1296,7 @@ header {
     right: -10px;
     top: -10px;
   }
-  .footer__wrapper {
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    gap: 28px;
-  }
+
   .footer {
     padding-top: 25px;
     padding-bottom: 21px;
@@ -4389,5 +4384,36 @@ header {
     .article__title {
       color: #0e4cd4;
     }
+  }
+}
+
+.footer__block {
+  display: flex;
+  a {
+    padding: 0 10px;
+    &:last-child {
+      padding-right: 0;
+    }
+  }
+}
+
+@media (max-width: 680px) {
+  .footer__wrapper {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 28px;
+  }
+}
+@media (max-width: 380px) {
+  .footer__block {
+    flex-direction: column;
+    align-items: center;
+    a {
+      padding: 5px !important;
+    }
+  }
+  .footer__wrapper {
+    gap: 15px;
   }
 }

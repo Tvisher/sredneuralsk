@@ -5968,6 +5968,18 @@ header {
   color: #0e4cd4;
 }
 
+.footer__block {
+  display: flex;
+}
+
+.footer__block a {
+  padding: 0 10px;
+}
+
+.footer__block a:last-child {
+  padding-right: 0;
+}
+
 @media (max-width: 1190px) {
   .slide-baner__grad {
     padding: 32px;
@@ -6443,6 +6455,13 @@ header {
   .table-wrapper table {
     width: 600px;
   }
+
+  .footer__wrapper {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 28px;
+  }
 }
 
 @media (max-width: 660px) {
@@ -6532,13 +6551,6 @@ header {
     width: 140px;
     right: -10px;
     top: -10px;
-  }
-
-  .footer__wrapper {
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    gap: 28px;
   }
 
   .footer {
@@ -7273,6 +7285,19 @@ header {
 
   .quote .quote__auth .name {
     font-size: 16px;
+  }
+
+  .footer__block {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .footer__block a {
+    padding: 5px !important;
+  }
+
+  .footer__wrapper {
+    gap: 15px;
   }
 }
 
