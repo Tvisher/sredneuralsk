@@ -1934,6 +1934,7 @@ header {
     align-items: center;
   }
   .page {
+    transition: $tt;
     color: #000000;
     width: 36px;
     height: 36px;
@@ -1947,8 +1948,10 @@ header {
     }
   }
   .next-btn {
-    margin-left: 12px;
+    transition: $tt;
     color: #000000;
+    padding: 12px;
+    border-radius: 20px;
   }
 }
 
@@ -2405,10 +2408,15 @@ header {
   gap: 8px;
   padding: 0 15px;
   background: #f2f3f7;
+  border: 1px solid transparent;
   input {
     background-color: transparent;
     padding: 12px 0;
     height: 100%;
+  }
+  transition: border-color $tt;
+  &:hover {
+    border-color: #393c41;
   }
 }
 .select2-container--default
@@ -2977,6 +2985,7 @@ header {
   display: flex;
   width: 100%;
   .search__field {
+    border: 1px solid transparent;
     width: 100%;
     margin-right: 30px;
     font-size: 18px;
@@ -3969,6 +3978,7 @@ header {
   }
   textarea {
     resize: none;
+    width: 100%;
     height: 68px;
   }
   .file-label {
@@ -4221,5 +4231,160 @@ header {
     margin-left: 0;
     padding-left: 0;
     padding-right: 0;
+  }
+}
+
+.documents-tab__list .list-item {
+  transition: $tt;
+  .list-item__link {
+    transition: $tt;
+  }
+  &:hover {
+    background-color: #f6f7f9;
+    .list-item__link {
+      color: #0e4cd4;
+    }
+  }
+}
+
+.pagination {
+  .page,
+  .next-btn {
+    &:hover {
+      background: #f6f7f9;
+      color: #0e4cd4;
+    }
+  }
+}
+
+.news-section .news-section__list .list-item {
+  h3,
+  h1,
+  h2,
+  h4 {
+    transition: $tt;
+  }
+  &:hover {
+    h3,
+    h1,
+    h2,
+    h4 {
+      color: #0e4cd4;
+    }
+  }
+}
+
+.contacts-tab__contancts .item__link {
+  transition: $tt;
+  &:hover {
+    color: #0e4cd4;
+  }
+}
+
+.sub-org__item {
+  .list-item__site,
+  .list-item__name,
+  .text-blue,
+  .list-item__wrapper {
+    transition: $tt;
+  }
+  &:hover {
+    .list-item__wrapper {
+      background-color: #90c171;
+    }
+    .list-item__site {
+      color: rgba(255, 255, 255, 0.6);
+    }
+    .list-item__name,
+    .text-blue {
+      color: #fff;
+    }
+  }
+}
+.list-item__more,
+.article-section .article-link,
+.error-page__content .error-page__descr a,
+.event .event__link {
+  transition: $tt;
+  &:hover {
+    color: #0e4cd4;
+  }
+}
+
+.npa-docs-tab__list .list-item,
+.search-area__res .res-item,
+.article-section .doc-item {
+  transition: $tt;
+  .list-item__link,
+  .list-item__more,
+  .res-item__name,
+  .link {
+    transition: $tt;
+  }
+  padding-right: 5px;
+  &:hover {
+    background-color: #f6f7f9;
+
+    .list-item__link,
+    .res-item__name,
+    .link {
+      color: #0e4cd4;
+    }
+  }
+}
+
+.archive-tab__btns .archive-tab__btn,
+.org-info__block .info-card__row a,
+.article__flying .news__item .news__item-link {
+  transition: $tt;
+  &:hover {
+    color: #0e4cd4;
+  }
+}
+
+.npa-docs-tab__settings .date-field,
+.decrees__wrapper .select2-container--default .select2-selection--single,
+.search-area__block .search__field {
+  transition: border-color $tt;
+  &:hover {
+    border-color: #000000;
+  }
+}
+
+.table-wrapper tr {
+  transition: $tt;
+  &:hover {
+    background-color: #f6f7f9;
+  }
+}
+
+.honorable__body {
+  color: #000000;
+}
+
+.modal .select2,
+.modal .modal__label {
+  transition: $tt;
+  &:hover {
+    border-color: #000000;
+    color: #000;
+  }
+}
+
+.modal .close-btn {
+  transition: $tt;
+  &:hover {
+    transform: scale(1.1);
+  }
+}
+
+.news .article {
+  .article__title {
+    transition: $tt;
+  }
+  &:hover {
+    .article__title {
+      color: #0e4cd4;
+    }
   }
 }
