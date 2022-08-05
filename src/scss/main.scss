@@ -915,9 +915,8 @@ header {
       width: 100%;
       height: calc(100% + 1px);
       content: "";
-      transition: background-color 0.25s ease-in-out;
+      transition: background-color 0.25s ease-in-out, opacity 0.2s ease-in-out;
       background-color: rgb(255, 255, 255, 0.6);
-      transition: opacity 0.2s ease-in-out;
     }
     &.swiper-slide-next:before,
     &.swiper-slide-prev:before {
