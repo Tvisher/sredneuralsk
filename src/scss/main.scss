@@ -349,7 +349,7 @@ header {
     color: $brand_blue;
     transition: $tt;
     &:hover {
-      color: #007cc3;
+      color: #0e4cd4;
     }
     &:nth-of-type(1) {
       margin-right: 28px;
@@ -419,6 +419,9 @@ header {
 .affiche__slider .poster.swiper-slide-visible {
   &:hover {
     z-index: 20 !important;
+    &:before {
+      opacity: 0;
+    }
   }
 }
 
@@ -914,6 +917,7 @@ header {
       content: "";
       transition: background-color 0.25s ease-in-out;
       background-color: rgb(255, 255, 255, 0.6);
+      transition: opacity 0.2s ease-in-out;
     }
     &.swiper-slide-next:before,
     &.swiper-slide-prev:before {
@@ -2414,7 +2418,7 @@ header {
   }
   transition: border-color $tt;
   &:hover {
-    border-color: #393c41;
+    border-color: #0e4cd4;
   }
 }
 .select2-container--default
@@ -4345,7 +4349,7 @@ header {
 .search-area__block .search__field {
   transition: border-color $tt;
   &:hover {
-    border-color: #000000;
+    border-color: #0e4cd4;
   }
 }
 
@@ -4364,7 +4368,7 @@ header {
 .modal .modal__label {
   transition: $tt;
   &:hover {
-    border-color: #000000;
+    border-color: #0e4cd4;
     color: #000;
   }
 }

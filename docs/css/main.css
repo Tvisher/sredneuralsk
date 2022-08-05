@@ -2759,7 +2759,7 @@ header {
 }
 
 .header__cats a:hover {
-  color: #007cc3;
+  color: #0e4cd4;
 }
 
 .header__cats a:nth-of-type(1) {
@@ -2840,6 +2840,10 @@ header {
 
 .affiche__slider .poster.swiper-slide-visible:hover {
   z-index: 20 !important;
+}
+
+.affiche__slider .poster.swiper-slide-visible:hover:before {
+  opacity: 0;
 }
 
 .main-screen__slider {
@@ -3388,6 +3392,7 @@ header {
   content: "";
   transition: background-color 0.25s ease-in-out;
   background-color: rgba(255, 255, 255, 0.6);
+  transition: opacity 0.2s ease-in-out;
 }
 
 .affiche__slider .poster.swiper-slide-next:before,
@@ -4485,7 +4490,7 @@ header {
 }
 
 .search-container:hover {
-  border-color: #393c41;
+  border-color: #0e4cd4;
 }
 
 .select2-container--default .select2-results__option--highlighted[aria-selected] {
@@ -5926,7 +5931,7 @@ header {
 .npa-docs-tab__settings .date-field:hover,
 .decrees__wrapper .select2-container--default .select2-selection--single:hover,
 .search-area__block .search__field:hover {
-  border-color: #000000;
+  border-color: #0e4cd4;
 }
 
 .table-wrapper tr {
@@ -5948,7 +5953,7 @@ header {
 
 .modal .select2:hover,
 .modal .modal__label:hover {
-  border-color: #000000;
+  border-color: #0e4cd4;
   color: #000;
 }
 
