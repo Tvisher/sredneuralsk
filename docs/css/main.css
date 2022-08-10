@@ -2434,7 +2434,6 @@ body {
   padding: 0;
   background-color: #fff;
   transition: opacity 0.2s ease-in-out;
-  opacity: 0;
 }
 
 body.hidden {
@@ -2445,7 +2444,13 @@ body.hidden {
   -ms-touch-action: none;
 }
 
-body.loaded {
+.swiper {
+  opacity: 0;
+  visibility: hidden;
+}
+
+.swiper.loaded {
+  visibility: visible;
   opacity: 1;
 }
 
@@ -2970,6 +2975,7 @@ header {
 }
 
 .main-screen__chapter {
+  z-index: 2;
   overflow: hidden;
   position: relative;
   width: calc(25% - 15px);
@@ -3320,7 +3326,14 @@ header {
   display: flex;
   align-items: center;
   justify-content: flex-start;
-  gap: 16px;
+}
+
+.main-body .title-wrapper h1,
+.main-body .title-wrapper h2,
+.main-body .title-wrapper h3,
+.main-body .title-wrapper h4,
+.main-body .title-wrapper h5 {
+  margin-right: 16px;
 }
 
 .show-more {

@@ -68,8 +68,14 @@ body {
     touch-action: none;
     -ms-touch-action: none;
   }
+  // opacity: 0;
+}
+
+.swiper {
   opacity: 0;
+  visibility: hidden;
   &.loaded {
+    visibility: visible;
     opacity: 1;
   }
 }
@@ -372,6 +378,7 @@ header {
 }
 
 .main-screen__wrapper {
+  // overflow: hidden;
   display: flex;
   align-items: flex-start;
   width: 100%;
@@ -546,6 +553,7 @@ header {
 }
 
 .main-screen__chapter {
+  z-index: 2;
   overflow: hidden;
   position: relative;
   width: calc(25% - 15px);
@@ -848,7 +856,14 @@ header {
     display: flex;
     align-items: center;
     justify-content: flex-start;
-    gap: 16px;
+    // gap: 16px;
+    h1,
+    h2,
+    h3,
+    h4,
+    h5 {
+      margin-right: 16px;
+    }
   }
 }
 .show-more {

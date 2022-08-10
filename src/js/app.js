@@ -19,8 +19,15 @@ baseFunction.testWebP();
 
 // Плавное отображение загрузки страницы 
 window.addEventListener('load', (e) => {
-    document.querySelector('body').classList.add('loaded');
+    const sliders = document.querySelectorAll('.swiper');
+    if (sliders) {
+        sliders.forEach(item => item.classList.add('loaded'));
+    }
 });
+
+var ua = window.navigator.userAgent.toLowerCase(),
+    is_ie = (/trident/gi).test(ua) || (/msie/gi).test(ua);
+console.log(is_ie);
 
 const mainScreenSlider = new Swiper('.main-screen__slider', {
     modules: [EffectFade, Pagination, Autoplay, Navigation],
