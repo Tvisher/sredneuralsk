@@ -25,14 +25,6 @@ window.addEventListener('load', (e) => {
     }
 });
 
-function isIE() {
-    var userAgent = navigator.userAgent;
-    return /MSIE|Trident/.test(userAgent);
-}
-
-if (isIE()) {
-    alert("Internet Explorer");
-}
 
 
 const mainScreenSlider = new Swiper('.main-screen__slider', {

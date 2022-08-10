@@ -1,3 +1,13 @@
+<script>
+    function isIE() {
+        var userAgent = navigator.userAgent;
+        return /MSIE|Trident/.test(userAgent);
+    }
+
+    if (isIE()) {
+        alert("Internet Explorer");
+    }
+</script>
 <header class="header">
     <div class="header__top">
         <div class="container">
