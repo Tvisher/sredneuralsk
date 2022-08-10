@@ -2457,11 +2457,12 @@ textarea {
 
 .ie-baner {
   display: none;
-  padding: 40px 0;
+  padding: 15px 0;
   font-weight: 600;
   text-align: center;
-  font-size: 22px;
+  font-size: 18px;
   line-height: 120%;
+  background-color: #fff;
 }
 
 body {
