@@ -25,9 +25,15 @@ window.addEventListener('load', (e) => {
     }
 });
 
-var ua = window.navigator.userAgent.toLowerCase(),
-    is_ie = (/trident/gi).test(ua) || (/msie/gi).test(ua);
-console.log(is_ie);
+function isIE() {
+    var userAgent = navigator.userAgent;
+    return /MSIE|Trident/.test(userAgent);
+}
+
+if (isIE()) {
+    alert("Internet Explorer");
+}
+
 
 const mainScreenSlider = new Swiper('.main-screen__slider', {
     modules: [EffectFade, Pagination, Autoplay, Navigation],
