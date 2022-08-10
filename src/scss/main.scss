@@ -1651,11 +1651,11 @@ header {
 .org-info__tab-controls {
   @media (max-width: 1024px) {
     &::-webkit-scrollbar {
-      width: 0;
+      display: none;
     }
     scrollbar-width: none;
   }
-  overflow: auto;
+  overflow-y: scroll;
   margin: 35px 0;
   border-bottom: 1px solid #dfe1e6;
   display: flex;
