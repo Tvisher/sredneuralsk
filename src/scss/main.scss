@@ -1653,6 +1653,7 @@ header {
     &::-webkit-scrollbar {
       width: 0;
     }
+    scrollbar-width: none;
   }
   overflow: auto;
   margin: 35px 0;

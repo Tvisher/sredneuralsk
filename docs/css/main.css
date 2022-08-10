@@ -6208,6 +6208,10 @@ header {
 }
 
 @media (max-width: 1024px) {
+  .org-info__tab-controls {
+    scrollbar-width: none;
+  }
+
   .org-info__tab-controls::-webkit-scrollbar {
     width: 0;
   }
