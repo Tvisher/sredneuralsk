@@ -2435,8 +2435,21 @@ html {
   height: 100%;
 }
 
+html.ie .ie-baner {
+  display: block;
+}
+
 textarea {
   font-family: "Roboto" !important;
+}
+
+.ie-baner {
+  display: none;
+  padding: 40px 0;
+  font-weight: 600;
+  text-align: center;
+  font-size: 22px;
+  line-height: 120%;
 }
 
 body {

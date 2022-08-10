@@ -3,11 +3,18 @@
         var userAgent = navigator.userAgent;
         return /MSIE|Trident/.test(userAgent);
     }
-
     if (isIE()) {
-        document.getElementsByTagName('html').classList.add('IE');
+        document.querySelector('html').className += "ie";
     }
 </script>
+<div class="ie-baner">
+    <div class="container">
+        <p>
+            Компания Microsoft прекратила поддержку браузера Internet Explorer c 21.03.2021.<br>
+            Пожалуйста используйте другой браузер для корректного отображения сайта.
+        </p>
+    </div>
+</div>
 <header class="header">
     <div class="header__top">
         <div class="container">

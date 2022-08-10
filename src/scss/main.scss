@@ -43,9 +43,23 @@ html {
   font-size: $mainFontSize;
   color: $mainFontColor;
   height: 100%;
+  &.ie {
+    .ie-baner {
+      display: block;
+    }
+  }
 }
 textarea {
   font-family: $mainFont !important;
+}
+
+.ie-baner {
+  display: none;
+  padding: 40px 0;
+  font-weight: 600;
+  text-align: center;
+  font-size: 22px;
+  line-height: 120%;
 }
 
 body {
