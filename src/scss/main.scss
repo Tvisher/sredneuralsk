@@ -49,6 +49,22 @@ html {
     }
   }
 }
+
+.header {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  z-index: 100;
+}
+
+.header-imitation {
+  height: 104px;
+  @media (max-width: 992px) {
+    height: 53px;
+  }
+}
+
 textarea {
   font-family: $mainFont !important;
 }
@@ -76,13 +92,11 @@ body {
   background-color: #fff;
   transition: opacity 0.2s ease-in-out;
   &.hidden {
-    height: 100%;
     width: 100%;
     overflow: hidden;
     touch-action: none;
     -ms-touch-action: none;
   }
-  // opacity: 0;
 }
 
 .swiper {
@@ -187,6 +201,13 @@ h4 {
   font-weight: 500;
   font-size: 18px;
   color: #000000;
+}
+
+.text-2-b {
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 125%;
+  color: #393c41;
 }
 
 .text-2 {
@@ -1628,6 +1649,11 @@ header {
 }
 
 .org-info__tab-controls {
+  @media (max-width: 1024px) {
+    &::-webkit-scrollbar {
+      width: 0;
+    }
+  }
   overflow: auto;
   margin: 35px 0;
   border-bottom: 1px solid #dfe1e6;

@@ -2439,6 +2439,18 @@ html.ie .ie-baner {
   display: block;
 }
 
+.header {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  z-index: 100;
+}
+
+.header-imitation {
+  height: 104px;
+}
+
 textarea {
   font-family: "Roboto" !important;
 }
@@ -2468,7 +2480,6 @@ body {
 }
 
 body.hidden {
-  height: 100%;
   width: 100%;
   overflow: hidden;
   touch-action: none;
@@ -2600,6 +2611,13 @@ h4 {
   font-weight: 500;
   font-size: 18px;
   color: #000000;
+}
+
+.text-2-b {
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 125%;
+  color: #393c41;
 }
 
 .text-2 {
@@ -6189,7 +6207,17 @@ header {
   }
 }
 
+@media (max-width: 1024px) {
+  .org-info__tab-controls::-webkit-scrollbar {
+    width: 0;
+  }
+}
+
 @media (max-width: 992px) {
+  .header-imitation {
+    height: 53px;
+  }
+
   .menu-btn {
     margin-top: auto;
     margin-bottom: auto;

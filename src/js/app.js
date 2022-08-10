@@ -11,6 +11,7 @@ import Swiper, {
 } from 'swiper';
 import IMask from 'imask';
 import AirDatepicker from 'air-datepicker';
+import { get } from 'jquery';
 
 
 window.AirDatepicker = AirDatepicker;
@@ -210,7 +211,7 @@ $('#modal-select').select2({
     minimumResultsForSearch: Infinity,
 });
 
-
+// Вызов модального окна по клику на кнопку
 document.querySelectorAll('[data-target-modal]').forEach(btn => {
     btn.addEventListener('click', (e) => {
         e.preventDefault();
@@ -221,5 +222,17 @@ document.querySelectorAll('[data-target-modal]').forEach(btn => {
         }
     });
 });
+
+
+
+//Фикс шапка подстраховка
+const header = document.querySelector('header.header');
+const headerImitation = document.querySelector('.header-imitation');
+function headerEmit() {
+    const headerheight = header.clientHeight;
+    headerImitation.style.height = `${headerheight}px`
+}
+headerEmit();
+window.addEventListener('resize', headerEmit);
 
 
