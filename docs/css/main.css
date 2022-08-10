@@ -3869,6 +3869,8 @@ header {
 }
 
 .contacts-tab__personal .personal__item-data {
+  flex-wrap: wrap;
+  margin-bottom: 8px;
   display: flex;
   align-items: center;
   justify-content: flex-start;
