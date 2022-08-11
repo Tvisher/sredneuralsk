@@ -3790,12 +3790,17 @@ header {
 }
 
 .org-info__tab-controls {
+  scrollbar-width: none;
   overflow-y: scroll;
   margin: 35px 0;
   border-bottom: 1px solid #dfe1e6;
   display: flex;
   align-items: center;
   justify-content: flex-start;
+}
+
+.org-info__tab-controls::-webkit-scrollbar {
+  display: none;
 }
 
 .org-info__tab-controls .tab-control {
@@ -6205,16 +6210,6 @@ header {
 @media (max-width: 1100px) {
   .top-citizens .honorable .honorable__wrap {
     flex-wrap: wrap;
-  }
-}
-
-@media (max-width: 1024px) {
-  .org-info__tab-controls {
-    scrollbar-width: none;
-  }
-
-  .org-info__tab-controls::-webkit-scrollbar {
-    display: none;
   }
 }
 
