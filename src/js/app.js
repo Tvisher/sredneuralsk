@@ -226,13 +226,24 @@ document.querySelectorAll('[data-target-modal]').forEach(btn => {
 
 
 //Фикс шапка подстраховка
-const header = document.querySelector('header.header');
-const headerImitation = document.querySelector('.header-imitation');
-function headerEmit() {
-    const headerheight = header.clientHeight;
-    headerImitation.style.height = `${headerheight}px`
-}
-headerEmit();
-window.addEventListener('resize', headerEmit);
+// const header = document.querySelector('header.header');
+// const headerImitation = document.querySelector('.header-imitation');
+// function headerEmit() {
+//     const headerheight = header.clientHeight;
+//     headerImitation.style.height = `${headerheight}px`
+// }
+// // headerEmit();
+// window.addEventListener('resize', headerEmit);
 
 
+setTimeout(() => {
+    Fancybox.bind('[data-fancybox="gallery"]', {
+        //
+      }); 
+}, 1000);
+
+
+$(document).on('click', '[data-dropped-element]', function (e) {
+    $(this).toggleClass('toggle-open');
+    $(this).next().slideToggle(() => { $(this).toggleClass('toggle-open'); })
+})

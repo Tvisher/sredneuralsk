@@ -1,0 +1,865 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="./favicon.ico" type="image/x-icon">
+    <link rel="icon" href="./favicon.ico" type="image/x-icon">
+    <title>Среднеуральск</title>
+    <!-- preload fonts -->
+    <link rel="preload" href="./fonts/Roboto-Bold.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+    <link rel="preload" href="./fonts/Roboto-Light.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+    <link rel="preload" href="./fonts/Roboto-Medium.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+    <link rel="preload" href="./fonts/Roboto-Regular.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+    <!-- main css -->
+    <link rel="stylesheet" href="./css/main.min.css">
+    <!-- transition bagfix zeroscript -->
+    <script> </script>
+</head>
+
+<body>
+    <script>
+    function isIE() {
+        var userAgent = navigator.userAgent;
+        return /MSIE|Trident/.test(userAgent);
+    }
+    if (isIE()) {
+        document.querySelector('html').className += "ie";
+    }
+</script>
+<header class="header">
+    <div class="ie-baner">
+        <div class="container">
+            <p>
+                Компания Microsoft прекратила поддержку браузера Internet Explorer c 21.03.2021.<br>
+                Пожалуйста используйте другой браузер для корректного отображения сайта.
+            </p>
+        </div>
+    </div>
+    <div class="header__top">
+        <div class="container">
+            <div class="header__wrapper">
+                <div class="menu-btn" data-burger-menu>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+                <a href="#" class="header__logo">
+                    <div class="logo-container">
+                        <img src="img/logo.svg" alt="">
+                    </div>
+                    <span class="logo__name">Среднеуральск</span>
+                </a>
+                <nav class="header__nav">
+                    <ul>
+                        <li><a href="#">Администрация</a></li>
+                        <li><a href="#">Городская дума</a></li>
+                        <li><a href="#">Счетная палата</a></li>
+                    </ul>
+                </nav>
+                <div class="header__actions">
+                    <a href="#" class="search-btn">
+                        <svg width="21" height="22" viewBox="0 0 21 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M9.40982 17.8135C14.0544 17.8135 17.8196 14.0497 17.8196 9.40676C17.8196 4.76383 14.0544 1 9.40982 1C4.76521 1 1 4.76383 1 9.40676C1 14.0497 4.76521 17.8135 9.40982 17.8135Z" stroke="white" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" />
+                            <path d="M15.3145 15.9883L20.3259 20.9998" stroke="white" stroke-width="1.5" stroke-miterlimit="10" />
+                        </svg>
+                    </a>
+                    <button class="eye-btn">
+                        <svg width="20" height="11" viewBox="0 0 20 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M9.86275 0C5.73256 0 2.09941 2.1281 0 5.3476C2.0993 8.5677 5.7328 10.6963 9.86345 10.6963C13.9936 10.6963 17.6268 8.56817 19.7262 5.34867C17.6269 2.12857 13.9934 0 9.86275 0ZM9.86227 9.0385C11.9005 9.0385 13.5527 7.38621 13.5527 5.34802C13.5527 3.30983 11.9005 1.65755 9.86227 1.65755C7.82407 1.65755 6.17179 3.30983 6.17179 5.34802C6.17179 7.38621 7.82407 9.0385 9.86227 9.0385Z" fill="white" />
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="header__bottom">
+        <div class="container">
+            <div class="header__cats">
+                <a href="#" class="cats__item  active">Муниципальные услуги</a>
+                <a href="#" class="cats__item">Нормативно-правовые акты</a>
+            </div>
+        </div>
+    </div>
+</header>
+<div class="header-imitation"></div>
+<div class="mobile-menu" data-header-menu>
+    <div class="mobile-menu__content">
+        <ul class="mobile-menu__top">
+            <li>
+                <a href="#">Администрация</a>
+            </li>
+            <li>
+                <a href="#">Городская дума</a>
+            </li>
+            <li>
+                <a href="#">Счетная палата</a>
+            </li>
+        </ul>
+        <ul class="mobile-menu__bottom">
+            <li>
+                <a href="#">Муниципальные услуги</a>
+            </li>
+            <li>
+                <a href="#">Нормативно-правовые акты</a>
+            </li>
+        </ul>
+    </div>
+</div>
+    <main>
+        <section class="breadcrumbs">
+            <div class="container">
+                <ul>
+                    <li><a href="#">Главная</a></li>
+                    <li><a href="#">Управление образования городского округа Среднеуральск</a></li>
+                </ul>
+            </div>
+        </section>
+        <section class="services-section">
+            <div class="container">
+                <h1>Муниципальные услуги</h1>
+                <ul class="services-list">
+                    <li class="services-list__item">
+                        <div class="list-item__head" data-dropped-element>
+                            <span>Управление муниципальным имуществом</span>
+                            <div class="list-item__arrow">
+                                <svg width="14" height="9" viewBox="0 0 14 9" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M1 1L7 7L13 1" stroke="#4F4F4F" stroke-width="2" stroke-miterlimit="10" />
+                                </svg>
+                            </div>
+                        </div>
+                        <div class="list-item__body">
+                            <ul class="services-tab">
+                                <li class="services-tab__item list-item">
+                                    <a href="#" class="list-item__wrapper">
+                                        <span class="text-1-b">
+                                            Прием заявлений, постановка на учет и зачисление детей в образовательные
+                                            учреждения,
+                                            реализующие
+                                            основную образовательную программу дошкольного образования (детские сады)
+                                        </span>
+                                        <div class="ico">
+                                            <svg width="14" height="14" viewBox="0 0 14 14" fill="none"
+                                                xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M1 7C5.68629 7 8.31371 7 13 7M13 7L7.24 13M13 7L7.24 1"
+                                                    stroke="#007CC3" stroke-linecap="round"></path>
+                                            </svg>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li class="services-tab__item list-item">
+                                    <a href="#" class="list-item__wrapper">
+                                        <span class="text-1-b">
+                                            Предоставление путевок в организации отдыха детей и их оздоровления в
+                                            учебное
+                                            время (за
+                                            исключением
+                                            детей-сирот и детей, оставшихся без попечения родителей, детей, находящихся
+                                            в
+                                            трудной
+                                            жизненной
+                                            ситуации)
+                                        </span>
+                                        <div class="ico">
+                                            <svg width="14" height="14" viewBox="0 0 14 14" fill="none"
+                                                xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M1 7C5.68629 7 8.31371 7 13 7M13 7L7.24 13M13 7L7.24 1"
+                                                    stroke="#007CC3" stroke-linecap="round"></path>
+                                            </svg>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li class="services-tab__item list-item">
+                                    <a href="#" class="list-item__wrapper">
+                                        <span class="text-1-b">
+                                            Предоставление информации об образовательных программах и учебных планах,
+                                            рабочих
+                                            программах
+                                            учебных
+                                            курсов, предметов, дисциплин (модулей), годовых календарных учебных графиках
+                                        </span>
+                                        <div class="ico">
+                                            <svg width="14" height="14" viewBox="0 0 14 14" fill="none"
+                                                xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M1 7C5.68629 7 8.31371 7 13 7M13 7L7.24 13M13 7L7.24 1"
+                                                    stroke="#007CC3" stroke-linecap="round"></path>
+                                            </svg>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li class="services-tab__item list-item">
+                                    <a href="#" class="list-item__wrapper">
+                                        <span class="text-1-b">
+                                            Предоставление информации о результатах сданных экзаменов, тестирования и
+                                            иных
+                                            вступительных
+                                            испытаний,
+                                            а также о зачислении в образовательное учреждение
+                                        </span>
+                                        <div class="ico">
+                                            <svg width="14" height="14" viewBox="0 0 14 14" fill="none"
+                                                xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M1 7C5.68629 7 8.31371 7 13 7M13 7L7.24 13M13 7L7.24 1"
+                                                    stroke="#007CC3" stroke-linecap="round"></path>
+                                            </svg>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li class="services-tab__item list-item">
+                                    <a href="#" class="list-item__wrapper">
+                                        <span class="text-1-b">
+                                            Предоставление информации о текущей успеваемости учащегося, ведение
+                                            электронного
+                                            дневника и
+                                            электронного
+                                            журнала успеваемости
+                                        </span>
+                                        <div class="ico">
+                                            <svg width="14" height="14" viewBox="0 0 14 14" fill="none"
+                                                xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M1 7C5.68629 7 8.31371 7 13 7M13 7L7.24 13M13 7L7.24 1"
+                                                    stroke="#007CC3" stroke-linecap="round"></path>
+                                            </svg>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li class="services-tab__item list-item">
+                                    <a href="#" class="list-item__wrapper">
+                                        <span class="text-1-b">
+                                            Зачисление в общеобразовательное учреждение
+                                        </span>
+                                        <div class="ico">
+                                            <svg width="14" height="14" viewBox="0 0 14 14" fill="none"
+                                                xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M1 7C5.68629 7 8.31371 7 13 7M13 7L7.24 13M13 7L7.24 1"
+                                                    stroke="#007CC3" stroke-linecap="round"></path>
+                                            </svg>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li class="services-tab__item list-item">
+                                    <a href="#" class="list-item__wrapper">
+                                        <span class="text-1-b">
+                                            Предоставление информации об организации общедоступного и бесплатного
+                                            дошкольного,
+                                            начального
+                                            общего,
+                                            основного общего, среднего общего образования, а также дополнительного
+                                            образования в
+                                            общеобразовательных
+                                            учреждениях, расположенных на территории городского округа Среднеуральск
+                                        </span>
+                                        <div class="ico">
+                                            <svg width="14" height="14" viewBox="0 0 14 14" fill="none"
+                                                xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M1 7C5.68629 7 8.31371 7 13 7M13 7L7.24 13M13 7L7.24 1"
+                                                    stroke="#007CC3" stroke-linecap="round"></path>
+                                            </svg>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li class="services-tab__item list-item">
+                                    <a href="#" class="list-item__wrapper">
+                                        <span class="text-1-b">
+                                            Предоставление путевок детям в организации отдыха в дневных и загородных
+                                            лагерях
+                                        </span>
+                                        <div class="ico">
+                                            <svg width="14" height="14" viewBox="0 0 14 14" fill="none"
+                                                xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M1 7C5.68629 7 8.31371 7 13 7M13 7L7.24 13M13 7L7.24 1"
+                                                    stroke="#007CC3" stroke-linecap="round"></path>
+                                            </svg>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li class="services-tab__item list-item">
+                                    <a href="#" class="list-item__wrapper">
+                                        <span class="text-1-b">
+                                            Предоставление информации об организации дополнительного образования
+                                        </span>
+                                        <div class="ico">
+                                            <svg width="14" height="14" viewBox="0 0 14 14" fill="none"
+                                                xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M1 7C5.68629 7 8.31371 7 13 7M13 7L7.24 13M13 7L7.24 1"
+                                                    stroke="#007CC3" stroke-linecap="round"></path>
+                                            </svg>
+                                        </div>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+
+                    <li class="services-list__item">
+                        <div class="list-item__head" data-dropped-element>
+                            <span>Архитектура</span>
+                            <div class="list-item__arrow">
+                                <svg width="14" height="9" viewBox="0 0 14 9" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M1 1L7 7L13 1" stroke="#4F4F4F" stroke-width="2" stroke-miterlimit="10" />
+                                </svg>
+                            </div>
+                        </div>
+                        <div class="list-item__body">
+                            <ul class="services-tab">
+                                <li class="services-tab__item list-item">
+                                    <a href="#" class="list-item__wrapper">
+                                        <span class="text-1-b">
+                                            Прием заявлений, постановка на учет и зачисление детей в образовательные
+                                            учреждения,
+                                            реализующие
+                                            основную образовательную программу дошкольного образования (детские сады)
+                                        </span>
+                                        <div class="ico">
+                                            <svg width="14" height="14" viewBox="0 0 14 14" fill="none"
+                                                xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M1 7C5.68629 7 8.31371 7 13 7M13 7L7.24 13M13 7L7.24 1"
+                                                    stroke="#007CC3" stroke-linecap="round"></path>
+                                            </svg>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li class="services-tab__item list-item">
+                                    <a href="#" class="list-item__wrapper">
+                                        <span class="text-1-b">
+                                            Предоставление путевок в организации отдыха детей и их оздоровления в
+                                            учебное
+                                            время (за
+                                            исключением
+                                            детей-сирот и детей, оставшихся без попечения родителей, детей, находящихся
+                                            в
+                                            трудной
+                                            жизненной
+                                            ситуации)
+                                        </span>
+                                        <div class="ico">
+                                            <svg width="14" height="14" viewBox="0 0 14 14" fill="none"
+                                                xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M1 7C5.68629 7 8.31371 7 13 7M13 7L7.24 13M13 7L7.24 1"
+                                                    stroke="#007CC3" stroke-linecap="round"></path>
+                                            </svg>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li class="services-tab__item list-item">
+                                    <a href="#" class="list-item__wrapper">
+                                        <span class="text-1-b">
+                                            Предоставление информации об образовательных программах и учебных планах,
+                                            рабочих
+                                            программах
+                                            учебных
+                                            курсов, предметов, дисциплин (модулей), годовых календарных учебных графиках
+                                        </span>
+                                        <div class="ico">
+                                            <svg width="14" height="14" viewBox="0 0 14 14" fill="none"
+                                                xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M1 7C5.68629 7 8.31371 7 13 7M13 7L7.24 13M13 7L7.24 1"
+                                                    stroke="#007CC3" stroke-linecap="round"></path>
+                                            </svg>
+                                        </div>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li class="services-list__item">
+                        <div class="list-item__head" data-dropped-element>
+                            <span>Образование</span>
+                            <div class="list-item__arrow">
+                                <svg width="14" height="9" viewBox="0 0 14 9" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M1 1L7 7L13 1" stroke="#4F4F4F" stroke-width="2" stroke-miterlimit="10" />
+                                </svg>
+                            </div>
+                        </div>
+                        <div class="list-item__body">
+                            <ul class="services-tab">
+                                <li class="services-tab__item list-item">
+                                    <a href="#" class="list-item__wrapper">
+                                        <span class="text-1-b">
+                                            Прием заявлений, постановка на учет и зачисление детей в образовательные
+                                            учреждения,
+                                            реализующие
+                                            основную образовательную программу дошкольного образования (детские сады)
+                                        </span>
+                                        <div class="ico">
+                                            <svg width="14" height="14" viewBox="0 0 14 14" fill="none"
+                                                xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M1 7C5.68629 7 8.31371 7 13 7M13 7L7.24 13M13 7L7.24 1"
+                                                    stroke="#007CC3" stroke-linecap="round"></path>
+                                            </svg>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li class="services-tab__item list-item">
+                                    <a href="#" class="list-item__wrapper">
+                                        <span class="text-1-b">
+                                            Предоставление путевок в организации отдыха детей и их оздоровления в
+                                            учебное
+                                            время (за
+                                            исключением
+                                            детей-сирот и детей, оставшихся без попечения родителей, детей, находящихся
+                                            в
+                                            трудной
+                                            жизненной
+                                            ситуации)
+                                        </span>
+                                        <div class="ico">
+                                            <svg width="14" height="14" viewBox="0 0 14 14" fill="none"
+                                                xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M1 7C5.68629 7 8.31371 7 13 7M13 7L7.24 13M13 7L7.24 1"
+                                                    stroke="#007CC3" stroke-linecap="round"></path>
+                                            </svg>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li class="services-tab__item list-item">
+                                    <a href="#" class="list-item__wrapper">
+                                        <span class="text-1-b">
+                                            Предоставление информации об образовательных программах и учебных планах,
+                                            рабочих
+                                            программах
+                                            учебных
+                                            курсов, предметов, дисциплин (модулей), годовых календарных учебных графиках
+                                        </span>
+                                        <div class="ico">
+                                            <svg width="14" height="14" viewBox="0 0 14 14" fill="none"
+                                                xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M1 7C5.68629 7 8.31371 7 13 7M13 7L7.24 13M13 7L7.24 1"
+                                                    stroke="#007CC3" stroke-linecap="round"></path>
+                                            </svg>
+                                        </div>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li class="services-list__item">
+                        <div class="list-item__head" data-dropped-element>
+                            <span>ЖКХ</span>
+                            <div class="list-item__arrow">
+                                <svg width="14" height="9" viewBox="0 0 14 9" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M1 1L7 7L13 1" stroke="#4F4F4F" stroke-width="2" stroke-miterlimit="10" />
+                                </svg>
+                            </div>
+                        </div>
+                        <div class="list-item__body">
+                            <ul class="services-tab">
+                                <li class="services-tab__item list-item">
+                                    <a href="#" class="list-item__wrapper">
+                                        <span class="text-1-b">
+                                            Прием заявлений, постановка на учет и зачисление детей в образовательные
+                                            учреждения,
+                                            реализующие
+                                            основную образовательную программу дошкольного образования (детские сады)
+                                        </span>
+                                        <div class="ico">
+                                            <svg width="14" height="14" viewBox="0 0 14 14" fill="none"
+                                                xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M1 7C5.68629 7 8.31371 7 13 7M13 7L7.24 13M13 7L7.24 1"
+                                                    stroke="#007CC3" stroke-linecap="round"></path>
+                                            </svg>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li class="services-tab__item list-item">
+                                    <a href="#" class="list-item__wrapper">
+                                        <span class="text-1-b">
+                                            Предоставление путевок в организации отдыха детей и их оздоровления в
+                                            учебное
+                                            время (за
+                                            исключением
+                                            детей-сирот и детей, оставшихся без попечения родителей, детей, находящихся
+                                            в
+                                            трудной
+                                            жизненной
+                                            ситуации)
+                                        </span>
+                                        <div class="ico">
+                                            <svg width="14" height="14" viewBox="0 0 14 14" fill="none"
+                                                xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M1 7C5.68629 7 8.31371 7 13 7M13 7L7.24 13M13 7L7.24 1"
+                                                    stroke="#007CC3" stroke-linecap="round"></path>
+                                            </svg>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li class="services-tab__item list-item">
+                                    <a href="#" class="list-item__wrapper">
+                                        <span class="text-1-b">
+                                            Предоставление информации об образовательных программах и учебных планах,
+                                            рабочих
+                                            программах
+                                            учебных
+                                            курсов, предметов, дисциплин (модулей), годовых календарных учебных графиках
+                                        </span>
+                                        <div class="ico">
+                                            <svg width="14" height="14" viewBox="0 0 14 14" fill="none"
+                                                xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M1 7C5.68629 7 8.31371 7 13 7M13 7L7.24 13M13 7L7.24 1"
+                                                    stroke="#007CC3" stroke-linecap="round"></path>
+                                            </svg>
+                                        </div>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li class="services-list__item">
+                        <div class="list-item__head" data-dropped-element>
+                            <span>Культура</span>
+                            <div class="list-item__arrow">
+                                <svg width="14" height="9" viewBox="0 0 14 9" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M1 1L7 7L13 1" stroke="#4F4F4F" stroke-width="2" stroke-miterlimit="10" />
+                                </svg>
+                            </div>
+                        </div>
+                        <div class="list-item__body">
+                            <ul class="services-tab">
+                                <li class="services-tab__item list-item">
+                                    <a href="#" class="list-item__wrapper">
+                                        <span class="text-1-b">
+                                            Прием заявлений, постановка на учет и зачисление детей в образовательные
+                                            учреждения,
+                                            реализующие
+                                            основную образовательную программу дошкольного образования (детские сады)
+                                        </span>
+                                        <div class="ico">
+                                            <svg width="14" height="14" viewBox="0 0 14 14" fill="none"
+                                                xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M1 7C5.68629 7 8.31371 7 13 7M13 7L7.24 13M13 7L7.24 1"
+                                                    stroke="#007CC3" stroke-linecap="round"></path>
+                                            </svg>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li class="services-tab__item list-item">
+                                    <a href="#" class="list-item__wrapper">
+                                        <span class="text-1-b">
+                                            Предоставление путевок в организации отдыха детей и их оздоровления в
+                                            учебное
+                                            время (за
+                                            исключением
+                                            детей-сирот и детей, оставшихся без попечения родителей, детей, находящихся
+                                            в
+                                            трудной
+                                            жизненной
+                                            ситуации)
+                                        </span>
+                                        <div class="ico">
+                                            <svg width="14" height="14" viewBox="0 0 14 14" fill="none"
+                                                xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M1 7C5.68629 7 8.31371 7 13 7M13 7L7.24 13M13 7L7.24 1"
+                                                    stroke="#007CC3" stroke-linecap="round"></path>
+                                            </svg>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li class="services-tab__item list-item">
+                                    <a href="#" class="list-item__wrapper">
+                                        <span class="text-1-b">
+                                            Предоставление информации об образовательных программах и учебных планах,
+                                            рабочих
+                                            программах
+                                            учебных
+                                            курсов, предметов, дисциплин (модулей), годовых календарных учебных графиках
+                                        </span>
+                                        <div class="ico">
+                                            <svg width="14" height="14" viewBox="0 0 14 14" fill="none"
+                                                xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M1 7C5.68629 7 8.31371 7 13 7M13 7L7.24 13M13 7L7.24 1"
+                                                    stroke="#007CC3" stroke-linecap="round"></path>
+                                            </svg>
+                                        </div>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li class="services-list__item">
+                        <div class="list-item__head" data-dropped-element>
+                            <span>Экономика</span>
+                            <div class="list-item__arrow">
+                                <svg width="14" height="9" viewBox="0 0 14 9" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M1 1L7 7L13 1" stroke="#4F4F4F" stroke-width="2" stroke-miterlimit="10" />
+                                </svg>
+                            </div>
+                        </div>
+                        <div class="list-item__body">
+                            <ul class="services-tab">
+                                <li class="services-tab__item list-item">
+                                    <a href="#" class="list-item__wrapper">
+                                        <span class="text-1-b">
+                                            Прием заявлений, постановка на учет и зачисление детей в образовательные
+                                            учреждения,
+                                            реализующие
+                                            основную образовательную программу дошкольного образования (детские сады)
+                                        </span>
+                                        <div class="ico">
+                                            <svg width="14" height="14" viewBox="0 0 14 14" fill="none"
+                                                xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M1 7C5.68629 7 8.31371 7 13 7M13 7L7.24 13M13 7L7.24 1"
+                                                    stroke="#007CC3" stroke-linecap="round"></path>
+                                            </svg>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li class="services-tab__item list-item">
+                                    <a href="#" class="list-item__wrapper">
+                                        <span class="text-1-b">
+                                            Предоставление путевок в организации отдыха детей и их оздоровления в
+                                            учебное
+                                            время (за
+                                            исключением
+                                            детей-сирот и детей, оставшихся без попечения родителей, детей, находящихся
+                                            в
+                                            трудной
+                                            жизненной
+                                            ситуации)
+                                        </span>
+                                        <div class="ico">
+                                            <svg width="14" height="14" viewBox="0 0 14 14" fill="none"
+                                                xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M1 7C5.68629 7 8.31371 7 13 7M13 7L7.24 13M13 7L7.24 1"
+                                                    stroke="#007CC3" stroke-linecap="round"></path>
+                                            </svg>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li class="services-tab__item list-item">
+                                    <a href="#" class="list-item__wrapper">
+                                        <span class="text-1-b">
+                                            Предоставление информации об образовательных программах и учебных планах,
+                                            рабочих
+                                            программах
+                                            учебных
+                                            курсов, предметов, дисциплин (модулей), годовых календарных учебных графиках
+                                        </span>
+                                        <div class="ico">
+                                            <svg width="14" height="14" viewBox="0 0 14 14" fill="none"
+                                                xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M1 7C5.68629 7 8.31371 7 13 7M13 7L7.24 13M13 7L7.24 1"
+                                                    stroke="#007CC3" stroke-linecap="round"></path>
+                                            </svg>
+                                        </div>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li class="services-list__item">
+                        <div class="list-item__head" data-dropped-element>
+                            <span>Организационный отдел</span>
+                            <div class="list-item__arrow">
+                                <svg width="14" height="9" viewBox="0 0 14 9" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M1 1L7 7L13 1" stroke="#4F4F4F" stroke-width="2" stroke-miterlimit="10" />
+                                </svg>
+                            </div>
+                        </div>
+                        <div class="list-item__body">
+                            <ul class="services-tab">
+                                <li class="services-tab__item list-item">
+                                    <a href="#" class="list-item__wrapper">
+                                        <span class="text-1-b">
+                                            Прием заявлений, постановка на учет и зачисление детей в образовательные
+                                            учреждения,
+                                            реализующие
+                                            основную образовательную программу дошкольного образования (детские сады)
+                                        </span>
+                                        <div class="ico">
+                                            <svg width="14" height="14" viewBox="0 0 14 14" fill="none"
+                                                xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M1 7C5.68629 7 8.31371 7 13 7M13 7L7.24 13M13 7L7.24 1"
+                                                    stroke="#007CC3" stroke-linecap="round"></path>
+                                            </svg>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li class="services-tab__item list-item">
+                                    <a href="#" class="list-item__wrapper">
+                                        <span class="text-1-b">
+                                            Предоставление путевок в организации отдыха детей и их оздоровления в
+                                            учебное
+                                            время (за
+                                            исключением
+                                            детей-сирот и детей, оставшихся без попечения родителей, детей, находящихся
+                                            в
+                                            трудной
+                                            жизненной
+                                            ситуации)
+                                        </span>
+                                        <div class="ico">
+                                            <svg width="14" height="14" viewBox="0 0 14 14" fill="none"
+                                                xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M1 7C5.68629 7 8.31371 7 13 7M13 7L7.24 13M13 7L7.24 1"
+                                                    stroke="#007CC3" stroke-linecap="round"></path>
+                                            </svg>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li class="services-tab__item list-item">
+                                    <a href="#" class="list-item__wrapper">
+                                        <span class="text-1-b">
+                                            Предоставление информации об образовательных программах и учебных планах,
+                                            рабочих
+                                            программах
+                                            учебных
+                                            курсов, предметов, дисциплин (модулей), годовых календарных учебных графиках
+                                        </span>
+                                        <div class="ico">
+                                            <svg width="14" height="14" viewBox="0 0 14 14" fill="none"
+                                                xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M1 7C5.68629 7 8.31371 7 13 7M13 7L7.24 13M13 7L7.24 1"
+                                                    stroke="#007CC3" stroke-linecap="round"></path>
+                                            </svg>
+                                        </div>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+
+                    <li class="services-list__item">
+                        <div class="list-item__head" data-dropped-element>
+                            <span>Юридический отдел</span>
+                            <div class="list-item__arrow">
+                                <svg width="14" height="9" viewBox="0 0 14 9" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M1 1L7 7L13 1" stroke="#4F4F4F" stroke-width="2" stroke-miterlimit="10" />
+                                </svg>
+                            </div>
+                        </div>
+                        <div class="list-item__body">
+                            <ul class="services-tab">
+                                <li class="services-tab__item list-item">
+                                    <a href="#" class="list-item__wrapper">
+                                        <span class="text-1-b">
+                                            Прием заявлений, постановка на учет и зачисление детей в образовательные
+                                            учреждения,
+                                            реализующие
+                                            основную образовательную программу дошкольного образования (детские сады)
+                                        </span>
+                                        <div class="ico">
+                                            <svg width="14" height="14" viewBox="0 0 14 14" fill="none"
+                                                xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M1 7C5.68629 7 8.31371 7 13 7M13 7L7.24 13M13 7L7.24 1"
+                                                    stroke="#007CC3" stroke-linecap="round"></path>
+                                            </svg>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li class="services-tab__item list-item">
+                                    <a href="#" class="list-item__wrapper">
+                                        <span class="text-1-b">
+                                            Предоставление путевок в организации отдыха детей и их оздоровления в
+                                            учебное
+                                            время (за
+                                            исключением
+                                            детей-сирот и детей, оставшихся без попечения родителей, детей, находящихся
+                                            в
+                                            трудной
+                                            жизненной
+                                            ситуации)
+                                        </span>
+                                        <div class="ico">
+                                            <svg width="14" height="14" viewBox="0 0 14 14" fill="none"
+                                                xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M1 7C5.68629 7 8.31371 7 13 7M13 7L7.24 13M13 7L7.24 1"
+                                                    stroke="#007CC3" stroke-linecap="round"></path>
+                                            </svg>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li class="services-tab__item list-item">
+                                    <a href="#" class="list-item__wrapper">
+                                        <span class="text-1-b">
+                                            Предоставление информации об образовательных программах и учебных планах,
+                                            рабочих
+                                            программах
+                                            учебных
+                                            курсов, предметов, дисциплин (модулей), годовых календарных учебных графиках
+                                        </span>
+                                        <div class="ico">
+                                            <svg width="14" height="14" viewBox="0 0 14 14" fill="none"
+                                                xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M1 7C5.68629 7 8.31371 7 13 7M13 7L7.24 13M13 7L7.24 1"
+                                                    stroke="#007CC3" stroke-linecap="round"></path>
+                                            </svg>
+                                        </div>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+                </ul>
+
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="footer">
+    <div class="container">
+        <div class="footer__wrapper">
+            <span>© 2022 Официальный сайт Городского округа Среднеуральск</span>
+            <div class="footer__block">
+                <a href="#">Карта сайта</a>
+                <a href="#">Архив</a>
+            </div>
+        </div>
+    </div>
+</footer>
+</body>
+
+<!-- форма обратной связи отображается при наличии класса show -->
+<div class="modal" data-modal="reception">
+    <div class="modal__content">
+        <form action="#" method="post" class="modal__form">
+            <div class="close-btn" onclick="this.closest('.modal').classList.remove('show')">
+                <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M10 22L15.76 16L10 10" stroke="#007CC3" stroke-linecap="round" />
+                    <path d="M21.7266 22L15.9666 16L21.7266 10" stroke="#007CC3" stroke-linecap="round" />
+                </svg>
+            </div>
+            <h5 class="modal__title">Приемная главы</h5>
+            <select name="" id="modal-select">
+                <option value="Тема обращения">Тема обращения</option>
+                <option value="Тема обращения 1">Тема обращения 1</option>
+                <option value="Тема обращения 2">Тема обращения 2</option>
+            </select>
+            <label class="modal__label">
+                <input type="text" placeholder="Ваше ФИО" name="">
+            </label>
+            <label class="modal__label">
+                <textarea name="" placeholder="Текст обращения"></textarea>
+            </label>
+            <label class="modal__label file-label">
+                <input type="file" name="">
+                <span>Добавить файл</span>
+            </label>
+            <label class="modal__label">
+                <input type="tel" placeholder="Ваш телефон" name="">
+            </label>
+            <label class="modal__label">
+                <input type="email" placeholder="E-mail" name="">
+            </label>
+
+            <label class="modal__label agreement">
+                <input type="checkbox" name="agreement" checked>
+                <span class="agreement-text">Согласен(а) на обработку, хранение и направление моих персональных данных в целях рассмотрения обращения</span>
+            </label>
+            <button class="btn fillBtn" type="submit">Оставить</button>
+        </form>
+    </div>
+</div>
+<script src="./js/app.min.js"></script>
+
+</html>

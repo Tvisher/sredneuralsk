@@ -4477,3 +4477,186 @@ header {
     gap: 15px;
   }
 }
+
+.special .main-screen__chapter .chapter__content,
+.special .affiche__slider .poster .poster__content,
+.special .slide-baner__content,
+.special .c-ico,
+.special .c-ico img,
+.special .categories__list span,
+.special .main-body__wrapper .news__item,
+.special .main-body__wrapper .news__item-date,
+.special .main-body__wrapper .news__item-link,
+.special .main-screen__chapter .chapter__content,
+.special .main-screen__chapter .chapter__img,
+.special .main-screen__chapter .chapter__title,
+.special .main-screen__chapter .chapter__img img,
+.special .main-screen__chapter .chapter__img span,
+.special .main-screen__wrapper .swiper-button-next svg,
+.special .main-screen__wrapper .swiper-button-prev svg,
+.special .affiche__slider-container .swiper-button-next svg,
+.special .affiche__slider-container .swiper-button-prev svg,
+.special .honoraries .swiper-button-next svg,
+.special .honoraries .swiper-button-prev svg {
+  background-color: transparent !important;
+}
+
+.special .header__bottom {
+  box-shadow: none;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+}
+
+.special .categories__list li a {
+  background-color: #f2f3f7 !important;
+}
+
+.special .slide-baner .slide-baner__grad {
+  background: rgba(0, 0, 0, 0.2) !important;
+}
+
+.special .header {
+  top: 74px;
+}
+
+.special .main-screen__slider {
+  padding-bottom: 0;
+}
+
+.special main.index {
+  padding-top: 58px;
+}
+
+.special .main-screen__wrapper .swiper-button-next:hover,
+.special .main-screen__wrapper .swiper-button-prev:hover,
+.special .affiche__slider-container .swiper-button-next:hover,
+.special .affiche__slider-container .swiper-button-prev:hover,
+.special .honoraries .swiper-button-next:hover,
+.special .honoraries .swiper-button-prev:hover {
+  background-color: #90c171 !important;
+}
+
+.special .main-body__news .news,
+.special .main-body__wrapper .news__item,
+.special .main-screen__chapter {
+  background: #f2f3f7 !important;
+}
+
+@media (max-width: 768px) {
+  .special .header {
+    top: 100px;
+  }
+
+  .special .mobile-menu__content {
+    padding-top: 100px;
+  }
+}
+
+.article__content > ul li {
+  list-style-type: none;
+  position: relative;
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+}
+
+.article__content > ul li::before {
+  flex-shrink: 0;
+  margin-top: 9px;
+  display: block;
+  content: "";
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: #646464;
+}
+
+.main-info__list {
+  margin-top: 28px;
+}
+
+.title-wrapper {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.title-wrapper h2 {
+  margin-right: 16px;
+}
+
+.decrees__wrapper .select2-container--default .select2-selection--single,
+.npa-docs-tab__settings .date-field,
+.search-area__block .search__field,
+.npa-docs-tab__settings .date-field input {
+  background: transparent;
+}
+
+.sub-org__item.inner .list-item__content svg {
+  flex-shrink: 0;
+}
+.posters__list .poster-item__content {
+  width: 100%;
+}
+
+.posters__list .poster-item__day,
+.posters__list .poster-item__location {
+  margin-bottom: 3px;
+}
+.main-body__wrapper .news__item {
+  padding: 15px;
+}
+
+@media (max-width: 800px) {
+  .posters__list .poster-item__data {
+    margin-bottom: 15px;
+  }
+}
+
+.services-section h1 {
+  margin-bottom: 35px;
+}
+
+.services-section {
+  .services-list {
+    .list-item__head {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      cursor: pointer;
+      padding: 15px;
+      font-weight: 700;
+      font-size: 18px;
+      color: #000000;
+      border-bottom: 1px solid #dfe1e6;
+      transition: color 0.2s ease-in-out;
+      .list-item__arrow {
+        flex-shrink: 0;
+        width: 23px;
+        height: 23px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-left: 10px;
+      }
+      &:hover {
+        color: #0e4cd4;
+        svg {
+          path {
+            stroke: #0e4cd4;
+          }
+        }
+      }
+    }
+    .list-item__body {
+      background-color: #fbfbfb;
+      padding: 15px 0;
+      display: none;
+      width: 100%;
+    }
+    .services-tab {
+      margin-right: 0;
+      margin-left: 0;
+    }
+  }
+}
