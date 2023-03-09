@@ -4620,6 +4620,11 @@ header {
 .services-section {
   .services-list {
     .list-item__head {
+      &.toggle-open {
+        .list-item__arrow {
+          transform: rotate(180deg);
+        }
+      }
       display: flex;
       align-items: center;
       justify-content: space-between;
@@ -4631,6 +4636,7 @@ header {
       border-bottom: 1px solid #dfe1e6;
       transition: color 0.2s ease-in-out;
       .list-item__arrow {
+        transition: transform 0.3s ease-in-out;
         flex-shrink: 0;
         width: 23px;
         height: 23px;

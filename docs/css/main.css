@@ -381,7 +381,8 @@ th {
 }
 
 .swiper-centered.swiper-horizontal > .swiper-wrapper > .swiper-slide:first-child {
-  margin-inline-start: var(--swiper-centered-offset-before);
+  -webkit-margin-start: var(--swiper-centered-offset-before);
+          margin-inline-start: var(--swiper-centered-offset-before);
 }
 
 .swiper-centered.swiper-horizontal > .swiper-wrapper::before {
@@ -391,7 +392,8 @@ th {
 }
 
 .swiper-centered.swiper-vertical > .swiper-wrapper > .swiper-slide:first-child {
-  margin-block-start: var(--swiper-centered-offset-before);
+  -webkit-margin-before: var(--swiper-centered-offset-before);
+          margin-block-start: var(--swiper-centered-offset-before);
 }
 
 .swiper-centered.swiper-vertical > .swiper-wrapper::before {
@@ -560,7 +562,8 @@ button.swiper-pagination-bullet {
   padding: 0;
   box-shadow: none;
   -webkit-appearance: none;
-  appearance: none;
+  -moz-appearance: none;
+       appearance: none;
 }
 
 .swiper-pagination-clickable .swiper-pagination-bullet {
@@ -724,7 +727,8 @@ button.swiper-pagination-bullet {
 .swiper-zoom-container > svg {
   max-width: 100%;
   max-height: 100%;
-  object-fit: contain;
+  -o-object-fit: contain;
+     object-fit: contain;
 }
 
 .swiper-slide-zoomed {
@@ -1216,7 +1220,6 @@ button.swiper-pagination-bullet {
 
 .air-datepicker-time {
   display: grid;
-  grid-template-columns: -webkit-max-content 1fr;
   grid-template-columns: max-content 1fr;
   grid-column-gap: 12px;
   align-items: center;
@@ -1498,7 +1501,6 @@ button.swiper-pagination-bullet {
   box-sizing: content-box;
   display: grid;
   grid-template-columns: 1fr;
-  grid-template-rows: repeat(4, -webkit-max-content);
   grid-template-rows: repeat(4, max-content);
   grid-template-areas: var(--adp-grid-areas);
   font-family: var(--adp-font-family), sans-serif;
@@ -1758,7 +1760,8 @@ button.swiper-pagination-bullet {
   cursor: pointer;
   display: block;
   height: 28px;
-  user-select: none;
+  -moz-user-select: none;
+       user-select: none;
   -webkit-user-select: none;
 }
 
@@ -1785,7 +1788,8 @@ button.swiper-pagination-bullet {
   cursor: pointer;
   display: block;
   min-height: 32px;
-  user-select: none;
+  -moz-user-select: none;
+       user-select: none;
   -webkit-user-select: none;
 }
 
@@ -1837,7 +1841,8 @@ button.swiper-pagination-bullet {
 
 .select2-results__option {
   padding: 6px;
-  user-select: none;
+  -moz-user-select: none;
+       user-select: none;
   -webkit-user-select: none;
 }
 
@@ -2146,8 +2151,6 @@ button.swiper-pagination-bullet {
   border: 1px solid #aaa;
   border-radius: 4px;
   outline: 0;
-  background-image: -webkit-linear-gradient(top, #fff 50%, #eee 100%);
-  background-image: -o-linear-gradient(top, #fff 50%, #eee 100%);
   background-image: linear-gradient(to bottom, #fff 50%, #eee 100%);
   background-repeat: repeat-x;
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#FFFFFFFF", endColorstr="#FFEEEEEE", GradientType=0);
@@ -2184,8 +2187,6 @@ button.swiper-pagination-bullet {
   top: 1px;
   right: 1px;
   width: 20px;
-  background-image: -webkit-linear-gradient(top, #eee 50%, #ccc 100%);
-  background-image: -o-linear-gradient(top, #eee 50%, #ccc 100%);
   background-image: linear-gradient(to bottom, #eee 50%, #ccc 100%);
   background-repeat: repeat-x;
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#FFEEEEEE", endColorstr="#FFCCCCCC", GradientType=0);
@@ -2236,8 +2237,6 @@ button.swiper-pagination-bullet {
   border-top: none;
   border-top-left-radius: 0;
   border-top-right-radius: 0;
-  background-image: -webkit-linear-gradient(top, #fff 0%, #eee 50%);
-  background-image: -o-linear-gradient(top, #fff 0%, #eee 50%);
   background-image: linear-gradient(to bottom, #fff 0%, #eee 50%);
   background-repeat: repeat-x;
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#FFFFFFFF", endColorstr="#FFEEEEEE", GradientType=0);
@@ -2247,8 +2246,6 @@ button.swiper-pagination-bullet {
   border-bottom: none;
   border-bottom-left-radius: 0;
   border-bottom-right-radius: 0;
-  background-image: -webkit-linear-gradient(top, #eee 50%, #fff 100%);
-  background-image: -o-linear-gradient(top, #eee 50%, #fff 100%);
   background-image: linear-gradient(to bottom, #eee 50%, #fff 100%);
   background-repeat: repeat-x;
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#FFEEEEEE", endColorstr="#FFFFFFFF", GradientType=0);
@@ -2382,11 +2379,9 @@ button.swiper-pagination-bullet {
   /* iOS Safari */
   -webkit-user-select: none;
   /* Chrome/Safari/Opera */
-  -khtml-user-select: none;
   /* Konqueror */
   -moz-user-select: none;
   /* Firefox */
-  -ms-user-select: none;
   /* Internet Explorer/Edge */
   user-select: none;
   /* Non-prefixed version, currently not supported by any browser */
@@ -2530,6 +2525,7 @@ li {
   font-weight: 400;
   display: flex;
   text-align: center;
+  width: -moz-fit-content;
   width: fit-content;
   align-items: center;
   justify-content: center;
@@ -2933,8 +2929,10 @@ header {
 
 .slide-baner__image img {
   height: 100%;
-  object-fit: cover;
-  object-position: center right;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center right;
+     object-position: center right;
 }
 
 .slide-baner__grad {
@@ -2967,7 +2965,6 @@ header {
   overflow: hidden;
   text-overflow: ellipsis;
   display: -moz-box;
-  -moz-box-orient: vertical;
   display: -webkit-box;
   -webkit-line-clamp: 5;
   -webkit-box-orient: vertical;
@@ -2996,7 +2993,6 @@ header {
   overflow: hidden;
   text-overflow: ellipsis;
   display: -moz-box;
-  -moz-box-orient: vertical;
   display: -webkit-box;
   -webkit-line-clamp: 2;
   -webkit-box-orient: vertical;
@@ -3051,8 +3047,10 @@ header {
 .main-screen__chapter .chapter__img img {
   width: 100%;
   height: 100%;
-  object-fit: contain;
-  object-position: right bottom;
+  -o-object-fit: contain;
+     object-fit: contain;
+  -o-object-position: right bottom;
+     object-position: right bottom;
   margin-top: auto;
 }
 
@@ -3070,7 +3068,8 @@ header {
 }
 
 .c-ico svg {
-  object-fit: contain;
+  -o-object-fit: contain;
+     object-fit: contain;
 }
 
 .categories__list {
@@ -3298,8 +3297,10 @@ header {
 .honorable .honorable__image img {
   width: 100%;
   height: 100%;
-  object-fit: cover;
-  object-position: center;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
 }
 
 .honorable .honorable__name {
@@ -3317,7 +3318,6 @@ header {
   overflow: hidden;
   text-overflow: ellipsis;
   display: -moz-box;
-  -moz-box-orient: vertical;
   display: -webkit-box;
   -webkit-line-clamp: 2;
   -webkit-box-orient: vertical;
@@ -3371,6 +3371,7 @@ header {
 .show-more {
   color: #114f74;
   position: relative;
+  width: -moz-fit-content;
   width: fit-content;
   display: flex;
   align-items: center;
@@ -3460,8 +3461,10 @@ header {
 .affiche__slider .poster .poster__image img {
   width: 100%;
   height: 100%;
-  object-fit: cover;
-  object-position: center;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
 }
 
 .affiche__slider .poster .poster__date {
@@ -3488,7 +3491,6 @@ header {
   overflow: hidden;
   text-overflow: ellipsis;
   display: -moz-box;
-  -moz-box-orient: vertical;
   display: -webkit-box;
   -webkit-line-clamp: 3;
   -webkit-box-orient: vertical;
@@ -3507,7 +3509,6 @@ header {
   overflow: hidden;
   text-overflow: ellipsis;
   display: -moz-box;
-  -moz-box-orient: vertical;
   display: -webkit-box;
   -webkit-line-clamp: 2;
   -webkit-box-orient: vertical;
@@ -3521,7 +3522,6 @@ header {
   overflow: hidden;
   text-overflow: ellipsis;
   display: -moz-box;
-  -moz-box-orient: vertical;
   display: -webkit-box;
   -webkit-line-clamp: 1;
   -webkit-box-orient: vertical;
@@ -3613,7 +3613,6 @@ header {
   overflow: hidden;
   text-overflow: ellipsis;
   display: -moz-box;
-  -moz-box-orient: vertical;
   display: -webkit-box;
   -webkit-line-clamp: 1;
   -webkit-box-orient: vertical;
@@ -3628,7 +3627,6 @@ header {
   overflow: hidden;
   text-overflow: ellipsis;
   display: -moz-box;
-  -moz-box-orient: vertical;
   display: -webkit-box;
   -webkit-line-clamp: 3;
   -webkit-box-orient: vertical;
@@ -3999,8 +3997,10 @@ header {
 .news-section .news-section__list .list-item__image img {
   width: 100%;
   height: 100%;
-  object-fit: cover;
-  object-position: center;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
 }
 
 .news-section .news-section__list .list-item__date {
@@ -4017,7 +4017,6 @@ header {
   overflow: hidden;
   text-overflow: ellipsis;
   display: -moz-box;
-  -moz-box-orient: vertical;
   display: -webkit-box;
   -webkit-line-clamp: 4;
   -webkit-box-orient: vertical;
@@ -4139,8 +4138,10 @@ header {
 .documents-tab__list .list-item__link .ico svg {
   width: 100%;
   height: 100%;
-  object-fit: cover;
-  object-position: center;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
 }
 
 .documents-tab__list .size {
@@ -4241,8 +4242,10 @@ header {
 .sub-org__item .list-item__image img {
   width: 100%;
   height: 100%;
-  object-fit: cover;
-  object-position: center;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
 }
 
 .sub-org__item.inner .list-item__content {
@@ -4346,8 +4349,10 @@ header {
 
 .npa-docs-tab__list .ico svg,
 .npa-docs-tab__list .ico img {
-  object-fit: contain;
-  object-position: center;
+  -o-object-fit: contain;
+     object-fit: contain;
+  -o-object-position: center;
+     object-position: center;
 }
 
 .npa-docs-tab__list .list-item__link {
@@ -4504,6 +4509,7 @@ header {
 }
 
 .select2-container--open .select2-dropdown--below {
+  width: -moz-fit-content !important;
   width: fit-content !important;
   box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.3);
   margin-top: 10px;
@@ -4613,8 +4619,10 @@ header {
 .render-content__item .ico svg {
   width: 100%;
   height: 100%;
-  object-fit: contain;
-  object-position: center;
+  -o-object-fit: contain;
+     object-fit: contain;
+  -o-object-position: center;
+     object-position: center;
 }
 
 .render-content__item .list-item__size {
@@ -4635,7 +4643,6 @@ header {
   overflow: hidden;
   text-overflow: ellipsis;
   display: -moz-box;
-  -moz-box-orient: vertical;
   display: -webkit-box;
   -webkit-line-clamp: 3;
   -webkit-box-orient: vertical;
@@ -4659,7 +4666,6 @@ header {
   overflow: hidden;
   text-overflow: ellipsis;
   display: -moz-box;
-  -moz-box-orient: vertical;
   display: -webkit-box;
   -webkit-line-clamp: 150;
   -webkit-box-orient: vertical;
@@ -4668,6 +4674,7 @@ header {
 }
 
 .npa-docs-tab__list .list-item__more {
+  width: -moz-fit-content;
   width: fit-content;
   position: relative;
   display: none;
@@ -4752,7 +4759,8 @@ header {
 .news .article.large .article__image img {
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 .news .article.large .article__content {
@@ -4765,7 +4773,6 @@ header {
   overflow: hidden;
   text-overflow: ellipsis;
   display: -moz-box;
-  -moz-box-orient: vertical;
   display: -webkit-box;
   -webkit-line-clamp: 6;
   -webkit-box-orient: vertical;
@@ -4784,7 +4791,6 @@ header {
   overflow: hidden;
   text-overflow: ellipsis;
   display: -moz-box;
-  -moz-box-orient: vertical;
   display: -webkit-box;
   -webkit-line-clamp: 4;
   -webkit-box-orient: vertical;
@@ -4803,8 +4809,10 @@ header {
 .news .article .article__image img {
   width: 100%;
   height: 100%;
-  object-fit: cover;
-  object-position: center;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
 }
 
 .news .article .article__date {
@@ -4918,6 +4926,7 @@ header {
 }
 
 .search-area__res .res-item__name {
+  width: -moz-fit-content;
   width: fit-content;
   font-weight: 700;
   font-size: 18px;
@@ -4998,8 +5007,10 @@ header {
 .article-section .article__image video {
   width: 100%;
   height: 100%;
-  object-fit: cover;
-  object-position: center;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
 }
 
 .article-section .article__image .img-descr {
@@ -5129,8 +5140,10 @@ header {
 .quote .quote__img img {
   width: 100%;
   height: 100%;
-  object-fit: cover;
-  object-position: center;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
 }
 
 .quote .quote__auth .name {
@@ -5286,8 +5299,10 @@ header {
 .article-galery .galery-slider img {
   height: 100%;
   width: 100%;
-  object-position: center;
-  object-fit: contain;
+  -o-object-position: center;
+     object-position: center;
+  -o-object-fit: contain;
+     object-fit: contain;
 }
 
 .article-galery .galery-thumbs-slider .swiper-slide {
@@ -5362,14 +5377,17 @@ header {
 .posters__list .poster-item__image .poster-bg img {
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 .posters__list .poster-item__image .img-wrapper img {
   width: 100%;
   height: 100%;
-  object-fit: cover;
-  object-position: center;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
 }
 
 .posters__list .poster-item__image .img-wrapper {
@@ -5380,8 +5398,10 @@ header {
 .posters__list .poster-item__image.contain .img-wrapper img {
   width: 100%;
   height: 100%;
-  object-fit: contain;
-  object-position: center;
+  -o-object-fit: contain;
+     object-fit: contain;
+  -o-object-position: center;
+     object-position: center;
 }
 
 .posters__list .poster-item__content {
@@ -5419,6 +5439,7 @@ header {
   font-size: 22px;
   color: #000000;
   margin-bottom: 18px;
+  width: -moz-fit-content;
   width: fit-content;
 }
 
@@ -5789,7 +5810,8 @@ header {
 .event .event__image.contain .img-wrap img {
   width: 100%;
   height: 100%;
-  object-fit: contain;
+  -o-object-fit: contain;
+     object-fit: contain;
 }
 
 .event .img-wrap {
@@ -5804,7 +5826,8 @@ header {
 .event .img-wrap img {
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 .event .text-1-b {
@@ -6174,7 +6197,12 @@ header {
   transition: color 0.2s ease-in-out;
 }
 
+.services-section .services-list .list-item__head.toggle-open .list-item__arrow {
+  transform: rotate(180deg);
+}
+
 .services-section .services-list .list-item__head .list-item__arrow {
+  transition: transform 0.3s ease-in-out;
   flex-shrink: 0;
   width: 23px;
   height: 23px;

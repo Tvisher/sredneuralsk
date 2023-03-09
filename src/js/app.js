@@ -11,7 +11,6 @@ import Swiper, {
 } from 'swiper';
 import IMask from 'imask';
 import AirDatepicker from 'air-datepicker';
-import { get } from 'jquery';
 
 
 window.AirDatepicker = AirDatepicker;
@@ -157,15 +156,14 @@ document.body.addEventListener('click', (e) => {
 
     //логика работы табов
     if (target.hasAttribute('data-tab-control')) {
-        const activeTab = document.querySelector('[data-tab-content].active');
-        if (activeTab) { activeTab.classList.remove('active') }
-        const activeTabBtn = document.querySelector('[data-tab-control].active');
-        if (activeTabBtn) { activeTabBtn.classList.remove('active') }
         const tabId = target.getAttribute('data-tab-control');
-        target.classList.add('active');
-        const tabContentWhatINeed = document.querySelector(`[data-tab-content="${tabId}"]`);
-        if (tabContentWhatINeed) { tabContentWhatINeed.classList.add('active') }
+        const state = {
+            page: `?tab-id=${tabId}`
+        }
+        history.pushState(state, '', state.page);
+        openCurrnTab(target, tabId);
     }
+
 
     if (target.closest('[data-open-hide-text]')) {
         let btn = target.closest('[data-open-hide-text]');
@@ -173,11 +171,40 @@ document.body.addEventListener('click', (e) => {
         btn.closest('.list-item').classList.toggle('toggle');
     }
 
-
     if (target.closest('.modal.show') && !target.closest('.modal__content')) {
         target.closest('.modal.show').classList.remove('show');
     }
 });
+
+function openCurrnTab(btn, id) {
+    const activeTab = document.querySelector('[data-tab-content].active');
+    if (activeTab) { activeTab.classList.remove('active') }
+    const activeTabBtn = document.querySelector('[data-tab-control].active');
+    if (activeTabBtn) { activeTabBtn.classList.remove('active') }
+    btn.classList.add('active');
+    const tabContentWhatINeed = document.querySelector(`[data-tab-content="${id}"]`);
+    if (tabContentWhatINeed) tabContentWhatINeed.classList.add('active');
+}
+
+function tabLoad() {
+    var tabId = location.search.split('tab-id=').splice(1).join('').split('&')[0];
+    const firstTab = document.querySelector('[data-tab-control]');
+    if (firstTab && !tabId) {
+        const firstTab = document.querySelectorAll('[data-tab-control]')[0];
+        const firstTabId = firstTab.getAttribute('data-tab-control');
+        openCurrnTab(firstTab, firstTabId);
+    }
+    if (tabId) {
+        const btn = document.querySelector(`[data-tab-control="${tabId}"]`);
+        openCurrnTab(btn, tabId);
+    }
+}
+
+tabLoad();
+window.addEventListener('popstate', () => {
+    tabLoad();
+})
+
 
 // Маска на номера телефона
 document.querySelectorAll('input[type="tel"]').forEach(input => {
@@ -225,25 +252,8 @@ document.querySelectorAll('[data-target-modal]').forEach(btn => {
 
 
 
-//Фикс шапка подстраховка
-// const header = document.querySelector('header.header');
-// const headerImitation = document.querySelector('.header-imitation');
-// function headerEmit() {
-//     const headerheight = header.clientHeight;
-//     headerImitation.style.height = `${headerheight}px`
-// }
-// // headerEmit();
-// window.addEventListener('resize', headerEmit);
 
-
-setTimeout(() => {
-    Fancybox.bind('[data-fancybox="gallery"]', {
-        //
-      }); 
-}, 1000);
-
-
-$(document).on('click', '[data-dropped-element]', function (e) {
+$(document).on('click', '[data-toggle-element]', function (e) {
     $(this).toggleClass('toggle-open');
-    $(this).next().slideToggle(() => { $(this).toggleClass('toggle-open'); })
+    $(this).next().slideToggle("slow");
 })
