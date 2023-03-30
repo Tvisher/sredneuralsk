@@ -14,7 +14,7 @@
     <link rel="preload" href="./fonts/Roboto-Medium.woff2" as="font" type="font/woff2" crossorigin="anonymous">
     <link rel="preload" href="./fonts/Roboto-Regular.woff2" as="font" type="font/woff2" crossorigin="anonymous">
     <!-- main css -->
-    <link rel="stylesheet" href="./css/main.min.css?_v=20230309225653">
+    <link rel="stylesheet" href="./css/main.min.css">
     <!-- transition bagfix zeroscript -->
     <script> </script>
 </head>
@@ -130,10 +130,10 @@
                         <a href="#" class="poster-item">
                             <div class="poster-item__image">
                                 <div class="poster-bg">
-                                    <picture><source srcset="img/poster-a-1.webp" type="image/webp"><img src="img/poster-a-1.jpg" alt=""></picture>
+                                    <img src="img/poster-a-1.jpg" alt="">
                                 </div>
                                 <div class="img-wrapper">
-                                    <picture><source srcset="img/poster-a-1.webp" type="image/webp"><img src="img/poster-a-1.jpg" alt=""></picture>
+                                    <img src="img/poster-a-1.jpg" alt="">
                                 </div>
                             </div>
                             <div class="poster-item__content">
@@ -162,10 +162,10 @@
                         <a href="#" class="poster-item">
                             <div class="poster-item__image contain">
                                 <div class="poster-bg">
-                                    <picture><source srcset="img/poster-a-2.webp" type="image/webp"><img src="img/poster-a-2.jpg" alt=""></picture>
+                                    <img src="img/poster-a-2.jpg" alt="">
                                 </div>
                                 <div class="img-wrapper">
-                                    <picture><source srcset="img/poster-a-2.webp" type="image/webp"><img src="img/poster-a-2.jpg" alt=""></picture>
+                                    <img src="img/poster-a-2.jpg" alt="">
                                 </div>
                             </div>
                             <div class="poster-item__content">
@@ -195,10 +195,10 @@
                         <a href="#" class="poster-item">
                             <div class="poster-item__image">
                                 <div class="poster-bg">
-                                    <picture><source srcset="img/poster-a-3.webp" type="image/webp"><img src="img/poster-a-3.jpg" alt=""></picture>
+                                    <img src="img/poster-a-3.jpg" alt="">
                                 </div>
                                 <div class="img-wrapper">
-                                    <picture><source srcset="img/poster-a-3.webp" type="image/webp"><img src="img/poster-a-3.jpg" alt=""></picture>
+                                    <img src="img/poster-a-3.jpg" alt="">
                                 </div>
                             </div>
                             <div class="poster-item__content">
@@ -227,10 +227,10 @@
                         <a href="#" class="poster-item">
                             <div class="poster-item__image">
                                 <div class="poster-bg">
-                                    <picture><source srcset="img/poster-a-4.webp" type="image/webp"><img src="img/poster-a-4.jpg" alt=""></picture>
+                                    <img src="img/poster-a-4.jpg" alt="">
                                 </div>
                                 <div class="img-wrapper">
-                                    <picture><source srcset="img/poster-a-4.webp" type="image/webp"><img src="img/poster-a-4.jpg" alt=""></picture>
+                                    <img src="img/poster-a-4.jpg" alt="">
                                 </div>
                             </div>
                             <div class="poster-item__content">
@@ -261,10 +261,10 @@
                         <a href="#" class="poster-item">
                             <div class="poster-item__image contain">
                                 <div class="poster-bg">
-                                    <picture><source srcset="img/poster-a-5.webp" type="image/webp"><img src="img/poster-a-5.jpg" alt=""></picture>
+                                    <img src="img/poster-a-5.jpg" alt="">
                                 </div>
                                 <div class="img-wrapper">
-                                    <picture><source srcset="img/poster-a-5.webp" type="image/webp"><img src="img/poster-a-5.jpg" alt=""></picture>
+                                    <img src="img/poster-a-5.jpg" alt="">
                                 </div>
                             </div>
                             <div class="poster-item__content">
@@ -298,10 +298,10 @@
                         <a href="#" class="poster-item">
                             <div class="poster-item__image ">
                                 <div class="poster-bg">
-                                    <picture><source srcset="img/poster-a-6.webp" type="image/webp"><img src="img/poster-a-6.jpg" alt=""></picture>
+                                    <img src="img/poster-a-6.jpg" alt="">
                                 </div>
                                 <div class="img-wrapper">
-                                    <picture><source srcset="img/poster-a-6.webp" type="image/webp"><img src="img/poster-a-6.jpg" alt=""></picture>
+                                    <img src="img/poster-a-6.jpg" alt="">
                                 </div>
                             </div>
                             <div class="poster-item__content">
@@ -331,10 +331,10 @@
                         <a href="#" class="poster-item">
                             <div class="poster-item__image ">
                                 <div class="poster-bg">
-                                    <picture><source srcset="img/poster-a-7.webp" type="image/webp"><img src="img/poster-a-7.jpg" alt=""></picture>
+                                    <img src="img/poster-a-7.jpg" alt="">
                                 </div>
                                 <div class="img-wrapper">
-                                    <picture><source srcset="img/poster-a-7.webp" type="image/webp"><img src="img/poster-a-7.jpg" alt=""></picture>
+                                    <img src="img/poster-a-7.jpg" alt="">
                                 </div>
                             </div>
                             <div class="poster-item__content">
@@ -412,14 +412,18 @@
                 <input type="email" placeholder="E-mail" name="">
             </label>
 
-            <label class="modal__label agreement">
-                <input type="checkbox" name="agreement" checked>
-                <span class="agreement-text">Согласен(а) на обработку, хранение и направление моих персональных данных в целях рассмотрения обращения</span>
-            </label>
+            <div class="modal-agree-wrapper">
+                <label class="modal__label agreement">
+                    <input type="checkbox" name="agreement" checked>
+                    <span class="agreement-text"></span>
+                </label>
+                <a href="#">Согласен(а) на обработку, хранение и направление моих персональных данных в целях
+                    рассмотрения обращения</a>
+            </div>
             <button class="btn fillBtn" type="submit">Оставить</button>
         </form>
     </div>
 </div>
-<script src="./js/app.min.js?_v=20230309225653"></script>
+<script src="./js/app.min.js"></script>
 
 </html>

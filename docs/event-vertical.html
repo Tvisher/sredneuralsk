@@ -14,7 +14,7 @@
     <link rel="preload" href="./fonts/Roboto-Medium.woff2" as="font" type="font/woff2" crossorigin="anonymous">
     <link rel="preload" href="./fonts/Roboto-Regular.woff2" as="font" type="font/woff2" crossorigin="anonymous">
     <!-- main css -->
-    <link rel="stylesheet" href="./css/main.min.css?_v=20230309225653">
+    <link rel="stylesheet" href="./css/main.min.css">
     <!-- transition bagfix zeroscript -->
     <script> </script>
 </head>
@@ -127,7 +127,7 @@
                         <!-- добавить к event__image класс contain, если изображение афиши не должно растягиваться и обрезаться -->
                         <div class="event__image vertical">
                             <div class="img-wrap">
-                                <picture><source srcset="img/event-1.webp" type="image/webp"><img src="img/event-1.jpg" alt=""></picture>
+                                <img src="img/event-1.jpg" alt="">
                             </div>
                         </div>
                         <div class="event__texts">
@@ -201,14 +201,18 @@
                 <input type="email" placeholder="E-mail" name="">
             </label>
 
-            <label class="modal__label agreement">
-                <input type="checkbox" name="agreement" checked>
-                <span class="agreement-text">Согласен(а) на обработку, хранение и направление моих персональных данных в целях рассмотрения обращения</span>
-            </label>
+            <div class="modal-agree-wrapper">
+                <label class="modal__label agreement">
+                    <input type="checkbox" name="agreement" checked>
+                    <span class="agreement-text"></span>
+                </label>
+                <a href="#">Согласен(а) на обработку, хранение и направление моих персональных данных в целях
+                    рассмотрения обращения</a>
+            </div>
             <button class="btn fillBtn" type="submit">Оставить</button>
         </form>
     </div>
 </div>
-<script src="./js/app.min.js?_v=20230309225653"></script>
+<script src="./js/app.min.js"></script>
 
 </html>

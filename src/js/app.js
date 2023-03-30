@@ -122,27 +122,37 @@ const afficheSlider = new Swiper('.affiche__slider', {
 
 
 // Галерея статьи
-const galeryThumbsSlider = new Swiper(".galery-thumbs-slider", {
-    spaceBetween: 10,
-    slidesPerView: 'auto',
-    freeMode: true,
-    watchSlidesProgress: true,
+const articleGaleryes = document.querySelectorAll('.article-galery');
+articleGaleryes.forEach(galery => {
+    const mainGalSlider = galery.querySelector(".galery-thumbs-slider");
+    const thumbGalSlider = galery.querySelector(".galery-slider");
+
+    const galeryThumbsSlider = new Swiper(mainGalSlider, {
+        spaceBetween: 10,
+        slidesPerView: 'auto',
+        freeMode: true,
+        watchSlidesProgress: true,
+    });
+    const galerySlider = new Swiper(thumbGalSlider, {
+        modules: [Thumbs, Navigation, Pagination],
+        spaceBetween: 10,
+        navigation: {
+            nextEl: ".swiper-button-next",
+            prevEl: ".swiper-button-prev",
+        },
+        pagination: {
+            el: '.swiper-pagination',
+            type: 'bullets',
+        },
+        thumbs: {
+            swiper: galeryThumbsSlider,
+        },
+    });
 });
-const galerySlider = new Swiper(".galery-slider", {
-    modules: [Thumbs, Navigation, Pagination],
-    spaceBetween: 10,
-    navigation: {
-        nextEl: ".swiper-button-next",
-        prevEl: ".swiper-button-prev",
-    },
-    pagination: {
-        el: '.swiper-pagination',
-        type: 'bullets',
-    },
-    thumbs: {
-        swiper: galeryThumbsSlider,
-    },
-});
+
+
+
+
 
 document.body.addEventListener('click', (e) => {
     const target = e.target;
