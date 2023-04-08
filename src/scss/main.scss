@@ -3237,7 +3237,7 @@ header {
     .article__image {
       border-radius: 3px;
       overflow: hidden;
-      animation: imageLoad 1.5s ease-in-out infinite;
+      // animation: imageLoad 1.5s ease-in-out infinite;
       height: 183px;
       margin-bottom: 16px;
 
@@ -3611,7 +3611,7 @@ header {
       width: 100%;
       padding-top: 55%;
       position: relative;
-      animation: imageLoad 1.5s ease-in-out infinite;
+      // animation: imageLoad 1.5s ease-in-out infinite;
     }
 
     .article__image-container {
@@ -4745,7 +4745,7 @@ header {
   }
 
   .event__image {
-    animation: imageLoad 1.5s ease-in-out infinite;
+    // animation: imageLoad 1.5s ease-in-out infinite;
     width: 100%;
     height: 0px;
     padding-top: 55%;
@@ -5480,6 +5480,7 @@ header {
 }
 
 .article__image-container {
+  height: 100%;
   border: 1px solid rgb(0, 0, 0, 10%);
 }
 
